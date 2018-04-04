@@ -7,6 +7,7 @@ class LoginForm extends React.Component {
     this.state = { username: '', password: '' };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   update(field) {
@@ -17,6 +18,15 @@ class LoginForm extends React.Component {
     e.preventDefault();
 
     this.props.login(this.state)
+      .then(() => this.props.history.push('/'));
+  }
+
+  handleDemoLogin(e) {
+    const demoUser = {
+      username: 'demo',
+      password: 'demodemo'
+    };
+    this.props.login(demoUser)
       .then(() => this.props.history.push('/'));
   }
 
@@ -51,7 +61,15 @@ class LoginForm extends React.Component {
           value={user.password}
           placeholder="Password">
         </input>
-        <input className='submit' type='submit' value='Log in'/>
+        <input
+          className='submit'
+          type='submit'
+          value='Log in'/>
+        <input
+          className='demo'
+          type='button'
+          value='Demo Login'
+          onClick={this.handleDemoLogin}/>
       </form>
     );
   }
