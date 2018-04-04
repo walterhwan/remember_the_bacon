@@ -1,19 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LoginFormContainer from './login_form_container.jsx';
+import LoginFormContainer from './login_form_container';
 
 
 class SessionLogin extends React.Component {
   render() {
     return (
-      <div>
+      <main className='session-login-main'>
         <section className='session-left'>
-          <p>LEFT</p>
+          <div className='container'>
+            <a className='logo'/>
+          </div>
         </section>
         <section className='session-right'>
-          <LoginFormContainer />
+          <div className='container'>
+            <Link to='/signup'>Sign up for free</Link>
+            <LoginFormContainer />
+          </div>
         </section>
-      </div>
+      </main>
     );
   }
 }

@@ -21,10 +21,5 @@ const App = () => (
     </Switch>
   </div>
 );
-// <AuthRoute path="/login" component={LoginFormContainer} />
-// <AuthRoute path="/signup" component={SignupFormContainer} />
 
 export default App;
-
-
-// {window.currentUser ? <input type='button' onClick={() => logout().then()} value='Log out'></input> : <div></div>}

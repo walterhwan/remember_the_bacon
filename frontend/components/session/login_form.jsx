@@ -23,22 +23,24 @@ class LoginForm extends React.Component {
   render() {
     const user = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <p>Been here before? Welcome back!</p>
-          <input
-            type='text'
-            onChange={this.update('username')}
-            value={user.username}>
-          </input>
-          <input
-            type='password'
-            onChange={this.update('password')}
-            value={user.password}>
-          </input>
-          <input type='submit' value='Log in'/>
-        </form>
-      </div>
+      <form
+        onSubmit={this.handleSubmit}
+        className='session-form'>
+        <h3>Been here before? Welcome back!</h3>
+        <input
+          type='text'
+          onChange={this.update('username')}
+          value={user.username}
+          placeholder="Email or username">
+        </input>
+        <input
+          type='password'
+          onChange={this.update('password')}
+          value={user.password}
+          placeholder="Password">
+        </input>
+        <input className='submit' type='submit' value='Log in'/>
+      </form>
     );
   }
 
