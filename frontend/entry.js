@@ -11,9 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
       currentUser: window.currentUser
     }
   };
-  let store;
+  let store = undefined;
   if (window.currentUser) {
     store = configureStore(preloadedState);
+    delete window.currentUser;
   } else {
     store = configureStore();
   }
