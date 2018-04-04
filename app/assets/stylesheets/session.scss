@@ -9,7 +9,6 @@
 .session-main {
   display: flex;
   flex-direction: row;
-  // height: 100%;
 
   .session-left {
     width: 50%;
@@ -24,11 +23,25 @@
         // justify-content: space-between;
         // height: 95px;
         // width: 940px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 19px;
-        margin-right: auto;
-        margin-left: 25%;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 19px;
+      margin-right: auto;
+      margin-left: 25%;
+    }
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      opacity: 1;
+    }
+
+    .quote-text {
+      font-size: 28px;
+      line-height: 1.2;
+      margin: 230px 0 11px;
     }
   }
 

@@ -1,15 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LoginFormContainer from './login_form_container';
-
+import generateQuote from '../../util/quote_util';
 
 class SessionLogin extends React.Component {
   render() {
+    const quote = generateQuote();
     return (
       <main className='session-main'>
         <section className='session-left'>
           <div className='container'>
             <Link to='/' className='logo'/>
+            <div>
+              <p
+                className='quote-text'>"{quote.text}"
+              </p>
+              <p
+                className='quote-author'>- {quote.author}
+              </p>
+            </div>
           </div>
         </section>
         <section className='session-right'>
