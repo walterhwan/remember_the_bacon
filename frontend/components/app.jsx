@@ -6,16 +6,21 @@ import {
 import { AuthRoute } from '../util/route_util';
 import LoginFormContainer from './session/login_form_container.jsx';
 import SignupFormContainer from './session/signup_form_container.jsx';
-import { logout } from '../actions/session_actions';
+import LandingPage from './landing_page';
+// import { logout } from '../util/session_api_util';
 
+// <h1>This is an app</h1>
 const App = () => (
   <div>
-    <h1>This is an app</h1>
-    {window.currentUser ? <button onClick={() => logout()}>Log out</button> : <div></div>}
-
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    <AuthRoute path="/signup" component={SignupFormContainer} />
+    <Switch>
+      <Route path='/' component={LandingPage} />
+    </Switch>
   </div>
 );
+// <AuthRoute path="/login" component={LoginFormContainer} />
+// <AuthRoute path="/signup" component={SignupFormContainer} />
 
 export default App;
+
+
+// {window.currentUser ? <input type='button' onClick={() => logout().then()} value='Log out'></input> : <div></div>}
