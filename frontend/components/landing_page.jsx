@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class LandingPage extends React.Component {
   render() {
@@ -9,10 +11,18 @@ class LandingPage extends React.Component {
             <a className='logo'/>
             <ul className='landing-nav-ul'>
               <li>
-                <a className='link-nav'>Log in</a>
+                <Link
+                  className='link-nav'
+                  to='/login'>
+                  Log in
+                </Link>
               </li>
               <li>
-                <a className='link-nav sign-up'>Sign up for free</a>
+                <Link
+                  className='link-nav sign-up'
+                  to='/signup'>
+                  Sign up for free
+                </Link>
               </li>
             </ul>
           </div>

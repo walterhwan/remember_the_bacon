@@ -11,5 +11,4 @@ const Root = ({ store }) => (
   </Provider>
 );
 
-// <App />
 export default Root;

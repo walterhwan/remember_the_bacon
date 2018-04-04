@@ -4,16 +4,18 @@ import {
   NavLink, Redirect, Switch
 } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
-import LoginFormContainer from './session/login_form_container.jsx';
-import SignupFormContainer from './session/signup_form_container.jsx';
 import LandingPage from './landing_page';
+import SessionLogin from './session/session_login';
+import SessionSignup from './session/session_signup';
+import SignupFormContainer from './session/signup_form_container.jsx';
 // import { logout } from '../util/session_api_util';
 
-// <h1>This is an app</h1>
 const App = () => (
   <div>
     <Switch>
-      <Route path='/' component={LandingPage} />
+      <Route exact path='/' component={LandingPage} />
+      <AuthRoute path='/login' component={SessionLogin} />
+      <AuthRoute path='/signup' component={SessionSignup} />
     </Switch>
   </div>
 );
