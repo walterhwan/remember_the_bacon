@@ -8,7 +8,7 @@ class LandingPage extends React.Component {
       <div>
         <nav className='landing-nav'>
           <div >
-            <a className='logo'/>
+            <Link to='/' className='logo'/>
             <ul className='landing-nav-ul'>
               <li>
                 <Link

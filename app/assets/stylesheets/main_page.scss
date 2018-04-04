@@ -1,95 +1,36 @@
-* {
-  font-family: 'Noto Sans', sans-serif;
-}
-.session-login-main {
+.main-page-nav {
+  background: #0065BA;
+  width: 100%;
+  height: 40px;
+
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  justify-content: space-between;
 
-  .session-left {
-    width: 50%;
-    background: #0065BA;
+  box-sizing: border-box;
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      width: 420px;
-      height: 570px;
-      margin-right: 20px;
-        // justify-content: space-between;
-        // height: 95px;
-        // width: 940px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 19px;
-        margin-right: auto;
-        margin-left: 25%;
-    }
+  input {
+
+  }
+  // TODO: fix here
+  form {
+    position: absolute;
+    left: 218px;
+    background: white;
+    width: 237px;
+    height: 30px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: auto;
   }
 
-  .session-right {
-    width: 50%;
+  input[type=button] {
 
-    .container {
-      width: 420px;
-      margin-left: 52px;
-
-      a {
-        float: right;
-        height: 21px;
-        margin: 43px -2px 0 0;
-        font-size: 15px;
-        padding: 9px 11px 4px;
-        background-color: rgba(0, 96, 191, 0.1);
-        color: rgba(0, 0, 0, 0.5);
-        border-radius: 3px;
-      }
-    }
   }
 }
 
-.session-form {
-  display: flex;
-  flex-direction: column;
-  clear: both;
-  padding: 126px 10px 0;
-
-  h3 {
-    font-size: 21px;
-    color: #000;
-    margin-bottom: 28px;
-    margin-top: 20px;
-  }
-
-  input[type=submit]{
-    color: #fff;
-    background-color: #009dff;
-    border-color: transparent;
-    // margin-top: 19px;
-  }
-
-  input {
-    width: 400px;
-    height: 48px;
-    box-sizing: border-box;
-    font-size: 20px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    padding: 10px 12px;
-    font-size: 20px;
-    font-weight: 300;
-  }
-
-  input::placeholder {
-    color: #B5B5B5;
-    font-weight: 300;
-  }
-
-  input::-webkit-input-placeholder {
-
-  }
-
-  > * {
-    margin-bottom: 10px;
-  }
+.main-page-main {
+  background: #D4E8F4;
+  width: 100%;
+  height: calc(100vh - 40px);
 }

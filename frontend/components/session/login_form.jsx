@@ -20,6 +20,17 @@ class LoginForm extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
+  renderErrorMessage() {
+    const errorMessage = this.props.errors.responseJSON;
+    if (errorMessage) {
+      return (
+        <div className='error-message'>
+          <p>Sorry, that wasn't a valid login. Please try again. If you've forgotten your password, you can always reset it.</p>
+        </div>
+      );
+    }
+  }
+
   render() {
     const user = this.state;
     return (
@@ -27,6 +38,7 @@ class LoginForm extends React.Component {
         onSubmit={this.handleSubmit}
         className='session-form'>
         <h3>Been here before? Welcome back!</h3>
+        {this.renderErrorMessage()}
         <input
           type='text'
           onChange={this.update('username')}

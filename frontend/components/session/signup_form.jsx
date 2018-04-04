@@ -25,37 +25,56 @@ class SignupForm extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
+  renderErrorMessage() {
+    const errorMessage = this.props.errors.responseJSON;
+    if (errorMessage) {
+      return (
+        <div className='error-message'>
+          <p>Sorry, that wasn't a valid user informaiton </p>
+        </div>
+      );
+    }
+  }
+
   render() {
     const user = this.state;
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <p>Sign up for free.</p>
+        <form
+          onSubmit={this.handleSubmit}
+          className='session-form'>
+          <h3>Sign up for free.</h3>
           <input
             type='text'
             onChange={this.update('first_name')}
-            value={user.first_name}>
+            value={user.first_name}
+            placeholder="First Name">
           </input>
           <input
             type='text'
             onChange={this.update('last_name')}
-            value={user.last_name}>
+            value={user.last_name}
+            placeholder="Last Name">
           </input>
           <input
             type='text'
             onChange={this.update('email')}
-            value={user.email}>
+            value={user.email}
+            placeholder="Email">
           </input>
           <input
             type='text'
             onChange={this.update('username')}
-            value={user.username}>
+            value={user.username}
+            placeholder="Username">
           </input>
           <input
             type='password'
             onChange={this.update('password')}
-            value={user.password}>
+            value={user.password}
+            placeholder="Password">
           </input>
+          {this.renderErrorMessage()}
           <input type='submit' value='Sign up!'/>
         </form>
       </div>

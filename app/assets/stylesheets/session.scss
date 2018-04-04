@@ -1,3 +1,104 @@
 // Place all the styles related to the Session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.session-main {
+  display: flex;
+  flex-direction: row;
+  // height: 100%;
+
+  .session-left {
+    width: 50%;
+    background: #0065BA;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 420px;
+      height: 100vh;
+      margin-right: 20px;
+        // justify-content: space-between;
+        // height: 95px;
+        // width: 940px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 19px;
+        margin-right: auto;
+        margin-left: 25%;
+    }
+  }
+
+  .session-right {
+    width: 50%;
+
+    .container {
+      width: 420px;
+      margin-left: 52px;
+
+      a {
+        float: right;
+        height: 21px;
+        margin: 43px -2px 0 0;
+        font-size: 15px;
+        padding: 9px 11px 4px;
+        background-color: rgba(0, 96, 191, 0.1);
+        color: rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+  clear: both;
+  padding: 126px 10px 0;
+
+  > * {
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 21px;
+    color: #000;
+    margin-bottom: 28px;
+    margin-top: 20px;
+  }
+
+  .error-message {
+    background: #FEE4DD;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 13px 20px 15px 44px;
+  }
+
+  input[type=submit]{
+    color: #fff;
+    background-color: #009dff;
+    border-color: transparent;
+    // margin-top: 19px;
+  }
+
+  input {
+    width: 400px;
+    height: 48px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  input::placeholder {
+    color: #B5B5B5;
+    font-weight: 300;
+  }
+}

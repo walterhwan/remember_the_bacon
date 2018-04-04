@@ -6,14 +6,19 @@ import SignupFormContainer from './signup_form_container';
 class SessionSignup extends React.Component {
   render() {
     return (
-      <div>
+      <main className='session-main'>
         <section className='session-left'>
-          <p>LEFT</p>
+          <div className='container'>
+            <Link to='/' className='logo'/>
+          </div>
         </section>
         <section className='session-right'>
-          <SignupFormContainer />
+          <div className='container'>
+            <Link to='/login'>Log in</Link>
+            <SignupFormContainer />
+          </div>
         </section>
-      </div>
+      </main>
     );
   }
 }

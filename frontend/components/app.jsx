@@ -3,7 +3,7 @@ import {
   Route, withRouter, Link,
   NavLink, Redirect, Switch
 } from 'react-router-dom';
-import { AuthRoute, RrotectedRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LandingPage from './landing_page';
 import MainPage from './main/main_page';
 import SessionLogin from './session/session_login';
@@ -14,7 +14,7 @@ import SignupFormContainer from './session/signup_form_container.jsx';
 const App = () => (
   <div>
     <Switch>
-      <RrotectedRoute path='/main' component={MainPage} />
+      <ProtectedRoute path='/main' component={MainPage} />
       <AuthRoute path='/login' component={SessionLogin} />
       <AuthRoute path='/signup' component={SessionSignup} />
       <AuthRoute path='/' component={LandingPage} />

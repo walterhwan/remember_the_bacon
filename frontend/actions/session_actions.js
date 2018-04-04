@@ -15,7 +15,13 @@ const receiveErrors = (errors) => ({
 
 export const login = (userForm) => dispatch => {
   return SessionAPIUtil.login(userForm)
-    .then((user) => dispatch(receiveCurrentUser(user)));
+    .then(
+      (user) => {
+        dispatch(receiveCurrentUser(user));
+        dispatch(receiveErrors(null));
+      },
+      (errors) => dispatch(receiveErrors(errors))
+    );
 };
 
 export const logout = () => dispatch => {
@@ -25,5 +31,11 @@ export const logout = () => dispatch => {
 
 export const signup = (userForm) => dispatch => {
   return SessionAPIUtil.signup(userForm)
-    .then((user) => dispatch(receiveCurrentUser(user)));
+    .then(
+      (user) => {
+        dispatch(receiveCurrentUser(user));
+        dispatch(receiveErrors(null));
+      },
+      (errors) => dispatch(receiveErrors(errors))
+  );
 };

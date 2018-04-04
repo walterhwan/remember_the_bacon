@@ -6,10 +6,10 @@ import LoginFormContainer from './login_form_container';
 class SessionLogin extends React.Component {
   render() {
     return (
-      <main className='session-login-main'>
+      <main className='session-main'>
         <section className='session-left'>
           <div className='container'>
-            <a className='logo'/>
+            <Link to='/' className='logo'/>
           </div>
         </section>
         <section className='session-right'>
