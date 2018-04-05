@@ -4,14 +4,29 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.landing_page	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.landing_page {$/;"	function	line:1
-.landing-nav	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.landing-nav {$/;"	function	line:5
-> div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  > div {$/;"	function	line:12
-.logo	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.logo {$/;"	function	line:26
-.landing-nav-ul	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.landing-nav-ul {$/;"	function	line:37
-.sign-up	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  .sign-up {$/;"	function	line:43
-.link-nav	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.link-nav {$/;"	function	line:51
-.quote-signup-div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.quote-signup-div {$/;"	function	line:60
-h1	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  h1 {$/;"	function	line:69
-a	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  a {$/;"	function	line:76
-.silder-div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.silder-div {$/;"	function	line:89
+name	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "name": "remember_the_bacon",$/;"	function	line:2
+private	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "private": true,$/;"	function	line:3
+dependencies	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "dependencies": {$/;"	function	line:4
+babel-core	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "babel-core": "^6.26.0",$/;"	function	line:5
+babel-loader	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "babel-loader": "^7.1.4",$/;"	function	line:6
+babel-preset-env	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "babel-preset-env": "^1.6.1",$/;"	function	line:7
+babel-preset-react	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "babel-preset-react": "^6.24.1",$/;"	function	line:8
+lodash	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "lodash": "^4.17.5",$/;"	function	line:9
+react	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "react": "^16.3.0",$/;"	function	line:10
+react-dom	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "react-dom": "^16.3.0",$/;"	function	line:11
+react-redux	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "react-redux": "^5.0.7",$/;"	function	line:12
+react-router-dom	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "react-router-dom": "^4.2.2",$/;"	function	line:13
+redux	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "redux": "^3.7.2",$/;"	function	line:14
+redux-logger	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "redux-logger": "^3.0.6",$/;"	function	line:15
+redux-thunk	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "redux-thunk": "^2.2.0",$/;"	function	line:16
+webpack	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "webpack": "^3.4.1"$/;"	function	line:17
+engines	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "engines": {$/;"	function	line:19
+node	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "node": "9.8.0",$/;"	function	line:20
+npm	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "npm": "5.6.0"$/;"	function	line:21
+scripts	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "scripts": {$/;"	function	line:23
+test	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "test": "echo \\"Error: no test specified\\" && exit 1",$/;"	function	line:24
+webpack	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "webpack": "webpack --watch",$/;"	function	line:25
+postinstall	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "postinstall": "webpack"$/;"	function	line:26
+keywords	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "keywords": [],$/;"	function	line:28
+author	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "author": "",$/;"	function	line:29
+license	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "license": "ISC"$/;"	function	line:30
