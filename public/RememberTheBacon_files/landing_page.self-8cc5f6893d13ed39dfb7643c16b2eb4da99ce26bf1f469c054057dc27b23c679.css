@@ -1,0 +1,105 @@
+/* line 1, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.landing_page {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* line 5, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.landing-nav {
+  background: #0095ED;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+/* line 12, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.landing-nav > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 95px;
+  width: 940px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 19px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 26, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.logo {
+  background-image: url("/remember_the_bacon.png");
+  background-repeat: no-repeat;
+  background-size: 179px auto;
+  width: 179px;
+  height: 83px;
+  margin: 12px 0 0 2px;
+  z-index: 2;
+}
+
+/* line 36, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.landing-nav-ul {
+  display: flex;
+  flex-direction: row;
+  height: 33px;
+  margin-top: 45px;
+}
+/* line 42, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.landing-nav-ul .link-nav {
+  color: #fff;
+  padding: 5px 18px;
+  border-radius: 5px;
+  opacity: .8;
+  line-height: 22px;
+  font-size: 15px;
+}
+/* line 51, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.landing-nav-ul .link-nav:hover {
+  color: #fff;
+  opacity: 1;
+}
+/* line 56, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.landing-nav-ul .sign-up {
+  border: 2px solid;
+  margin-top: -1px;
+  margin-left: 23px;
+  padding: 7px 12px;
+}
+
+/* line 64, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.quote-signup-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #0095ED;
+  height: 214px;
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+}
+/* line 73, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.quote-signup-div h1 {
+  margin: 70px 0 31px 0;
+  font-size: 42px;
+  font-weight: 400;
+  text-align: center;
+}
+/* line 80, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.quote-signup-div a {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 11px 37px 12px;
+  line-height: 1.2;
+  width: 200px;
+  border-radius: 4px;
+  background-color: #d24b03;
+  color: #fff;
+  font-size: 21px;
+}
+/* line 92, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.quote-signup-div a:hover {
+  background-color: #ca492e;
+}
+
+/* line 97, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss */
+.silder-div {
+  width: 100%;
+  background: #0095ED;
+  height: 666px;
+}

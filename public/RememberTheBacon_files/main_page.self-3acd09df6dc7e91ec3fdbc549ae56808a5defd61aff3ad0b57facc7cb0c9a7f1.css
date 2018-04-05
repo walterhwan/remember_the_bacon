@@ -1,0 +1,105 @@
+/* line 1, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav {
+  background: #0056B7;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+/* line 12, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav .menu-icon-div {
+  height: 30px;
+  width: 36px;
+  margin: 5px 5px 5px 11px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+/* line 19, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav .menu-icon-div i {
+  color: white;
+  font-size: 24px;
+  padding: 3px 0px 0px 6px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* line 28, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav .menu-icon-div:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+/* line 32, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav form {
+  position: absolute;
+  left: 210px;
+  background: #3378C5;
+  width: 280px;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: auto;
+}
+/* line 42, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav form i {
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  padding: 3px 0px 0px 6px;
+  opacity: 0.8;
+  user-select: none;
+}
+/* line 51, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav form input[type=search] {
+  height: 30px;
+  padding-left: 33px;
+  padding-right: 24px;
+  font-size: 0.875rem;
+  max-width: 237px;
+  min-width: 120px;
+}
+/* line 60, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav form input:focus {
+  outline: none;
+}
+/* line 65, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav input[type=button] {
+  background-color: rgba(0, 96, 191, 0.1);
+  color: white;
+  opacity: 0.8;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+/* line 74, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-nav input[type=button]:hover {
+  opacity: 1;
+}
+
+/* line 79, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-main {
+  display: flex;
+  flex-direction: row;
+  background: #D4E8F4;
+  width: 100%;
+  height: calc(100vh - 40px);
+}
+/* line 86, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-main .side-lists-nav {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  height: 100%;
+}
+/* line 92, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-main .side-lists-nav a {
+  margin-left: 9px;
+}
+/* line 97, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss */
+.main-page-main .tasks-list-section {
+  background: white;
+  width: 849px;
+  z-index: 1;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  position: relative;
+  top: 9px;
+}

@@ -7,14 +7,21 @@ class MainPage extends React.Component {
     return (
       <div>
         <nav className='main-page-nav'>
-          <input type='button' value='Menu' />
+          <div className='menu-icon-div'>
+            <i class="material-icons">menu</i>
+          </div>
           <form>
+            <i class="material-icons search-icon">search</i>
             <input type='search' />
           </form>
           <LogoutContainer />
         </nav>
         <main className='main-page-main'>
           <nav className='side-lists-nav'>
+            <Link to='/' className='logo'/>
+            <ul>
+              <li>All Tasks</li>
+            </ul>
           </nav>
           <section className='tasks-list-section'>
           </section>
@@ -25,5 +32,6 @@ class MainPage extends React.Component {
     );
   }
 }
+  // <input type='button' value='Menu' />
 
 export default MainPage;

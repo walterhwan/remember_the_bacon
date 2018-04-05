@@ -1,0 +1,120 @@
+/* line 5, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* line 9, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-main {
+  display: flex;
+  flex-direction: row;
+}
+/* line 13, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-main .session-left {
+  width: 50%;
+  background: #0065BA;
+}
+/* line 17, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-main .session-left .container {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  height: 100vh;
+  margin-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 19px;
+  margin-right: auto;
+  margin-left: 25%;
+}
+/* line 30, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-main .session-left p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+}
+/* line 38, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-main .session-left .quote-text {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 230px 0 11px;
+}
+/* line 45, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-main .session-right {
+  width: 50%;
+}
+/* line 48, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-main .session-right .container {
+  width: 420px;
+  margin-left: 52px;
+}
+/* line 52, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-main .session-right .container a {
+  float: right;
+  height: 21px;
+  margin: 43px -2px 0 0;
+  font-size: 15px;
+  padding: 9px 11px 4px;
+  background-color: rgba(0, 96, 191, 0.1);
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+}
+/* line 63, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-main .session-right .container a:hover {
+  background-color: rgba(0, 70, 140, 0.1);
+}
+
+/* line 70, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-form {
+  display: flex;
+  flex-direction: column;
+  clear: both;
+  padding: 126px 10px 0;
+}
+/* line 76, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-form > * {
+  margin-bottom: 10px;
+}
+/* line 80, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-form h3 {
+  font-size: 21px;
+  color: #000;
+  margin-bottom: 28px;
+  margin-top: 20px;
+}
+/* line 87, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-form .error-message {
+  background: #FEE4DD;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 13px 20px 15px 44px;
+}
+/* line 95, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-form input[type=submit], .session-form input.demo {
+  color: #fff;
+  background-color: #009dff;
+  border-color: transparent;
+}
+/* line 102, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-form input[type=submit]:hover, .session-form input.demo:hover {
+  background-color: #007ecc;
+}
+/* line 106, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-form input {
+  width: 400px;
+  height: 48px;
+  box-sizing: border-box;
+  font-size: 20px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  font-size: 20px;
+  font-weight: 300;
+}
+/* line 118, /Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss */
+.session-form input::placeholder {
+  color: #B5B5B5;
+  font-weight: 300;
+}
