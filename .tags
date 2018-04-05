@@ -31,22 +31,6 @@ Api	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bac
 create	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/users_controller.rb	/^  def create$/;"	method	line:2	class:Api
 destory	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/users_controller.rb	/^  def destory$/;"	method	line:13	class:Api
 user_params	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/users_controller.rb	/^  def user_params$/;"	method	line:18	class:Api
-*	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^* {$/;"	function	line:5
-.session-main	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^.session-main {$/;"	function	line:9
-.session-left	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  .session-left {$/;"	function	line:13
-.container	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^    .container {$/;"	function	line:17
-p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^    p {$/;"	function	line:33
-.quote-text	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^    .quote-text {$/;"	function	line:41
-.session-right	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  .session-right {$/;"	function	line:48
-.container	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^    .container {$/;"	function	line:51
-a	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^      a {$/;"	function	line:55
-.session-form	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^.session-form {$/;"	function	line:69
-> *	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  > * {$/;"	function	line:75
-h3	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  h3 {$/;"	function	line:79
-.error-message	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  .error-message {$/;"	function	line:86
-input[type=submit], input.demo	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  input[type=submit], input.demo{$/;"	function	line:94
-input	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  input {$/;"	function	line:101
-input::placeholder	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  input::placeholder {$/;"	function	line:113
 name	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "name": "remember_the_bacon",$/;"	function	line:2
 private	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "private": true,$/;"	function	line:3
 dependencies	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "dependencies": {$/;"	function	line:4
@@ -73,14 +57,34 @@ postinstall	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember
 keywords	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "keywords": [],$/;"	function	line:28
 author	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "author": "",$/;"	function	line:29
 license	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "license": "ISC"$/;"	function	line:30
+*	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^* {$/;"	function	line:5
+.session-main	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^.session-main {$/;"	function	line:9
+.session-left	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  .session-left {$/;"	function	line:13
+.container	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^    .container {$/;"	function	line:17
+p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^    p {$/;"	function	line:33
+.quote-text	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^    .quote-text {$/;"	function	line:41
+.session-right	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  .session-right {$/;"	function	line:48
+.container	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^    .container {$/;"	function	line:51
+a	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^      a {$/;"	function	line:55
+a:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^      a:hover {$/;"	function	line:66
+.session-form	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^.session-form {$/;"	function	line:73
+> *	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  > * {$/;"	function	line:79
+h3	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  h3 {$/;"	function	line:83
+.error-message	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  .error-message {$/;"	function	line:90
+input[type=submit], input.demo	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  input[type=submit], input.demo {$/;"	function	line:98
+input[type=submit]:hover, input.demo:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  input[type=submit]:hover, input.demo:hover {$/;"	function	line:105
+input	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  input {$/;"	function	line:109
+input::placeholder	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/session.scss	/^  input::placeholder {$/;"	function	line:121
 .landing_page	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.landing_page {$/;"	function	line:1
 .landing-nav	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.landing-nav {$/;"	function	line:5
 > div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  > div {$/;"	function	line:12
 .logo	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.logo {$/;"	function	line:26
 .landing-nav-ul	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.landing-nav-ul {$/;"	function	line:36
-.sign-up	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  .sign-up {$/;"	function	line:42
-.link-nav	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.link-nav {$/;"	function	line:50
-.quote-signup-div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.quote-signup-div {$/;"	function	line:59
-h1	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  h1 {$/;"	function	line:68
-a	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  a {$/;"	function	line:75
-.silder-div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.silder-div {$/;"	function	line:88
+.link-nav	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  .link-nav {$/;"	function	line:42
+.link-nav:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  .link-nav:hover {$/;"	function	line:51
+.sign-up	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  .sign-up {$/;"	function	line:56
+.quote-signup-div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.quote-signup-div {$/;"	function	line:64
+h1	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  h1 {$/;"	function	line:73
+a	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  a {$/;"	function	line:80
+a:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  a:hover {$/;"	function	line:92
+.silder-div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.silder-div {$/;"	function	line:97

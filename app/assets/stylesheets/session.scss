@@ -62,6 +62,10 @@
         color: rgba(0, 0, 0, 0.5);
         border-radius: 3px;
       }
+
+      a:hover {
+        background-color: rgba(0, 70, 140, 0.1);
+      }
     }
   }
 }
@@ -91,11 +95,15 @@
     padding: 13px 20px 15px 44px;
   }
 
-  input[type=submit], input.demo{
+  input[type=submit], input.demo {
     color: #fff;
     background-color: #009dff;
     border-color: transparent;
     // margin-top: 19px;
+  }
+
+  input[type=submit]:hover, input.demo:hover {
+    background-color: #007ecc;
   }
 
   input {
