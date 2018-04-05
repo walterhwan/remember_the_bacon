@@ -8,19 +8,24 @@ class MainPage extends React.Component {
       <div>
         <nav className='main-page-nav'>
           <div className='menu-icon-div'>
-            <i class="material-icons">menu</i>
+            <i className="material-icons">menu</i>
           </div>
           <form>
-            <i class="material-icons search-icon">search</i>
+            <i className="material-icons search-icon">search</i>
             <input type='search' />
           </form>
           <LogoutContainer />
         </nav>
         <main className='main-page-main'>
           <nav className='side-lists-nav'>
-            <Link to='/' className='logo'/>
+            <div className='logo'/>
             <ul>
-              <li>All Tasks</li>
+              <li>
+                <i className="material-icons">
+                  arrow_drop_down
+                </i>
+                <p onClick={()=>console.log('clicked')}>All Tasks</p>
+              </li>
             </ul>
           </nav>
           <section className='tasks-list-section'>

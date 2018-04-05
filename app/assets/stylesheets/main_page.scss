@@ -92,6 +92,36 @@
     a {
       margin-left: 9px;
     }
+
+    ul {
+      font-size: 13px;
+      margin-left: 15px;
+      margin-right: 4px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        i {
+          padding: 3px 0px;
+        }
+        p {
+          padding: 5px 0px;
+        }
+      }
+
+      li:hover {
+        background: #B7D1ED;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+
+    i {
+      padding: 0px 2px;
+      font-size: 13px;
+    }
   }
 
   .tasks-list-section {
