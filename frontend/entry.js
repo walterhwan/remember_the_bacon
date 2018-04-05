@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { login, logout, signup } from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
+
+// testing
+import { login, logout, signup } from './util/session_api_util';
+import {
+  fetchTaskIndex,
+  fetchTask,
+  createTask,
+  updateTask,
+  deleteTask
+} from './actions/task_actions';
+// test end
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
@@ -23,6 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // testing
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchTaskIndex = fetchTaskIndex;
+  window.fetchTask = fetchTask;
+  window.createTask = createTask;
+  window.updateTask = updateTask;
+  window.deleteTask = deleteTask;
   window.logout = logout;
   // testing end
 });

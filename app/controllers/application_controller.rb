@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   # TODO: remember to uncomment this
-  # protect_from_forgery with: :exception
+  protect_from_forgery with: :exception
 
   helper_method :current_user, :logged_in?
 
@@ -24,7 +24,8 @@ class ApplicationController < ActionController::Base
 
   def require_logged_in
     # TODO: make sure new_session_url works or change to api/??
-    redirect_to new_session_url unless logged_in?
+    # redirect_to new_session_url unless logged_in?
+    render :json ['You must login to do this'], status: 401 unless logged_in?
   end
 
 end

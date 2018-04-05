@@ -1,9 +1,27 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  username        :string           not null
+#  email           :string           not null
+#  last_name       :string           not null
+#  first_name      :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class User < ApplicationRecord
   validates :username, :email, :last_name, :first_name,
     :password_digest, :session_token, presence: true
   validates :username, :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true}
   after_initialize :ensure_session_token
+
+  has_many :lists
+  has_many :tasks, through: :lists, source: :tasks
 
   attr_reader :password
 
