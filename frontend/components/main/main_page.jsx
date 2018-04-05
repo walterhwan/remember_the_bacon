@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoutContainer from '../session/logout_container';
+import TaskIndexContainer from './tasks_index_container';
 
 class MainPage extends React.Component {
   render() {
@@ -29,6 +30,7 @@ class MainPage extends React.Component {
             </ul>
           </nav>
           <section className='tasks-list-section'>
+            <TaskIndexContainer />
           </section>
           <section className='details-section'>
           </section>
@@ -37,6 +39,7 @@ class MainPage extends React.Component {
     );
   }
 }
+
   // <input type='button' value='Menu' />
 
 export default MainPage;

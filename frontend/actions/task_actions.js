@@ -5,10 +5,12 @@ export const RECEIVE_TASK = 'RECEIVE_TASK';
 export const REMOVE_TASK = 'REMOVE_TASK';
 
 
-const receiveTasks = (tasks) => ({
-  type: RECEIVE_TASKS,
-  tasks,
-});
+const receiveTasks = (tasks) => {
+  return {
+    type: RECEIVE_TASKS,
+    tasks,
+  };
+};
 
 const receiveTask = (task) => ({
   type: RECEIVE_TASK,

@@ -1,0 +1,53 @@
+
+.task-bar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50px;
+  // background: #CBC8CA;
+  background: white;
+  transition: height 0.2s;
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+
+  .task-create {
+    display: block;
+    width: calc(100% - 34px);
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+    line-height: 30px;
+    margin: 10px 17px;
+    padding: 0px 0px;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #2e8ceb;
+  }
+}
+
+.task-util-bar {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  margin: 5px 17px;
+  margin-top: 0px;
+  // for testing
+  // background: #F2F2F2;
+
+  button{
+    /* visibility: hidden; */
+    float: right;
+    background: #2881E8;
+    padding-right: 14px;
+    padding-left: 14px;
+    height: 32px;
+    border: none;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.08);
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    font-size: .875rem;
+  }
+}

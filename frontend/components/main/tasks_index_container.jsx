@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoutButton from './logout_button';
+import TaskIndex from './task_index';
 import {
   fetchTaskIndex,
   fetchTask,
@@ -12,7 +12,7 @@ import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ tasks }) => {
   return {
-    tasks: tasks,
+    tasks: Object.values(tasks),
   };
 };
 
@@ -29,4 +29,4 @@ const mapDispatchToProps = (dispatch) => {
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(LogoutButton));
+)(TaskIndex));
