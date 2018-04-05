@@ -19,7 +19,4 @@ const generateQuote = () => {
   return { text, author };
 };
 
-console.log(generateQuote());
-
-
 export default generateQuote;

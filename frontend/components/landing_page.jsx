@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class LandingPage extends React.Component {
   render() {
     return (
-      <div>
+      <div className='landing_page'>
         <nav className='landing-nav'>
           <div >
             <Link to='/' className='logo'/>
@@ -20,15 +20,20 @@ class LandingPage extends React.Component {
               <li>
                 <Link
                   className='link-nav sign-up'
-                  to='/signup'>
-                  Sign up for free
-                </Link>
+                  to='/signup'>Sign up for free</Link>
               </li>
             </ul>
           </div>
         </nav>
         <main>
-          <h1>Get reminded, anywhere.</h1>
+          <div className='quote-signup-div'>
+            <h1>The smart to-do app for lazy people.</h1>
+            <Link
+              type='button'
+              to='/signup'>Sign Up Free</Link>
+          </div>
+          <div className='silder-div'>
+          </div>
         </main>
         <footer>
           <h1>footer</h1>

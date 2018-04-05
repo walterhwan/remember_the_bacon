@@ -1,6 +1,13 @@
+.landing_page {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 .landing-nav {
   background: #0095ED;
-  font-family: 'Noto Sans', sans-serif;
+  // font-family: 'Noto Sans', sans-serif;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+  // border-bottom: 1px solid #d9d9d9;
 
   > div {
     display: flex;
@@ -48,4 +55,39 @@
   opacity: .8;
   line-height: 22px;
   font-size: 15px;
+}
+
+.quote-signup-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #0095ED;
+  height: 214px;
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+
+  h1 {
+    margin: 70px 0 31px 0;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  a {
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 11px 37px 12px;
+    line-height: 1.2;
+    width: 200px;
+    border-radius: 4px;
+    background-color: #d24b03;
+    color: #fff;
+    font-size: 21px;
+  }
+}
+
+.silder-div {
+  width: 100%;
+  background: #0095ED;
+  height: 666px;
 }
