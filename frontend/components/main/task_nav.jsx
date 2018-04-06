@@ -10,12 +10,19 @@ class TaskNav extends React.Component {
     applyCreateTaskOnFocusEvents();
   }
 
+  handleOnFocus(e) {
+
+  }
+
   render() {
     return (
       <div>
         <form
           className='task-bar'>
-          <input className='task-create' type="text" name="" value="" />
+          <input
+            className='task-create'
+            type="text"
+            placeholder="Add a task..." />
           <div className="task-util-bar">
             <div className=""></div>
             <input

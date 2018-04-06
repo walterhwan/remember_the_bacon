@@ -14,7 +14,7 @@ export const requestTask = (id) => {
 
 export const createTask = (task) => {
   return $.ajax({
-    url: 'api/tasks',
+    url: `api/lists/${task.list_id}/tasks`,
     method: 'POST',
     data: { task }
   });
