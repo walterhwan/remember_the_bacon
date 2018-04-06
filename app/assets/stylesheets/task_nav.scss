@@ -4,11 +4,10 @@
   flex-direction: column;
   width: 100%;
   height: 50px;
-  // background: #CBC8CA;
   background: white;
   transition: height 0.2s;
-  border-top: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
+  border-top: 1px dotted #EEEEEE;
+  border-bottom: 1px dotted #EEEEEE;
 
   .task-create {
     display: block;
@@ -49,5 +48,48 @@
     font-weight: bold;
     color: white;
     font-size: .875rem;
+  }
+}
+
+.task-item {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px dotted #EEEEEE;
+  cursor: pointer;
+  font-size: .8125rem;
+  // display: table-cell;
+  // vertical-align: top;
+
+  .task-white-space {
+    width: 13.3px;
+    height: 100%;
+  }
+
+  .task-divider {
+    background-color: #ccc;
+    background-attachment: scroll;
+    width: 3px;
+    min-width: 3px;
+    border-radius: 1px;
+    margin: 1px 0px;
+  }
+
+  .task-check-box {
+
+  }
+
+  [class^="task-check-box-"] {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #ccc;
+
+    i {
+      padding: 7px 8px;
+    }
+  }
+
+  p {
+    padding: 9px 0;
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoutContainer from '../session/logout_container';
-import TaskIndexContainer from './tasks_index_container';
+import TaskNavContainer from './tasks_nav_container';
 
 class MainPage extends React.Component {
   render() {
@@ -30,7 +30,7 @@ class MainPage extends React.Component {
             </ul>
           </nav>
           <section className='tasks-list-section'>
-            <TaskIndexContainer />
+            <TaskNavContainer />
           </section>
           <section className='details-section'>
           </section>
