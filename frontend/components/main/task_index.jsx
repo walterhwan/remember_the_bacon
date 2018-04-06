@@ -2,7 +2,14 @@ import React from 'react';
 
 class TaskIndex extends React.Component {
   componentDidMount() {
-    this.props.fetchTaskIndex();
+    this.props.fetchListTasks(this.props.listId);
+    this.props.history.listen((location, action) => {
+      this.props.fetchListTasks(this.props.listId);
+    });
+  }
+
+  getDerivedStateFromProps() {
+    debugger;
   }
 
   renderTaskItem(task) {

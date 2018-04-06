@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import LogoutContainer from '../session/logout_container';
 import TaskNavContainer from './tasks_nav_container';
 import ListIndexContainer from './list_index_container';
+import ListCreateContainer from '../lists/list_create_container';
 
 const applySearchOnFocusEvent = () => {
   let searchInput = document.getElementsByClassName('task-search')[0];
@@ -26,7 +27,7 @@ class MainPage extends React.Component {
   }
 
   componentDidMount() {
-      applySearchOnFocusEvent();
+    applySearchOnFocusEvent();
   }
 
   // <i class="material-icons">done</i>
@@ -37,6 +38,8 @@ class MainPage extends React.Component {
   render() {
     return (
       <div>
+        <div className='modal-screen modal'></div>
+        <ListCreateContainer />
         <nav className="main-page-nav">
           <div className="menu-icon-div">
             <i className="material-icons">menu</i>

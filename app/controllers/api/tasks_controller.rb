@@ -2,7 +2,11 @@ class Api::TasksController < ApplicationController
   before_action :require_logged_in
 
   def index
-    @tasks = current_user.tasks
+    if params[:list_id]
+      @tasks = current_user.tasks.where(list_id: params[:list_id])
+    else
+      @tasks = current_user.tasks
+    end
     render :index
   end
 

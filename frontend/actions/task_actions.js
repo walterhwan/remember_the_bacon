@@ -29,6 +29,13 @@ export const fetchTaskIndex = () => dispatch => {
     );
 };
 
+export const fetchListTasks = (listId) => dispatch => {
+  return TaskAPIUtil.requestListTask(listId)
+    .then(
+      (tasks) => dispatch(receiveTasks(tasks))
+    );
+};
+
 export const fetchTask = (id) => dispatch => {
   return TaskAPIUtil.requestTask(id)
     .then(

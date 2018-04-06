@@ -14,7 +14,7 @@ export const requestList = (id) => {
 
 export const createList = (list) => {
   return $.ajax({
-    url: `api/lists/${list.list_id}`,
+    url: 'api/lists',
     method: 'POST',
     data: { list }
   });

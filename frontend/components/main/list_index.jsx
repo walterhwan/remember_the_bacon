@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 class ListIndex extends React.Component {
   componentDidMount() {
@@ -7,10 +8,21 @@ class ListIndex extends React.Component {
 
   renderListItem(list) {
     return (
-      <li key={`list-item-${list.id}`}>
-        <p>{list.name}</p>
-      </li>
+      <NavLink
+        key={`list-item-${list.id}`}
+        to={`/main/lists/${list.id}`}>
+        <li >
+          <p>{list.name}</p>
+        </li>
+      </NavLink>
     );
+  }
+
+  handleOpenModal() {
+    const modals = document.getElementsByClassName('modal');
+    for (const modal of modals) {
+      modal.classList.add('is-open');
+    }
   }
 
   render() {
@@ -24,7 +36,11 @@ class ListIndex extends React.Component {
           <p onClick={()=>console.log('clicked')}>
             Lists
           </p>
-          <i className="material-icons add-box">add_box</i>
+          <i
+            className="material-icons add-box"
+            onClick={this.handleOpenModal}>
+            add_box
+          </i>
         </li>
         {
           lists.map((list)=> this.renderListItem(list))

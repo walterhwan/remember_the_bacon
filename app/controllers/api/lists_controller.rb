@@ -11,11 +11,12 @@ class Api::ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
+    @list.user_id = current_user.id;
 
     if @list.save
       render :show
     else
-      render json: ['Create list failed. Some entry cannot be empty']
+      render json: ['Create list failed. Name cannot be empty']
     end
   end
 

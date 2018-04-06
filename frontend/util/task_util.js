@@ -5,6 +5,13 @@ export const requestTaskIndex = () => {
   });
 };
 
+export const requestListTask = (listId) => {
+  return $.ajax({
+    url: `api/lists/${listId}/tasks`,
+    method: 'GET',
+  });
+};
+
 export const requestTask = (id) => {
   return $.ajax({
     url: `api/tasks/${id}`,
