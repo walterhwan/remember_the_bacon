@@ -27,7 +27,7 @@ class Api::TasksController < ApplicationController
     if @task.update_attributes(task_params)
       render :show
     else
-      render json: ['Create task failed. Some entry cannot be empty']
+      render json: ['Update task failed. Some entry cannot be empty']
     end
   end
 

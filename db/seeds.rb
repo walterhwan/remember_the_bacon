@@ -14,7 +14,11 @@ demo = User.create!(username: 'demo', password: 'demodemo', email: 'demo@gmail.c
 demo2 = User.create!(username: 'demo2', password: 'demodemo', email: 'demo2@gmail.com', last_name: 'Olivaw', first_name: 'Daneel')
 
 list1 = List.create!(user_id: demo.id, name: 'work')
-list2 = List.create!(user_id: demo2.id, name: 'personal')
+list2 = List.create!(user_id: demo.id, name: 'personal')
+list3 = List.create!(user_id: demo.id, name: 'family')
+list4 = List.create!(user_id: demo.id, name: 'gaming')
+list5 = List.create!(user_id: demo.id, name: 'other')
+list21 = List.create!(user_id: demo2.id, name: 'personal')
 
 
 task1 = Task.create!(list_id: list1.id, description: 'take out trash', due_date: nil, estimate: 5, completed: false)

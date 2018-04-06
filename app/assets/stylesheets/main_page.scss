@@ -117,9 +117,12 @@ $list-hover-color: #B7D1ED;
         flex-direction: row;
         position: relative;
         i {
+          position: absolute;
           padding: 3px 0px;
         }
         p {
+          position: relative;
+          left: 20px;
           padding: 5px 0px;
         }
         .add-box {

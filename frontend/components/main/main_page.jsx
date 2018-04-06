@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoutContainer from '../session/logout_container';
 import TaskNavContainer from './tasks_nav_container';
+import ListIndexContainer from './list_index_container';
 
 const applySearchOnFocusEvent = () => {
   let searchInput = document.getElementsByClassName('task-search')[0];
@@ -49,17 +50,7 @@ class MainPage extends React.Component {
         <main className="main-page-main">
           <nav className="side-lists-nav">
             <div className="logo"/>
-            <ul className="list-index-ul">
-              <li>
-                <i className="material-icons">
-                  arrow_drop_down
-                </i>
-                <p onClick={()=>console.log('clicked')}>
-                  All Tasks
-                </p>
-                <i className="material-icons add-box">add_box</i>
-              </li>
-            </ul>
+            <ListIndexContainer />
           </nav>
           <section className='tasks-list-section'>
             <TaskNavContainer />
