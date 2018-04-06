@@ -2,6 +2,10 @@ import React from 'react';
 import TaskIndexContainer from './task_index_container';
 
 class TaskNav extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     applyCreateTaskOnFocusEvents();
   }
@@ -9,11 +13,15 @@ class TaskNav extends React.Component {
   render() {
     return (
       <div>
-        <form className='task-bar'>
+        <form
+          className='task-bar'>
           <input className='task-create' type="text" name="" value="" />
           <div className="task-util-bar">
             <div className=""></div>
-            <button type="submit" name="submit">Add Task</button>
+            <input
+              type="submit"
+              value="Add Task">
+            </input>
           </div>
         </form>
         <TaskIndexContainer />

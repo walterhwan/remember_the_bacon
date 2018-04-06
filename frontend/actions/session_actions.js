@@ -34,8 +34,12 @@ export const signup = (userForm) => dispatch => {
     .then(
       (user) => {
         dispatch(receiveCurrentUser(user));
-        dispatch(receiveErrors(null));
+        dispatch(receiveErrors([]));
       },
       (errors) => dispatch(receiveErrors(errors))
   );
+};
+
+export const clearSessionErrors = () => dispatch => {
+  dispatch(receiveErrors([]));
 };

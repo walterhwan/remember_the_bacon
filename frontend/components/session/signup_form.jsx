@@ -13,6 +13,11 @@ class SignupForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.props.clearSessionErrors();
   }
 
   update(field) {
@@ -25,12 +30,23 @@ class SignupForm extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
+  handleDemoLogin(e) {
+    const demoUser = {
+      username: 'demo',
+      password: 'demodemo'
+    };
+    this.props.login(demoUser)
+      .then(() => this.props.history.push('/'));
+  }
+
   renderErrorMessage() {
     const errorMessage = this.props.errors.responseJSON;
     if (errorMessage) {
       return (
         <div className='error-message'>
-          <p>Sorry, that wasn't a valid user informaiton </p>
+          {
+            errorMessage.map(e => <p>{e}</p>)
+          }
         </div>
       );
     }
@@ -76,6 +92,11 @@ class SignupForm extends React.Component {
           </input>
           {this.renderErrorMessage()}
           <input type='submit' value='Sign up!'/>
+          <input
+            className='demo'
+            type='button'
+            value='Demo Login'
+            onClick={this.handleDemoLogin}/>
         </form>
       </div>
     );

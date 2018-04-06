@@ -35,10 +35,14 @@ class LoginForm extends React.Component {
     if (errorMessage) {
       return (
         <div className='error-message'>
-          <p>Sorry, that wasn't a valid login. Please try again. If you've forgotten your password, you can always reset it.</p>
+          <p>Sorry, that wasn't a valid login. Please try again.</p>
         </div>
       );
     }
+  }
+
+  componentWillUnmount() {
+    this.props.clearSessionErrors();
   }
 
   render() {

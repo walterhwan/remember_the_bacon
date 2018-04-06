@@ -10,7 +10,8 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = ({ tasks }) => {
+const mapStateToProps = ({ entities }) => {
+  const { tasks } = entities;
   return {
     tasks: Object.values(tasks),
   };

@@ -4,8 +4,6 @@ import {
   RECEIVE_TASKS, RECEIVE_TASK, REMOVE_TASK
 } from '../actions/task_actions';
 
-// const _defaultState = Object.freeze({});
-
 const taskReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch(action.type) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import TaskNav from './task_nav';
+import TaskIndex from './task_index';
 import {
   fetchTaskIndex,
   fetchTask,
@@ -11,23 +11,18 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ entities }) => {
-  const { tasks } = entities;
   return {
-    tasks: Object.values(tasks),
+    task: {},
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchTaskIndex: () => dispatch(fetchTaskIndex()),
-    fetchTask: (id) => dispatch(fetchTask(id)),
     CreateTask: (task) => dispatch(CreateTask(task)),
-    updateTask: (task) => dispatch(updateTask(task)),
-    deleteTask: (id) => dispatch(deleteTask(id)),
   };
 };
 
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(TaskNav));
+)(TaskIndex));
