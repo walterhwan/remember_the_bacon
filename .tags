@@ -116,6 +116,18 @@ create	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_
 destory	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/users_controller.rb	/^  def destory$/;"	method	line:13	class:Api
 user_params	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/users_controller.rb	/^  def user_params$/;"	method	line:18	class:Api
 switch	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/frontend/reducers/tasks_reducer.js	/^  switch(action.type) {$/;"	function	line:9
+.task-bar	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^.task-bar {$/;"	function	line:2
+.task-create	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-create {$/;"	function	line:13
+.task-create:focus	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-create:focus {$/;"	function	line:23
+.task-util-bar	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^.task-util-bar {$/;"	function	line:29
+input[type=submit]	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  input[type=submit]{$/;"	function	line:39
+.task-item	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^.task-item {$/;"	function	line:55
+.task-white-space	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-white-space {$/;"	function	line:64
+.task-divider	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-divider {$/;"	function	line:69
+[class^="task-check-box-"]	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  [class^="task-check-box-"] {$/;"	function	line:78
+i	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^    i {$/;"	function	line:84
+p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  p {$/;"	function	line:91
+.task-item:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^.task-item:hover {$/;"	function	line:96
 search-color	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^$search-color: #417CE1;$/;"	function	line:1
 nav-bar-color	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^$nav-bar-color: #0064BA;$/;"	function	line:2
 list-nav-color	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^$list-nav-color: #D4E8F4;$/;"	function	line:3
@@ -133,23 +145,13 @@ input[type=button]	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/r
 input[type=button]:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^  input[type=button]:hover {$/;"	function	line:86
 .main-page-main	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^.main-page-main {$/;"	function	line:91
 .side-lists-nav	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^  .side-lists-nav {$/;"	function	line:98
-a	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^    a {$/;"	function	line:104
-ul	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^    ul {$/;"	function	line:108
+.logo	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^    .logo {$/;"	function	line:104
+.list-index-ul	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^    .list-index-ul {$/;"	function	line:108
 li	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^      li {$/;"	function	line:115
-i	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^        i {$/;"	function	line:118
-p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^        p {$/;"	function	line:121
-li:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^      li:hover {$/;"	function	line:126
-i	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^    i {$/;"	function	line:133
-.tasks-list-section	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^  .tasks-list-section {$/;"	function	line:139
-.task-bar	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^.task-bar {$/;"	function	line:2
-.task-create	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-create {$/;"	function	line:13
-.task-create:focus	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-create:focus {$/;"	function	line:23
-.task-util-bar	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^.task-util-bar {$/;"	function	line:29
-input[type=submit]	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  input[type=submit]{$/;"	function	line:39
-.task-item	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^.task-item {$/;"	function	line:55
-.task-white-space	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-white-space {$/;"	function	line:64
-.task-divider	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-divider {$/;"	function	line:69
-[class^="task-check-box-"]	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  [class^="task-check-box-"] {$/;"	function	line:78
-i	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^    i {$/;"	function	line:84
-p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  p {$/;"	function	line:89
-.task-item:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^.task-item:hover {$/;"	function	line:94
+i	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^        i {$/;"	function	line:119
+p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^        p {$/;"	function	line:122
+.add-box	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^        .add-box {$/;"	function	line:125
+.add-box:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^        .add-box:hover {$/;"	function	line:131
+li:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^      li:hover {$/;"	function	line:136
+i	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^    i {$/;"	function	line:143
+.tasks-list-section	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/main_page.scss	/^  .tasks-list-section {$/;"	function	line:149

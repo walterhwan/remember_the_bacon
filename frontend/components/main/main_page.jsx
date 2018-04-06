@@ -28,6 +28,11 @@ class MainPage extends React.Component {
       applySearchOnFocusEvent();
   }
 
+  // <i class="material-icons">done</i>
+  // <i class="material-icons">add_box</i>
+  // <i class="material-icons">check_box</i>
+  // <i class="material-icons">check_box_outline_blank</i>
+
   render() {
     return (
       <div>
@@ -44,12 +49,15 @@ class MainPage extends React.Component {
         <main className="main-page-main">
           <nav className="side-lists-nav">
             <div className="logo"/>
-            <ul>
+            <ul className="list-index-ul">
               <li>
                 <i className="material-icons">
                   arrow_drop_down
                 </i>
-                <p onClick={()=>console.log('clicked')}>All Tasks</p>
+                <p onClick={()=>console.log('clicked')}>
+                  All Tasks
+                </p>
+                <i className="material-icons add-box">add_box</i>
               </li>
             </ul>
           </nav>

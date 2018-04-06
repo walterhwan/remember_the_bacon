@@ -10,10 +10,6 @@ class TaskNav extends React.Component {
     applyCreateTaskOnFocusEvents();
   }
 
-  handleOnFocus(e) {
-
-  }
-
   render() {
     return (
       <div>

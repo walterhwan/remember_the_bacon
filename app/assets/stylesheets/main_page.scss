@@ -61,7 +61,7 @@ $list-hover-color: #B7D1ED;
       padding-left: 33px;
       padding-right: 24px;
       font-size: 0.875rem;
-      max-width: 237px;
+      width: 280px;
       min-width: 120px;
     }
 
@@ -101,11 +101,11 @@ $list-hover-color: #B7D1ED;
     width: 210px;
     height: 100%;
 
-    a {
+    .logo {
       margin-left: 9px;
     }
 
-    ul {
+    .list-index-ul {
       font-size: 13px;
       margin-left: 15px;
       margin-right: 4px;
@@ -115,11 +115,21 @@ $list-hover-color: #B7D1ED;
       li {
         display: flex;
         flex-direction: row;
+        position: relative;
         i {
           padding: 3px 0px;
         }
         p {
           padding: 5px 0px;
+        }
+        .add-box {
+          position: absolute;
+          left: 150px;
+          top: 1px;
+          color: $nav-bar-color;
+        }
+        .add-box:hover {
+          color: $search-color;
         }
       }
 

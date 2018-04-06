@@ -11,7 +11,7 @@ class TaskIndex extends React.Component {
         <div className='task-white-space'> </div>
         <div className='task-divider'></div>
         <div className={`task-check-box-${task.id}`}>
-          <i className="fa fa-square-o" aria-hidden="true"></i>
+          <i className="material-icons">crop_din</i>
         </div>
         <p>
           {task.description}
