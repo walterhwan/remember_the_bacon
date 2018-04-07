@@ -22,7 +22,7 @@ $light-gray: #c1c1c1;
 
 .modal-create-list-div {
   position: absolute;
-  top: 100px;
+  top: calc(50% - 220px);
   left: 50%;
   margin-left: -220px;
   width: 360px;

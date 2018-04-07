@@ -1,15 +1,19 @@
 import React from 'react';
 
 class TaskIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   componentDidMount() {
-    this.props.fetchListTasks(this.props.listId);
-    this.props.history.listen((location, action) => {
-      this.props.fetchListTasks(this.props.listId);
-    });
+    this.props.fetchListTasks(this.props.listId)
+      .then(() => this.setState(this.props.tasks));
   }
 
-  getDerivedStateFromProps() {
-    debugger;
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.listId !== nextProps.match.params.listId) {
+      this.props.fetchListTasks(nextProps.match.params.listId);
+    }
   }
 
   renderTaskItem(task) {

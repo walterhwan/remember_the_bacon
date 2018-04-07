@@ -22,6 +22,7 @@ class ListIndex extends React.Component {
     const modals = document.getElementsByClassName('modal');
     for (const modal of modals) {
       modal.classList.add('is-open');
+      document.getElementById('create-list').focus();
     }
   }
 

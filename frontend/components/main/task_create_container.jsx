@@ -1,28 +1,30 @@
 import React from 'react';
-import TaskIndex from './task_index';
+import TaskCreate from './task_create';
 import {
-  fetchTaskIndex,
-  fetchTask,
-  CreateTask,
-  updateTask,
-  deleteTask
+  createTask,
 } from '../../actions/task_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ entities }) => {
   return {
-    task: {},
+    task: {
+      list_id: '',
+      description: '',
+      due_date: '',
+      estimate: '',
+      completed: false,
+    },
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    CreateTask: (task) => dispatch(CreateTask(task)),
+    createTask: (task) => dispatch(createTask(task)),
   };
 };
 
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(TaskIndex));
+)(TaskCreate));
