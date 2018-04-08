@@ -4,6 +4,7 @@ import LogoutContainer from '../session/logout_container';
 import TaskNavContainer from './tasks_nav_container';
 import ListIndexContainer from './list_index_container';
 import ListCreateContainer from '../lists/list_create_container';
+import ListUpdateContainer from '../lists/list_update_container';
 
 const applySearchOnFocusEvent = () => {
   let searchInput = document.getElementsByClassName('task-search')[0];
@@ -40,6 +41,7 @@ class MainPage extends React.Component {
       <div>
         <div className='modal-screen modal'></div>
         <ListCreateContainer />
+        <ListUpdateContainer />
         <nav className="main-page-nav">
           <div className="menu-icon-div">
             <i className="material-icons">menu</i>
@@ -55,11 +57,14 @@ class MainPage extends React.Component {
             <div className="logo"/>
             <ListIndexContainer />
           </nav>
-          <section className='tasks-list-section'>
-            <TaskNavContainer />
-          </section>
-          <section className='details-section'>
-          </section>
+          <div>
+            <section className='tasks-list-section'>
+              <TaskNavContainer />
+            </section>
+            <section className='details-section'>
+              List detail
+            </section>
+          </div>
         </main>
       </div>
     );

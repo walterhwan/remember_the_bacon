@@ -1,6 +1,15 @@
 $very-light-gray: #EEEEEE;
 $light-gray: #c1c1c1;
 
+.task-nav-div {
+  display: flex;
+  flex-direction: column;
+
+  .seperator {
+    height: 10px;
+  }
+}
+
 .task-bar {
   display: flex;
   flex-direction: column;
@@ -14,13 +23,13 @@ $light-gray: #c1c1c1;
 
   .task-create {
     display: block;
-    width: calc(100% - 34px);
+    width: calc(100% - 34px - 8px);
     border: 1px solid $light-gray;
     border-radius: 3px;
     line-height: 30px;
     margin: 10px 17px;
-    padding: 0px 0px 0px;
-    font-size: 16px;
+    padding: 0px 0px 0px 8px;
+    font-size: 14px;
   }
 
   .task-create:focus {

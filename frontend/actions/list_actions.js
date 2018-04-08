@@ -18,7 +18,7 @@ const receiveList = (list) => ({
 });
 
 const removeList = (listId) => ({
-  type: RECEIVE_LIST,
+  type: REMOVE_LIST,
   listId,
 });
 

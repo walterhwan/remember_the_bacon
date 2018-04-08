@@ -30,8 +30,9 @@ class Api::ListsController < ApplicationController
     end
   end
 
-  def destory
-    @list = current_user.lists.find_by(id: params[:id])
+  def destroy
+    list = current_user.lists.find_by(id: params[:id])
+    list.destroy
     render json: {}
   end
 

@@ -1,29 +1,82 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 class ListIndex extends React.Component {
   componentDidMount() {
     this.props.fetchListIndex();
+
+    this.handleDeleteList = this.handleDeleteList.bind(this);
   }
 
   renderListItem(list) {
     return (
-      <NavLink
-        key={`list-item-${list.id}`}
-        to={`/main/lists/${list.id}`}>
-        <li >
-          <p>{list.name}</p>
-        </li>
-      </NavLink>
+      <div
+        className='list-item-div'
+        tabIndex="-1"
+        key={`list-item-${list.id}`}>
+        <div className='list-head'>
+        </div>
+        <div className='list-body'>
+          <NavLink
+            className='list-item-a'
+            activeClassName="active"
+            to={`/main/lists/${list.id}`}>
+            <p>{list.name}</p>
+          </NavLink>
+        </div>
+        <div className='list-tail'>
+          <i
+            className="material-icons list-option-icon"
+            onClick={this.handleOpenDropDown(list.id)}>
+            settings_applications
+          </i>
+        </div>
+        <div className={`list-drop-down-menu-div-${list.id} hidden`}
+          id={`list-drop-down-menu-div-${list.id}`}>
+          <div
+            onClick={this.handleOpenModal('update')}>
+            <p>Rename list</p>
+          </div>
+          <div
+            onClick={this.handleDeleteList(list.id)}>
+            <p>Remove list</p>
+          </div>
+        </div>
+      </div>
     );
   }
 
-  handleOpenModal() {
-    const modals = document.getElementsByClassName('modal');
-    for (const modal of modals) {
-      modal.classList.add('is-open');
-      document.getElementById('create-list').focus();
-    }
+  handleOpenDropDown(id) {
+    return () => {
+      console.log('clicked drop down');
+      const dropDown = document.getElementById(`list-drop-down-menu-div-${id}`);
+      if (dropDown.classList.contains('hidden')) {
+        dropDown.classList.remove('hidden');
+      } else {
+        dropDown.classList.add('hidden');
+      }
+
+      const container = document.getElementsByClassName('list-item-div')[0];
+      container.addEventListener("focusout", function () {
+        dropDown.classList.add('hidden');
+      });
+    };
+  }
+
+  handleDeleteList(id) {
+    return () => {
+      this.props.deleteList(id);
+    };
+  }
+
+  handleOpenModal(formType) {
+    return () => {
+      const modals = document.getElementsByClassName(`modal ${formType}`);
+      for (const modal of modals) {
+        modal.classList.add('is-open');
+        document.getElementById(`${formType}-list`).focus();
+      }
+    };
   }
 
   render() {
@@ -39,7 +92,7 @@ class ListIndex extends React.Component {
           </p>
           <i
             className="material-icons add-box"
-            onClick={this.handleOpenModal}>
+            onClick={this.handleOpenModal('create')}>
             add_box
           </i>
         </li>

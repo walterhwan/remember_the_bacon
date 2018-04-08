@@ -13,15 +13,15 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = ({ entities }) => {
   return {
     list: {name: ''},
-    title: 'Add a list',
-    label: 'Please enter a new list name:',
-    formType: 'create',
+    title: 'Rename list',
+    label: 'List name:',
+    formType: 'update',
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    action: (list) => dispatch(createList(list)),
+    action: (list) => dispatch(updateList(list)),
   };
 };
 

@@ -3,10 +3,14 @@ import React from 'react';
 class LogoutButton extends React.Component {
   render() {
     return (
-      <input
-        type='button'
-        value='Sign out'
-        onClick={() => this.props.logout()} />
+      <div className='logout-div'>
+        <i className="material-icons settings-icon">settings</i>
+        <input
+          className='logout-button'
+          type='button'
+          value='Sign out'
+          onClick={() => this.props.logout()} />
+      </div>
     );
   }
 }

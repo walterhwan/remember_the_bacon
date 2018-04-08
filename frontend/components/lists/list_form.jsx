@@ -1,7 +1,7 @@
 import React from 'react';
 import merge from 'lodash/merge';
 
-class ListCreate extends React.Component {
+class ListForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.list;
@@ -15,12 +15,13 @@ class ListCreate extends React.Component {
     const newState = { name };
 
     if (name) {
-      this.props.createList(newState);
-      this.handleCloseModal();
+      this.props.action(newState);
+      this.closeModal();
+      this.setState({name: ''});
     }
   }
 
-  handleCloseModal() {
+  closeModal(typeForm) {
     const modals = document.getElementsByClassName('modal');
     for (const modal of modals) {
       modal.classList.remove('is-open');
@@ -33,26 +34,28 @@ class ListCreate extends React.Component {
 
   render() {
     const list = this.state;
+    const formType = this.props.formType;
     return (
-      <div className='modal-create-list-div modal'>
+      <div className={`modal-form-list-div modal ${formType}`}>
         <i
-          onClick={this.handleCloseModal}
-          className="material-icons close-create-list">
+          onClick={this.closeModal}
+          className="material-icons close-form-list">
           clear
         </i>
         <form
           onSubmit={this.handleSubmit}
-          className='modal-create-list-form'>
-          <h1>Add a list</h1>
-          <label htmlFor='create-list'>
-            Please enter a new list name:
+          className='modal-form-list-form'>
+          <h1>{this.props.title}</h1>
+          <label htmlFor='form-list'>
+            {this.props.label}
           </label>
           <input
-            id='create-list'
+            id={`${formType}-list`}
             type='text'
-            className='create-list-input'
+            className='form-list-input'
             value={list.name}
-            onChange={this.update('name')} />
+            onChange={this.update('name')}
+            autoComplete="off" />
           <ul>
             <li>
               <input
@@ -64,7 +67,7 @@ class ListCreate extends React.Component {
               <input
                 type='button'
                 value='Cancel'
-                onClick={this.handleCloseModal}>
+                onClick={this.closeModal}>
               </input>
             </li>
           </ul>
@@ -74,4 +77,4 @@ class ListCreate extends React.Component {
   }
 }
 
-export default ListCreate;
+export default ListForm;

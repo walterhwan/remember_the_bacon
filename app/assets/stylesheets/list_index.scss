@@ -1,0 +1,158 @@
+$search-color: #417CE1;
+$nav-bar-color: #0064BA;
+$list-nav-color: #D4E8F4;
+$list-hover-color: #B7D1ED;
+
+.side-lists-nav {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  height: 100%;
+
+  .logo {
+    margin-left: 9px;
+  }
+
+  i {
+    font-size: 15px;
+  }
+
+  .list-index-ul {
+    font-size: 13px;
+    margin-left: 15px;
+    margin-right: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    li:hover {
+      background: $list-hover-color;
+      cursor: pointer;
+    }
+
+    // list item
+    .create-list-li {
+      position: relative;
+      i {
+        position: absolute;
+        padding: 3px 0px;
+      }
+      p {
+        position: relative;
+        left: 20px;
+        padding: 5px 0px;
+      }
+      .add-box {
+        position: absolute;
+        left: 150px;
+        top: 1px;
+        color: $search-color;
+      }
+      .add-box:hover {
+        color: $nav-bar-color;
+      }
+    }
+
+    .list-item-div:focus {
+      outline: none;
+    }
+    .list-item-div:hover {
+      background: $list-hover-color;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .list-item-div {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+
+      .list-head {
+        width: 20px;
+      }
+
+      .list-body {
+        line-height: 1.25rem;
+        width: 143px;
+
+        .active {
+          font-weight: bold;
+        }
+      }
+
+      .list-tail {
+        width: 20px;
+        .list-option-icon {
+          color: $search-color;
+          cursor: pointer;
+        }
+        .list-option-icon:hover {
+          color: $nav-bar-color;
+        }
+      }
+
+      div[class^='list-drop-down-menu-div-'] {
+        position: absolute;
+        background: white;
+        right: 17px;
+        top: 18px;
+        z-index: 2;
+        border-radius: 3px;
+        padding: 4px 0;
+        box-shadow: 0 1px 4px 1px rgba(0,0,0,0.2);
+
+        div:hover {
+          background: $list-nav-color;
+          cursor: pointer;
+        }
+        p {
+          line-height: 1.25rem;
+          padding: 3px 24px 0px 12px;
+        }
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: space-between;
+    //   padding: 6px 12px 0px 20px;
+    //   position: relative;
+    //
+    //   .list-item-a {
+    //     display: flex;
+    //     flex-direction: row;
+    //   }
+    //
+    //   .list-option-icon {
+    //     color: $search-color;
+    //     cursor: pointer;
+    //   }
+    //   .list-option-icon:hover {
+    //     color: $nav-bar-color;
+    //   }
+    //
+    //   div[class^='list-drop-down-menu-div-'] {
+    //     position: absolute;
+    //     background: white;
+    //     right: 17px;
+    //     top: 18px;
+    //     z-index: 3;
+    //     border-radius: 3px;
+    //     padding: 4px 0;
+    //     box-shadow: 0 1px 4px 1px rgba(0,0,0,0.2);
+    //
+    //     div:hover {
+    //       background: $list-nav-color;
+    //     }
+    //     p {
+    //       line-height: 1.25rem;
+    //       padding: 3px 24px 0px 12px;
+    //     }
+    //   }
+    //
+    //   .hidden {
+    //     display: none;
+    //   }
+    // }
+  }
+}

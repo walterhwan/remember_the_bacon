@@ -9,7 +9,8 @@ class TaskNav extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='task-nav-div'>
+        <div className='seperator'></div>
         <TaskCreateContainer />
         <TaskIndexContainer />
       </div>

@@ -74,17 +74,26 @@ $light-gray: #c1c1c1;
     background: #3383C8;
   }
 
-  input[type=button] {
-    background-color: rgba(0, 96, 191, 0.1);
-    color: white;
-    // opacity: 0.8;
-    cursor: pointer;
-    // border: 2px solid white;
-    border-radius: 3px;
-  }
+  .logout-div {
+    display: flex;
+    flex-direction: row;
 
-  input[type=button]:hover {
-    opacity: 1;
+    .settings-icon {
+      color: white;
+      padding: 7px 0px 0px;
+    }
+
+    .logout-button {
+      background-color: rgba(0, 96, 191, 0.1);
+      color: white;
+      // opacity: 0.8;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .logout-button:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -93,69 +102,35 @@ $light-gray: #c1c1c1;
   flex-direction: row;
   background: $list-nav-color;
   width: 100%;
-  height: calc(100vh - 40px);
+  height: calc(100vh);
 
+  // list_index.scss
   .side-lists-nav {
-    display: flex;
-    flex-direction: column;
-    width: 210px;
-    height: 100%;
-
-    .logo {
-      margin-left: 9px;
-    }
-
-    .list-index-ul {
-      font-size: 13px;
-      margin-left: 15px;
-      margin-right: 4px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-
-      li {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        i {
-          position: absolute;
-          padding: 3px 0px;
-        }
-        p {
-          position: relative;
-          left: 20px;
-          padding: 5px 0px;
-        }
-        .add-box {
-          position: absolute;
-          left: 150px;
-          top: 1px;
-          color: $nav-bar-color;
-        }
-        .add-box:hover {
-          color: $search-color;
-        }
-      }
-
-      li:hover {
-        background: $list-hover-color;
-        opacity: 0.8;
-        cursor: pointer;
-      }
-    }
-
-    i {
-      padding: 0px 2px;
-      font-size: 13px;
-    }
+    width: 200px;
   }
 
+  > div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
   .tasks-list-section {
     background: white;
-    width: 849px;
-    z-index: 1;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    width: 50%;
+    z-index: 1;
     position: relative;
     top: 9px;
+  }
+
+  .details-section {
+    background: #E2EEF7;
+    position: relative;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 50%;
+    top: 9px;
+    margin-right: 9px;
   }
 }
