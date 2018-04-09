@@ -26,3 +26,14 @@ task2 = Task.create!(list_id: list1.id, description: 'read js books', due_date: 
 task3 = Task.create!(list_id: list1.id, description: 'Remember to bring HDMI cable for the screen', due_date: nil, estimate: nil, completed: false)
 
 task3 = Task.create!(list_id: list2.id, description: 'Remember to act like human', due_date: nil, estimate: nil, completed: true)
+
+
+# Task edit (need to add auto submit)
+# Task details (add more fields?)
+# Fix rename list
+# When user logged in they don't have a list
+# Fix adding a empty task
+# Task mark complete
+# Fix delete option button where it will appear when its parent was clicked
+# Task select check box (and select only one)
+# clean selectedTaskIds when switching lists

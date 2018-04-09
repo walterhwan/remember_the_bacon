@@ -17,6 +17,9 @@ class TaskCreate extends React.Component {
     this.state = this.props.task;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+
+    this.handleUpdateComplete = this.handleUpdateComplete.bind(this);
+    this.handleUpdateEstimate = this.handleUpdateEstimate.bind(this);
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -25,7 +28,11 @@ class TaskCreate extends React.Component {
 
   update(field) {
     return (e) => {
-      this.setState({[field]: e.target.value});
+      if (field === 'completed') {
+        this.setState({[field]: e.target.checked});
+      } else {
+        this.setState({[field]: e.target.value});
+      }
     };
   }
 
@@ -44,6 +51,17 @@ class TaskCreate extends React.Component {
     this.props.updateTask(this.state);
   }
 
+  handleUpdateComplete(e) {
+    const newState = Object.assign({}, this.state, {completed: e.target.checked});
+    this.props.updateTask(newState);
+  }
+
+  handleUpdateEstimate(e) {
+    const newState = Object.assign({}, this.state, {estimate: e.target.value});
+    this.props.updateTask(newState);
+  }
+
+
   render() {
     const task = this.props.task;
     return (
@@ -57,12 +75,13 @@ class TaskCreate extends React.Component {
             onChange={this.update('description')} />
           <div className='task-estimate'>
             <label
+              className='task-estimate-label'
               htmlFor='task-estimate'>estimate
             </label>
             <select
               id='task-estimate'
               value={this.state.estimate || ''}
-              onChange={this.update('estimate')}>
+              onChange={this.handleUpdateEstimate}>
               <option value="2">2 minutes</option>
               <option value="5">5 minutes</option>
               <option value="10">10 minutes</option>
@@ -75,28 +94,22 @@ class TaskCreate extends React.Component {
           </div>
           <div className='task-completed'>
             <label
+              className='task-complete-label'
               htmlFor="task-completed">completed
             </label>
             <input
               type="checkbox"
               id="task-completed"
               name="subscribe"
-              value={this.state.completed}
+              value={this.state.completed.toString()}
               checked={this.state.completed}
-              onChange={this.update('completed')} />
+              onChange={this.handleUpdateComplete} />
           </div>
         </form>
       </div>
     );
   }
 }
-// <label
-//   htmlFor='task-estimate'>estimate
-// </label>
-// <input
-//   id="task-estimate"
-//   value={estTimeInText || ''}
-//   onChange={this.update('estimate')}/>
 // <DatePicker
 //   selected={this.state.date}
 //   onChange={this.handleChange} />

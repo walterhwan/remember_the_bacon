@@ -1,4 +1,5 @@
 $light-gray: #c1c1c1;
+$grey: #99999C;
 
 .task-list-details-section {
   position: relative;
@@ -34,8 +35,32 @@ $light-gray: #c1c1c1;
       }
     }
 
-    .task-completed {
+    .task-estimate-label, .task-complete-label {
+      position: relative;
+      font-size: 12px;
+      color: $grey;
+      margin: 0px 0px 0px 16px;
+    }
+
+    .task-estimate-label, .task-complete-label {
+
+    }
+
+    #task-completed, #task-estimate {
+      position: absolute;
+      left: 112px;
       cursor: pointer;
+    }
+    #task-estimate:focus {
+      outline: none;
+      border: 1px solid #2e8ceb;
+    }
+    #task-estimate:hover {
+      border: 1px solid $light-gray;
+    }
+    #task-estimate {
+      border: none;
+      background: white;
     }
   }
 }
