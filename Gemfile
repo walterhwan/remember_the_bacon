@@ -34,6 +34,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use JQuery
 gem 'jquery-rails'
 
+# use goldiloader
+gem 'goldiloader'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

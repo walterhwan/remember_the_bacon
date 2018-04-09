@@ -5,6 +5,7 @@ import TaskNavContainer from './tasks_nav_container';
 import ListIndexContainer from './list_index_container';
 import ListCreateContainer from '../lists/list_create_container';
 import ListUpdateContainer from '../lists/list_update_container';
+import ListDetailContainer from '../lists/list_detail_container';
 
 const applySearchOnFocusEvent = () => {
   let searchInput = document.getElementsByClassName('task-search')[0];
@@ -61,9 +62,7 @@ class MainPage extends React.Component {
             <section className='tasks-list-section'>
               <TaskNavContainer />
             </section>
-            <section className='details-section'>
-              List detail
-            </section>
+            <ListDetailContainer />
           </div>
         </main>
       </div>

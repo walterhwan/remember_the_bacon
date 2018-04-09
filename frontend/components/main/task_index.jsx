@@ -18,7 +18,10 @@ class TaskIndex extends React.Component {
 
   renderTaskItem(task) {
     return (
-      <li className='task-item' key={`tasks-${task.id}`}>
+      <li
+        className='task-item'
+        key={`tasks-${task.id}`}
+        onClick={() => console.log('clicked')} >
         <div className='task-white-space'> </div>
         <div className='task-divider'></div>
         <div className={`task-check-box-${task.id}`}>

@@ -56,8 +56,7 @@ class TaskCreate extends React.Component {
           <div className=""></div>
           <input
             type="submit"
-            value="Add Task"
-            onClick={()=>console.log('clicked')}>
+            value="Add Task" >
           </input>
         </div>
       </form>

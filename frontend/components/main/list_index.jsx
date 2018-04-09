@@ -8,6 +8,17 @@ class ListIndex extends React.Component {
     this.handleDeleteList = this.handleDeleteList.bind(this);
   }
 
+  applyListItemEvent() {
+    const listItemDiv = document.getElementsByClassName('list-item-div');
+    const listBody = document.getElementsByClassName('list-body');
+    listBody.addEventListener('mouseover', () => {
+      listItemDiv.classList.add('hovered');
+    });
+    listBody.addEventListener('mouseout', () => {
+      listItemDiv.classList.remove('hovered');
+    });
+  }
+
   renderListItem(list) {
     return (
       <div
@@ -16,7 +27,8 @@ class ListIndex extends React.Component {
         key={`list-item-${list.id}`}>
         <div className='list-head'>
         </div>
-        <div className='list-body'>
+        <div
+          className='list-body'>
           <NavLink
             className='list-item-a'
             activeClassName="active"
@@ -31,10 +43,12 @@ class ListIndex extends React.Component {
             settings_applications
           </i>
         </div>
-        <div className={`list-drop-down-menu-div-${list.id} hidden`}
+        <div
+          className={`list-drop-down-menu-div-${list.id} hidden`}
+          key={`list-dropdown-${list.id}`}
           id={`list-drop-down-menu-div-${list.id}`}>
           <div
-            onClick={this.handleOpenModal('update')}>
+            onClick={this.handleOpenModal('update', list.id)}>
             <p>Rename list</p>
           </div>
           <div
@@ -48,18 +62,17 @@ class ListIndex extends React.Component {
 
   handleOpenDropDown(id) {
     return () => {
-      console.log('clicked drop down');
       const dropDown = document.getElementById(`list-drop-down-menu-div-${id}`);
       if (dropDown.classList.contains('hidden')) {
         dropDown.classList.remove('hidden');
       } else {
         dropDown.classList.add('hidden');
       }
-
-      const container = document.getElementsByClassName('list-item-div')[0];
-      container.addEventListener("focusout", function () {
-        dropDown.classList.add('hidden');
-      });
+      //
+      // const container = document.getElementsByClassName('list-item-div')[0];
+      // container.addEventListener("focusout", function () {
+      //   dropDown.classList.add('hidden');
+      // });
     };
   }
 
@@ -69,8 +82,11 @@ class ListIndex extends React.Component {
     };
   }
 
-  handleOpenModal(formType) {
+  handleOpenModal(formType, id) {
     return () => {
+      // const dropDown = document.getElementById(`list-drop-down-menu-div-${id}`);
+      // dropDown.classList.add('hidden');
+
       const modals = document.getElementsByClassName(`modal ${formType}`);
       for (const modal of modals) {
         modal.classList.add('is-open');

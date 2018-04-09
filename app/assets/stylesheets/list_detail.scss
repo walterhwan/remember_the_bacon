@@ -1,0 +1,44 @@
+
+.details-section {
+  background: #E2EEF7;
+  position: relative;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: 50%;
+  top: 9px;
+  margin-right: 9px;
+
+  .list-name-div {
+    margin: 37px 0px 21px 27px;
+    font-size: 18px;
+  }
+
+  .list-detail-div {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+
+    .detail-item {
+      background: #D8E9F5;
+      margin: 0px 7px 0px 0px;
+      border-radius: 5px;
+      padding: 9px 13px 13px 9px;
+
+      .num {
+        font-size: 21px;
+        font-weight: bold;
+        padding: 0px 0px 4px 0px;
+      }
+    }
+
+    .list-num-task {
+      margin-left: 28px;
+      .num {
+        color: #0064BA;
+      }
+    }
+    .list-num-completed-task {
+      color: #828C93;
+    }
+  }
+}

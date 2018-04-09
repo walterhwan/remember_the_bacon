@@ -6,12 +6,12 @@ import Root from './components/root';
 // testing
 import { login, logout, signup } from './util/session_api_util';
 import {
-  fetchTaskIndex,
-  fetchTask,
-  createTask,
-  updateTask,
-  deleteTask
-} from './actions/task_actions';
+  fetchListIndex,
+  fetchList,
+  createList,
+  updateList,
+  deleteList
+} from './actions/list_actions';
 // test end
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // testing
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchTaskIndex = fetchTaskIndex;
-  window.fetchTask = fetchTask;
-  window.createTask = createTask;
-  window.updateTask = updateTask;
-  window.deleteTask = deleteTask;
+  window.fetchListIndex = fetchListIndex;
+  window.fetchList = fetchList;
+  window.createList = createList;
+  window.updateList = updateList;
+  window.deleteList = deleteList;
   window.logout = logout;
   // testing end
 });
