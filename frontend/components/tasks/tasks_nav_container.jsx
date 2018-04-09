@@ -11,9 +11,10 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ entities }) => {
-  const { tasks } = entities;
+  const { tasks, selectedTaskIds } = entities;
   return {
     tasks: Object.values(tasks),
+    selectedTaskIds,
   };
 };
 

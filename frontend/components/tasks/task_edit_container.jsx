@@ -15,12 +15,15 @@ const defaultTask = {
 };
 
 const mapStateToProps = ({ entities }, ownProps) => {
-  // const selectedTasks = ownProps.selectedTasks;
-  let task = ownProps.task;
-  // if (selectedTasks.size === 1) {
-  //   task = entities.tasks[selectedTasks[0]];
-  // }
-  return { task };
+  let { tasks, selectedTaskIds} = entities;
+  let task = defaultTask;
+  if (selectedTaskIds.length === 1) {
+    task = tasks[selectedTaskIds[0]];
+  }
+  return {
+    task,
+    selectedTaskIds,
+   };
 };
 
 const mapDispatchToProps = (dispatch) => {

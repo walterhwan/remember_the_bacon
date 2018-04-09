@@ -24,19 +24,9 @@ const applySearchOnFocusEvent = () => {
   });
 };
 
-const defaultTask = {
-  list_id: '',
-  description: '',
-  due_date: '',
-  estimate: '',
-  completed: false,
-};
-
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
-
-    this.selectedTasks = new Set();
   }
 
   componentDidMount() {
@@ -49,12 +39,6 @@ class MainPage extends React.Component {
   // <i class="material-icons">check_box_outline_blank</i>
 
   render() {
-    let selectedTask;
-    let task = defaultTask;
-    if (this.selectedTasks.size !== 0) {
-      task = this.props.tasks[this.selectedTasks[0]];
-    }
-    // debugger;
     return (
       <div>
         <div className='modal-screen modal'></div>
@@ -77,10 +61,10 @@ class MainPage extends React.Component {
           </nav>
           <div className='task-list-details-section'>
             <section className='tasks-nav-section'>
-              <TaskNavContainer selectedTasks={this.selectedTasks}/>
+              <TaskNavContainer />
             </section>
             <ListDetailContainer />
-            <TaskEditContainer task={task} />
+            <TaskEditContainer />
           </div>
         </main>
       </div>

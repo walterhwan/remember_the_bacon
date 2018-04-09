@@ -6,28 +6,36 @@ $light-gray: #c1c1c1;
   .task-details-section {
     position: absolute;
     background: white;
+    border-left: 2px solid $light-gray;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    width: calc(50% - 4px);
+    width: calc(50% - 6px);
     z-index: 2;
     top: 9px;
     right: 0px;
     margin-right: 9px;
 
-    .task-name-div {
+    .task-details {
+      display: flex;
+      flex-direction: column;
       margin: 37px 0px 21px 27px;
 
-      input:hover {
+      .task-description:hover {
         border: 1px solid $light-gray;
       }
-      input:focus {
+      .task-description:focus {
         outline: none;
         border: 1px solid #2e8ceb;
       }
-      input {
+      .task-description {
+        border: 1px solid white;
         border-radius: 3px;
         font-size: 18px;
       }
+    }
+
+    .task-completed {
+      cursor: pointer;
     }
   }
 }

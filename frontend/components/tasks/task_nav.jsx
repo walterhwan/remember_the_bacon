@@ -8,7 +8,7 @@ class TaskNav extends React.Component {
     super(props);
 
     this.handleDeleteTask = this.handleDeleteTask.bind(this);
-    this.selectedTasks = this.props.selectedTasks;
+    // this.selectedTasks = this.props.selectedTasks;
   }
 
   handleOpenTaskOption(e) {
@@ -23,7 +23,7 @@ class TaskNav extends React.Component {
 
   handleDeleteTask() {
     const deleteTask = this.props.deleteTask;
-    this.selectedTasks.forEach((taskId) => {
+    this.props.selectedTaskIds.forEach((taskId) => {
       deleteTask(taskId);
     });
   }
@@ -48,7 +48,7 @@ class TaskNav extends React.Component {
           </div>
         </div>
         <TaskCreateContainer />
-        <TaskIndexContainer selectedTasks={this.selectedTasks}/>
+        <TaskIndexContainer />
       </div>
     );
   }

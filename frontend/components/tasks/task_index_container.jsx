@@ -6,15 +6,18 @@ import {
   fetchTask,
   CreateTask,
   updateTask,
-  deleteTask
+  deleteTask,
+  addSelectedTask,
+  deleteSelectedTask,
 } from '../../actions/task_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ entities }, ownProps) => {
-  const { tasks } = entities;
+  const { tasks, selectedTaskIds } = entities;
   return {
     tasks: Object.values(tasks),
+    selectedTaskIds,
     listId: ownProps.match.params.listId,
   };
 };
@@ -27,6 +30,8 @@ const mapDispatchToProps = (dispatch) => {
     CreateTask: (task) => dispatch(CreateTask(task)),
     updateTask: (task) => dispatch(updateTask(task)),
     deleteTask: (id) => dispatch(deleteTask(id)),
+    addSelectedTask: (task) => dispatch(addSelectedTask(task)),
+    deleteSelectedTask: (task) => dispatch(deleteSelectedTask(task)),
   };
 };
 

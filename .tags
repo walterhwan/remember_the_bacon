@@ -87,13 +87,6 @@ create	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_
 destory	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/users_controller.rb	/^  def destory$/;"	method	line:13	class:Api
 user_params	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/users_controller.rb	/^  def user_params$/;"	method	line:18	class:Api
 switch	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/frontend/reducers/tasks_reducer.js	/^  switch(action.type) {$/;"	function	line:9
-Api	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^class Api::TasksController < ApplicationController$/;"	class	line:1
-index	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def index$/;"	method	line:4	class:Api
-show	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def show$/;"	method	line:13	class:Api
-create	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def create$/;"	method	line:18	class:Api
-update	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def update$/;"	method	line:28	class:Api
-destory	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def destory$/;"	method	line:38	class:Api
-task_params	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def task_params$/;"	method	line:45	class:Api
 html, body, div, span, applet, object, iframe	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/reset.scss	/^html, body, div, span, applet, object, iframe,$/;"	function	line:1
 h1, h2, h3, h4, h5, h6, p, blockquote, pre	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/reset.scss	/^h1, h2, h3, h4, h5, h6, p, blockquote, pre,$/;"	function	line:2
 a, abbr, acronym, address, big, cite, code	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/reset.scss	/^a, abbr, acronym, address, big, cite, code,$/;"	function	line:3
@@ -228,3 +221,18 @@ div[class^='list-drop-down-menu-div-']	/Users/walter/Documents/Programing/Ruby P
 div:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_index.scss	/^  div:hover {$/;"	function	line:154
 p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_index.scss	/^  p {$/;"	function	line:158
 .hidden	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_index.scss	/^.hidden {$/;"	function	line:164
+light-gray	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^$light-gray: #c1c1c1;$/;"	function	line:1
+.task-list-details-section	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^.task-list-details-section {$/;"	function	line:3
+.task-details-section	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^  .task-details-section {$/;"	function	line:6
+.task-details	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    .task-details {$/;"	function	line:18
+.task-description:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^      .task-description:hover {$/;"	function	line:23
+.task-description:focus	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^      .task-description:focus {$/;"	function	line:26
+.task-description	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^      .task-description {$/;"	function	line:30
+.task-completed	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    .task-completed {$/;"	function	line:37
+Api	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^class Api::TasksController < ApplicationController$/;"	class	line:1
+index	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def index$/;"	method	line:4	class:Api
+show	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def show$/;"	method	line:13	class:Api
+create	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def create$/;"	method	line:18	class:Api
+update	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def update$/;"	method	line:28	class:Api
+destroy	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def destroy$/;"	method	line:38	class:Api
+task_params	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def task_params$/;"	method	line:46	class:Api

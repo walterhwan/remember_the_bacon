@@ -7,6 +7,22 @@ export const REMOVE_TASK = 'REMOVE_TASK';
 export const RECEIVE_TASK_FOR_LIST = 'RECEIVE_TASK_FOR_LIST';
 export const REMOVE_TASK_FOR_LIST = 'REMOVE_TASK_FOR_LIST';
 
+export const RECEIVE_SELECTED_TASK = 'RECEIVE_SELECTED_TASK';
+export const REMOVE_SELECTED_TASK = 'REMOVE_SELECTED_TASK';
+
+const receiveSelectedTask = (task) => {
+  return {
+    type: RECEIVE_SELECTED_TASK,
+    task
+  };
+};
+
+const removeSelectedTask = (task) => {
+  return {
+    type: REMOVE_SELECTED_TASK,
+    task
+  };
+};
 
 const receiveTasks = (tasks) => {
   return {
@@ -35,6 +51,14 @@ const removeTaskForList = (task) => ({
   taskId: task.id,
   task,
 });
+
+export const addSelectedTask = (task) => dispatch => {
+  dispatch(receiveSelectedTask(task));
+};
+
+export const deleteSelectedTask = (task) => dispatch => {
+  dispatch(removeSelectedTask(task));
+};
 
 export const fetchTaskIndex = () => dispatch => {
   return TaskAPIUtil.requestTaskIndex()
