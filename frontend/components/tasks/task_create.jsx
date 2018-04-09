@@ -33,7 +33,9 @@ class TaskCreate extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createTask(this.state);
+    if (this.state.description.trim() !== '') {
+      this.props.createTask(this.state);
+    }
     this.setState(this.props.task);
   }
 

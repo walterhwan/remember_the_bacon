@@ -6,10 +6,10 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = ({ entities }) => {
+const mapStateToProps = ({ entities }, ownProps) => {
   return {
     task: {
-      list_id: '',
+      list_id: ownProps.match.params.listId,
       description: '',
       due_date: '',
       estimate: '',

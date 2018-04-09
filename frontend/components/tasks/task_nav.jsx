@@ -2,11 +2,13 @@ import React from 'react';
 import TaskIndexContainer from './task_index_container';
 import TaskCreateContainer from './task_create_container';
 
+
 class TaskNav extends React.Component {
   constructor(props) {
     super(props);
 
     this.handleDeleteTask = this.handleDeleteTask.bind(this);
+    this.selectedTasks = this.props.selectedTasks;
   }
 
   handleOpenTaskOption(e) {
@@ -20,7 +22,10 @@ class TaskNav extends React.Component {
   }
 
   handleDeleteTask() {
-    console.log('delete task');
+    const deleteTask = this.props.deleteTask;
+    this.selectedTasks.forEach((taskId) => {
+      deleteTask(taskId);
+    });
   }
 
   render() {
@@ -43,7 +48,7 @@ class TaskNav extends React.Component {
           </div>
         </div>
         <TaskCreateContainer />
-        <TaskIndexContainer />
+        <TaskIndexContainer selectedTasks={this.selectedTasks}/>
       </div>
     );
   }

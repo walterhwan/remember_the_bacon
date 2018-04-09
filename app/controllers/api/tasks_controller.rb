@@ -35,9 +35,10 @@ class Api::TasksController < ApplicationController
     end
   end
 
-  def destory
+  def destroy
     @task = current_user.tasks.find_by(id: params[:id])
-    render json: {}
+    @task.destroy
+    render :show
   end
 
   private

@@ -114,13 +114,14 @@ $light-gray: #c1c1c1;
     flex-direction: row;
     width: 100%;
   }
-  .tasks-list-section {
+  
+  .tasks-nav-section {
+    position: relative;
     background: white;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     width: 50%;
     z-index: 1;
-    position: relative;
     top: 9px;
   }
 

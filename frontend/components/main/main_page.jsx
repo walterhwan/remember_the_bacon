@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoutContainer from '../session/logout_container';
-import TaskNavContainer from './tasks_nav_container';
+import TaskNavContainer from '../tasks/tasks_nav_container';
 import ListIndexContainer from './list_index_container';
 import ListCreateContainer from '../lists/list_create_container';
 import ListUpdateContainer from '../lists/list_update_container';
 import ListDetailContainer from '../lists/list_detail_container';
+import TaskEditContainer from '../tasks/task_edit_container';
 
 const applySearchOnFocusEvent = () => {
   let searchInput = document.getElementsByClassName('task-search')[0];
@@ -23,9 +24,19 @@ const applySearchOnFocusEvent = () => {
   });
 };
 
+const defaultTask = {
+  list_id: '',
+  description: '',
+  due_date: '',
+  estimate: '',
+  completed: false,
+};
+
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
+
+    this.selectedTasks = new Set();
   }
 
   componentDidMount() {
@@ -38,6 +49,12 @@ class MainPage extends React.Component {
   // <i class="material-icons">check_box_outline_blank</i>
 
   render() {
+    let selectedTask;
+    let task = defaultTask;
+    if (this.selectedTasks.size !== 0) {
+      task = this.props.tasks[this.selectedTasks[0]];
+    }
+    // debugger;
     return (
       <div>
         <div className='modal-screen modal'></div>
@@ -58,17 +75,23 @@ class MainPage extends React.Component {
             <div className="logo"/>
             <ListIndexContainer />
           </nav>
-          <div>
-            <section className='tasks-list-section'>
-              <TaskNavContainer />
+          <div className='task-list-details-section'>
+            <section className='tasks-nav-section'>
+              <TaskNavContainer selectedTasks={this.selectedTasks}/>
             </section>
             <ListDetailContainer />
+            <TaskEditContainer task={task} />
           </div>
         </main>
       </div>
     );
   }
 }
+// <div className='task-details-section'>
+//   <div className='task-name-div'>
+//     <input value='Task Name' />
+//   </div>
+// </div>
 
 
   // <input type='button' value='Menu' />

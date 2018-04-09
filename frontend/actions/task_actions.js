@@ -5,6 +5,8 @@ export const RECEIVE_TASK = 'RECEIVE_TASK';
 export const REMOVE_TASK = 'REMOVE_TASK';
 
 export const RECEIVE_TASK_FOR_LIST = 'RECEIVE_TASK_FOR_LIST';
+export const REMOVE_TASK_FOR_LIST = 'REMOVE_TASK_FOR_LIST';
+
 
 const receiveTasks = (tasks) => {
   return {
@@ -19,12 +21,18 @@ const receiveTask = (task) => ({
 });
 
 const removeTask = (taskId) => ({
-  type: RECEIVE_TASK,
+  type: REMOVE_TASK,
   taskId,
 });
 
 const receiveTaskForList = (task) => ({
   type: RECEIVE_TASK_FOR_LIST,
+  task,
+});
+
+const removeTaskForList = (task) => ({
+  type: REMOVE_TASK_FOR_LIST,
+  taskId: task.id,
   task,
 });
 
@@ -54,7 +62,7 @@ export const createTask = (taskForm) => dispatch => {
     .then(
       (task) => {
         dispatch(receiveTask(task));
-        return dispatch(receiveTaskForList(task));
+        dispatch(receiveTaskForList(task));
       }
     );
 };
@@ -69,6 +77,9 @@ export const updateTask = (taskForm) => dispatch => {
 export const deleteTask = (id) => dispatch => {
   return TaskAPIUtil.deleteTask(id)
     .then(
-      (task) => dispatch(removeTask(id))
+      (task) => {
+        dispatch(removeTask(task.id));
+        dispatch(removeTaskForList(task));
+      }
     );
 };

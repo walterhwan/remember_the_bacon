@@ -4,7 +4,7 @@ import {
   RECEIVE_LISTS, RECEIVE_LIST, REMOVE_LIST
 } from '../actions/list_actions';
 import {
-  RECEIVE_TASK_FOR_LIST
+  RECEIVE_TASK_FOR_LIST, REMOVE_TASK_FOR_LIST
 } from '../actions/task_actions';
 
 const listReducer = (oldState = {}, action) => {
@@ -22,6 +22,12 @@ const listReducer = (oldState = {}, action) => {
     case RECEIVE_TASK_FOR_LIST:
       newState = merge({}, oldState);
       newState[action.task.list_id]['task_ids'].push(action.task.id);
+      return newState;
+    case REMOVE_TASK_FOR_LIST:
+      newState = merge({}, oldState);
+      const newTaskIds = newState[action.task.list_id]['task_ids']
+      .filter(el => el !== action.taskId);
+      newState[action.task.list_id]['task_ids'] = newTaskIds;
       return newState;
     default:
       return oldState;

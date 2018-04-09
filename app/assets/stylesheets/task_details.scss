@@ -1,0 +1,33 @@
+$light-gray: #c1c1c1;
+
+.task-list-details-section {
+  position: relative;
+
+  .task-details-section {
+    position: absolute;
+    background: white;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: calc(50% - 4px);
+    z-index: 2;
+    top: 9px;
+    right: 0px;
+    margin-right: 9px;
+
+    .task-name-div {
+      margin: 37px 0px 21px 27px;
+
+      input:hover {
+        border: 1px solid $light-gray;
+      }
+      input:focus {
+        outline: none;
+        border: 1px solid #2e8ceb;
+      }
+      input {
+        border-radius: 3px;
+        font-size: 18px;
+      }
+    }
+  }
+}

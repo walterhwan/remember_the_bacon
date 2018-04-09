@@ -1,7 +1,8 @@
 $very-light-gray: #EEEEEE;
 $light-gray: #c1c1c1;
 $button-gray: #6D6D6D;
-$list-nav-color: #D4E8F4; 
+$list-nav-color: #D4E8F4;
+$yellow: #FFFEDA;
 
 .task-nav-div {
   display: flex;
@@ -119,6 +120,9 @@ $list-nav-color: #D4E8F4;
   }
 }
 
+.task-item:hover {
+  background-color: $yellow;
+}
 .task-item {
   display: flex;
   flex-direction: row;
@@ -160,6 +164,6 @@ $list-nav-color: #D4E8F4;
   }
 }
 
-.task-item:hover {
-  background-color: #FFFEDA;
+.selected-task {
+  background-color: $yellow;
 }

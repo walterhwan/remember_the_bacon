@@ -4,6 +4,7 @@ class TaskIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.selectedTasks = props.selectedTasks;
   }
   componentDidMount() {
     this.props.fetchListTasks(this.props.listId)
@@ -16,12 +17,26 @@ class TaskIndex extends React.Component {
     }
   }
 
+  handleTaskOnClick(id) {
+    return (e) => {
+      const taskItem = e.currentTarget;
+      if (taskItem.classList.contains('selected-task')) {
+        taskItem.classList.remove('selected-task');
+        this.selectedTasks.delete(id);
+      } else {
+        taskItem.classList.add('selected-task');
+        this.selectedTasks.add(id);
+      }
+      console.log(this.selectedTasks);
+    };
+  }
+
   renderTaskItem(task) {
     return (
       <li
         className='task-item'
         key={`tasks-${task.id}`}
-        onClick={() => console.log('clicked')} >
+        onClick={this.handleTaskOnClick(task.id)} >
         <div className='task-white-space'> </div>
         <div className='task-divider'></div>
         <div className={`task-check-box-${task.id}`}>
