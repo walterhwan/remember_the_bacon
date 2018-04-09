@@ -14,7 +14,7 @@ import SignupFormContainer from './session/signup_form_container.jsx';
 const App = () => (
   <div>
     <Switch>
-      <ProtectedRoute path='/main/lists/:listId' component={MainPage} />
+      <ProtectedRoute path='/lists/:listId' component={MainPage} />
       <AuthRoute path='/login' component={SessionLogin} />
       <AuthRoute path='/signup' component={SessionSignup} />
       <AuthRoute path='/' component={LandingPage} />

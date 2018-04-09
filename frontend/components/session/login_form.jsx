@@ -18,7 +18,7 @@ class LoginForm extends React.Component {
     e.preventDefault();
 
     this.props.login(this.state)
-      .then(() => this.props.history.push('/main/lists/0'));
+      .then(() => this.props.history.push('/'));
   }
 
   handleDemoLogin(e) {
@@ -27,7 +27,7 @@ class LoginForm extends React.Component {
       password: 'demodemo'
     };
     this.props.login(demoUser)
-      .then((user) => this.props.history.push(`/main/lists/0`));
+      .then(() => this.props.history.push(`/`));
   }
 
   renderErrorMessage() {

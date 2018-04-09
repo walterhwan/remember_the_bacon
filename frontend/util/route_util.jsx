@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { withRouter, Redirect, Route } from 'react-router-dom';
 
 
-const Auth = ({component: Component, path, loggedIn, exact}) => {
+const Auth = ({component: Component, path, loggedIn, exact, currentUser}) => {
   return (
     <Route path={path} exact={exact} render={(props) => (
       !loggedIn ? (
         <Component {...props} />
       ) : (
-        <Redirect to="/main" />
+        <Redirect to={`/lists/${currentUser.list_ids[0]}`} />
       )
     )}/>
   );
@@ -27,7 +27,8 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
 
 const mapStateToProps = state => {
   return {
-    loggedIn: Boolean(state.session.currentUser)
+    loggedIn: Boolean(state.session.currentUser),
+    currentUser: state.session.currentUser,
   };
 };
 

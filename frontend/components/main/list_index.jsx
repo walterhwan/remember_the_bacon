@@ -32,7 +32,7 @@ class ListIndex extends React.Component {
           <NavLink
             className='list-item-a'
             activeClassName="active"
-            to={`/main/lists/${list.id}`}>
+            to={`/lists/${list.id}`}>
             <p>{list.name}</p>
           </NavLink>
         </div>

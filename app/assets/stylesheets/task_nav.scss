@@ -1,6 +1,7 @@
 $very-light-gray: #EEEEEE;
 $light-gray: #c1c1c1;
 $button-gray: #6D6D6D;
+$list-nav-color: #D4E8F4; 
 
 .task-nav-div {
   display: flex;
@@ -14,6 +15,7 @@ $button-gray: #6D6D6D;
 .task-tool-bar {
   display: flex;
   flex-direction: row;
+  position: relative;
   width: 100%;
   height: 50px;
 
@@ -39,7 +41,29 @@ $button-gray: #6D6D6D;
       margin: 0px 0px 0px -9px;
     }
   }
+
+  .task-drop-down:hover {
+    background-color: $list-nav-color;
+  }
+  .task-drop-down {
+    position: absolute;
+    background: white;
+    top: 30px;
+    left: 0px;
+    border-radius: 3px;
+    margin: 10px 17px;
+    padding: 0px 3px 0px 5px;
+    user-select: none;
+    border: 1px solid $light-gray;
+    font-size: 14px;
+    box-shadow: 0 1px 4px 1px rgba(0,0,0,0.2);
+
+    p {
+      padding: 8px 7px 8px 7px;
+    }
+  }
 }
+
 
 .task-bar {
   display: flex;
