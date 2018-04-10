@@ -81,10 +81,17 @@ class TaskIndex extends React.Component {
 
   render() {
     const { tasks } = this.props;
+    const selectedTab = document.querySelectorAll('.task-tab, .selected')[0];
+    // const displayCompleted =
+    // (selectedTab) ? Boolean(selectedTab.getAttribute('data')) : false;
+    const displayTasks = tasks.slice().filter((el) => {
+      return this.props.showCompleted === el.completed;
+    }).reverse();
+    // debugger;
     return (
       <ul className='task-index'>
         {
-          tasks.slice().reverse().map((task)=> this.renderTaskItem(task))
+          displayTasks.map((task)=> this.renderTaskItem(task))
         }
       </ul>
     );

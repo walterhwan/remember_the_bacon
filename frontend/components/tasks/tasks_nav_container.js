@@ -8,6 +8,7 @@ import {
   deleteTask,
   deleteAllSelectedTask
 } from '../../actions/task_actions';
+import { switchTab } from '../../actions/ui_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
@@ -27,6 +28,7 @@ const mapDispatchToProps = (dispatch) => {
     updateTask: (task) => dispatch(updateTask(task)),
     deleteTask: (id) => dispatch(deleteTask(id)),
     deleteAllSelectedTask: () => dispatch(deleteAllSelectedTask()),
+    switchTab: (showCompleted) => dispatch(switchTab(showCompleted)),
   };
 };
 

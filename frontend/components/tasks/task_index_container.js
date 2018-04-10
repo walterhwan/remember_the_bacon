@@ -14,12 +14,14 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = ({ entities }, ownProps) => {
+const mapStateToProps = ({ entities, ui }, ownProps) => {
   const { tasks, selectedTaskIds } = entities;
+  const { showCompleted } = ui;
   return {
     tasks: Object.values(tasks),
     selectedTaskIds,
     listId: ownProps.match.params.listId,
+    showCompleted,
   };
 };
 

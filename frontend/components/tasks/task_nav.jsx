@@ -8,6 +8,7 @@ class TaskNav extends React.Component {
     super(props);
 
     this.handleDeleteTask = this.handleDeleteTask.bind(this);
+    this.handleSelectTab = this.handleSelectTab.bind(this);
   }
 
   handleToggleTaskOption(e) {
@@ -52,7 +53,16 @@ class TaskNav extends React.Component {
   }
 
   handleSelectTab(e) {
+    const tabs = document.getElementsByClassName('task-tab');
+    const currentTab = e.currentTarget;
+    for (const tab of tabs) {
+      tab.classList.remove('selected');
+    }
+    currentTab.classList.add('selected');
 
+    const selectedTab = document.querySelector('.task-tab.selected');
+    const showCompleted = (selectedTab.getAttribute('data') === 'true');
+    this.props.switchTab(showCompleted);
   }
 
   render() {
@@ -61,12 +71,14 @@ class TaskNav extends React.Component {
         <div className='tab-nav'>
           <p
             onClick={this.handleSelectTab}
-            className='task-tab selected'>
+            className='task-tab selected'
+            data='false'>
             Incomplete
           </p>
           <p
             onClick={this.handleSelectTab}
-            className='task-tab'>
+            className='task-tab'
+            data='true'>
             Completed
           </p>
         </div>
