@@ -60,7 +60,7 @@ class ListForm extends React.Component {
             <li>
               <input
                 type='submit'
-                value='Add'>
+                value={formType === 'create' ? 'Add' : 'Save'}>
               </input>
             </li>
             <li>

@@ -3,6 +3,15 @@ import React from 'react';
 class ListDetail extends React.Component {
   render() {
     const list = this.props.list;
+    const hours = Math.floor(list.total_estimated / 60);
+    const minutes = list.total_estimated % 60;
+    // let estText;
+    // if (minutes === 0) {
+    //   estText = `${hours}hr`;
+    // } else {
+    //   estText = `${hours}hr ${minutes}min`;
+    // }
+
     return (
       <section className='details-section'>
         <div className='list-name-div'>{list.name}</div>
@@ -10,6 +19,12 @@ class ListDetail extends React.Component {
           <div className='list-num-task detail-item'>
             <p className='num'>{list.task_ids.length}</p>
             <p className='type'>task</p>
+          </div>
+          <div className='list-est-time detail-item'>
+            <p className='num'>
+              {hours}<span>hr</span>{minutes}<span>min</span>
+            </p>
+            <p className='type'>estimated</p>
           </div>
           <div className='list-num-completed-task detail-item'>
             <p className='num'>{list.num_completed}</p>

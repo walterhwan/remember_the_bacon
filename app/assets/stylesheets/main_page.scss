@@ -102,7 +102,8 @@ $light-gray: #c1c1c1;
   flex-direction: row;
   background: $list-nav-color;
   width: 100%;
-  height: calc(100vh);
+  height: 100vh;
+  min-height: 750px;
 
   // list_index.scss
   .side-lists-nav {
@@ -114,7 +115,7 @@ $light-gray: #c1c1c1;
     flex-direction: row;
     width: 100%;
   }
-  
+
   .tasks-nav-section {
     position: relative;
     background: white;

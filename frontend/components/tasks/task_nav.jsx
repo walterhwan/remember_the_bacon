@@ -12,21 +12,33 @@ class TaskNav extends React.Component {
 
   handleToggleTaskOption(e) {
     const taskToolBar = e.target;
+    const taskOption = document.getElementById('task-option');
     const taskDropDown = document.getElementById('task-drop-down');
     if (taskDropDown.classList.contains('hidden')) {
       taskDropDown.classList.remove('hidden');
+      taskOption.classList.add('task-option-on-click');
     } else {
       taskDropDown.classList.add('hidden');
+      taskOption.classList.remove('task-option-on-click');
     }
+  }
+
+  handleCloseTaskOption(e) {
+    const taskOption = document.getElementById('task-option');
+    const taskDropDown = document.getElementById('task-drop-down');
+    taskDropDown.classList.add('hidden');
+    taskOption.classList.remove('task-option-on-click');
   }
 
   handleDeleteTask() {
     const deleteTask = this.props.deleteTask;
+    const taskOption = document.getElementById('task-option');
     this.props.selectedTaskIds.forEach((taskId) => {
       deleteTask(taskId);
     });
     const taskDropDown = document.getElementById('task-drop-down');
     taskDropDown.classList.add('hidden');
+    taskOption.classList.remove('task-option-on-click');
   }
 
   render() {
@@ -37,6 +49,7 @@ class TaskNav extends React.Component {
           className='task-tool-bar'>
           <div
             className='task-option'
+            id='task-option'
             onClick={ this.handleToggleTaskOption }>
             <i className="material-icons more-horiz">more_horiz</i>
             <i className="material-icons arrow-drop-down">

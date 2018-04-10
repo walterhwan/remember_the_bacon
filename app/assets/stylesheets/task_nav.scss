@@ -21,6 +21,12 @@ $dark-grey: #666660;
   width: 100%;
   height: 50px;
 
+  .task-option:hover {
+    color: black;
+  }
+  .task-option-on-click {
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25);
+  }
   .task-option {
     display: flex;
     flex-direction: row;
@@ -103,11 +109,8 @@ $dark-grey: #666660;
   height: 32px;
   margin: 5px 17px;
   margin-top: 0px;
-  // for testing
-  // background: #F2F2F2;
 
   input[type=submit]{
-    /* visibility: hidden; */
     float: right;
     background: #2881E8;
     padding-right: 14px;
@@ -122,6 +125,12 @@ $dark-grey: #666660;
   }
 }
 
+html,
+.task-index {
+  height: 750px;
+  overflow-y: auto;
+}
+
 .task-item:hover {
   background-color: $yellow;
 }
@@ -131,8 +140,6 @@ $dark-grey: #666660;
   border-bottom: 1px dotted #EEEEEE;
   cursor: pointer;
   font-size: .8125rem;
-  // display: table-cell;
-  // vertical-align: top;
 
   .task-white-space {
     width: 13.3px;

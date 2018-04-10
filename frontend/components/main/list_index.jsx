@@ -4,28 +4,31 @@ import { NavLink, Link } from 'react-router-dom';
 class ListIndex extends React.Component {
   componentDidMount() {
     this.props.fetchListIndex();
+      // .then(() => this.applyListItemEvent());
 
     this.handleDeleteList = this.handleDeleteList.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
   }
 
-  applyListItemEvent() {
-    const listItemDiv = document.getElementsByClassName('list-item-div');
-    const listBody = document.getElementsByClassName('list-body');
-    listBody.addEventListener('mouseover', () => {
-      listItemDiv.classList.add('hovered');
-    });
-    listBody.addEventListener('mouseout', () => {
-      listItemDiv.classList.remove('hovered');
-    });
-  }
+  // TODO: fix hover list item
+  // applyListItemEvent() {
+  //   const listItemDiv = document.getElementsByClassName('list-item-div');
+  //   const listBody = document.getElementsByClassName('list-body');
+  //   listBody.addEventListener('mouseover', () => {
+  //     listItemDiv.classList.add('hovered');
+  //   });
+  //   listBody.addEventListener('mouseout', () => {
+  //     listItemDiv.classList.remove('hovered');
+  //   });
+  // }
 
   renderListItem(list) {
     return (
       <div
         className='list-item-div'
         tabIndex="-1"
-        key={`list-item-${list.id}`}>
+        key={`list-item-${list.id}`}
+        onBlur={this.handleOutFocusEvent(list.id)}>
         <div className='list-head'>
         </div>
         <div
@@ -40,7 +43,7 @@ class ListIndex extends React.Component {
         <div className='list-tail'>
           <i
             className="material-icons list-option-icon"
-            onClick={this.handleOpenDropDown(list.id)}>
+            onClick={this.handleToggleDropDown(list.id)}>
             settings_applications
           </i>
         </div>
@@ -61,7 +64,14 @@ class ListIndex extends React.Component {
     );
   }
 
-  handleOpenDropDown(id) {
+  handleOutFocusEvent(id) {
+    return () => {
+      const dropDown = document.getElementById(`list-drop-down-menu-div-${id}`);
+      dropDown.classList.add('hidden');
+    };
+  }
+
+  handleToggleDropDown(id) {
     return () => {
       const dropDown = document.getElementById(`list-drop-down-menu-div-${id}`);
       if (dropDown.classList.contains('hidden')) {
@@ -69,11 +79,6 @@ class ListIndex extends React.Component {
       } else {
         dropDown.classList.add('hidden');
       }
-      //
-      // const container = document.getElementsByClassName('list-item-div')[0];
-      // container.addEventListener("focusout", function () {
-      //   dropDown.classList.add('hidden');
-      // });
     };
   }
 
@@ -92,7 +97,7 @@ class ListIndex extends React.Component {
       const formInput = document.getElementById(`${formType}-list`);
       modal.classList.add('is-open');
       formInput.focus();
-      
+
       if (id !== undefined) {
         formInput.data = list.id;
         formInput.value = list.name;
@@ -105,7 +110,8 @@ class ListIndex extends React.Component {
   render() {
     const { lists } = this.props;
     return (
-      <ul className="list-index-ul">
+      <ul
+        className="list-index-ul">
         <li className="create-list-li">
           <i className="material-icons">
             arrow_drop_down

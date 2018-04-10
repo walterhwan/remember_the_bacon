@@ -8,6 +8,7 @@ class TaskIndex extends React.Component {
 
     this.handleTaskOnClick = this.handleTaskOnClick.bind(this);
   }
+
   componentDidMount() {
     this.props.fetchListTasks(this.props.listId)
       .then(() => this.setState(this.props.tasks));
@@ -81,7 +82,7 @@ class TaskIndex extends React.Component {
   render() {
     const { tasks } = this.props;
     return (
-      <ul>
+      <ul className='task-index'>
         {
           tasks.map((task)=> this.renderTaskItem(task))
         }
