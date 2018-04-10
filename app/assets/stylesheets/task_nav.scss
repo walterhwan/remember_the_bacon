@@ -1,8 +1,9 @@
-$very-light-gray: #EEEEEE;
-$light-gray: #c1c1c1;
-$button-gray: #6D6D6D;
+$very-light-grey: #EEEEEE;
+$light-grey: #c1c1c1;
+$button-grey: #6D6D6D;
 $list-nav-color: #D4E8F4;
-$yellow: #FFFEDA;
+$yellow: #FFFED1;
+$dark-grey: #666660;
 
 .task-nav-div {
   display: flex;
@@ -24,7 +25,7 @@ $yellow: #FFFEDA;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid $light-gray;
+    border: 1px solid $light-grey;
     border-radius: 3px;
     line-height: 30px;
     margin: 10px 17px;
@@ -33,7 +34,7 @@ $yellow: #FFFEDA;
     cursor: pointer;
 
     i {
-      color: $button-gray
+      color: $button-grey
     }
     .more-horiz {
       font-size: 29px;
@@ -56,7 +57,7 @@ $yellow: #FFFEDA;
     margin: 10px 17px;
     padding: 0px 3px 0px 5px;
     user-select: none;
-    border: 1px solid $light-gray;
+    border: 1px solid $light-grey;
     font-size: 14px;
     box-shadow: 0 1px 4px 1px rgba(0,0,0,0.2);
 
@@ -73,15 +74,15 @@ $yellow: #FFFEDA;
   width: 100%;
   height: 50px;
   background: white;
-  border-top: 1px dotted $very-light-gray;
-  border-bottom: 1px dotted $very-light-gray;
+  border-top: 1px dotted $very-light-grey;
+  border-bottom: 1px dotted $very-light-grey;
 
   transition: height 0.2s;
 
   .task-create {
     display: block;
     width: calc(100% - 34px - 8px);
-    border: 1px solid $light-gray;
+    border: 1px solid $light-grey;
     border-radius: 3px;
     line-height: 30px;
     margin: 10px 17px;
@@ -159,13 +160,16 @@ $yellow: #FFFEDA;
       font-size: 18px;
       opacity: 1;
     }
+
+    .done-icon {
+      position: absolute;
+      top: 5px;
+      left: 7px;
+      font-size: 19px;
+      color: $dark-grey;
+    }
   }
 
-  [class^="done-icon-"] {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-  }
 
   p {
     padding: 9px 0;

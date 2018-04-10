@@ -17,6 +17,8 @@ class TaskIndex extends React.Component {
     if (this.props.match.params.listId !== nextProps.match.params.listId) {
       this.props.fetchListTasks(nextProps.match.params.listId);
     }
+    // TODO: figure out what to return
+    return null;
   }
 
   handleTaskOnClick(task) {
@@ -26,14 +28,21 @@ class TaskIndex extends React.Component {
     return (e) => {
       const taskItem = e.currentTarget;
       const taskItems = document.getElementsByClassName('task-item');
+      const doneIcon = document.getElementById(`done-icon-${task.id}`);
+      const doneIcons = document.getElementsByClassName(`done-icon`);
       if (taskItem.classList.contains('selected-task')) {
         taskItem.classList.remove('selected-task');
+        doneIcon.classList.add('hidden');
         deleteSelectedTask(task);
       } else {
         for (const el of taskItems) {
           el.classList.remove('selected-task');
         }
+        for (const el of doneIcons) {
+          el.classList.add('hidden');
+        }
         taskItem.classList.add('selected-task');
+        doneIcon.classList.remove('hidden');
         deleteAllSelectedTask(task);
         addSelectedTask(task);
       }
@@ -58,7 +67,9 @@ class TaskIndex extends React.Component {
         <div className='task-divider'></div>
         <div className={`task-check-box-${task.id}`}>
           <i className="material-icons box-icon">crop_din</i>
-          <i className={`material-icons done-icon-${task.id}`}>done</i>
+          <i
+            className={'material-icons done-icon hidden'}
+            id={`done-icon-${task.id}`}>done</i>
         </div>
         <p>
           {task.description}
