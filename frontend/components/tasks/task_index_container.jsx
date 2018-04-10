@@ -9,6 +9,7 @@ import {
   deleteTask,
   addSelectedTask,
   deleteSelectedTask,
+  deleteAllSelectedTask,
 } from '../../actions/task_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -32,6 +33,7 @@ const mapDispatchToProps = (dispatch) => {
     deleteTask: (id) => dispatch(deleteTask(id)),
     addSelectedTask: (task) => dispatch(addSelectedTask(task)),
     deleteSelectedTask: (task) => dispatch(deleteSelectedTask(task)),
+    deleteAllSelectedTask: () => dispatch(deleteAllSelectedTask()),
   };
 };
 

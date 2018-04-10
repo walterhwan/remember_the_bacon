@@ -18,6 +18,7 @@ const App = () => (
       <AuthRoute path='/login' component={SessionLogin} />
       <AuthRoute path='/signup' component={SessionSignup} />
       <AuthRoute path='/' component={LandingPage} />
+      <ProtectedRoute path='/lists/1' component={MainPage} />
     </Switch>
   </div>
 );

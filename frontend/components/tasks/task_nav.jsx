@@ -8,10 +8,9 @@ class TaskNav extends React.Component {
     super(props);
 
     this.handleDeleteTask = this.handleDeleteTask.bind(this);
-    // this.selectedTasks = this.props.selectedTasks;
   }
 
-  handleOpenTaskOption(e) {
+  handleToggleTaskOption(e) {
     const taskToolBar = e.target;
     const taskDropDown = document.getElementById('task-drop-down');
     if (taskDropDown.classList.contains('hidden')) {
@@ -26,6 +25,8 @@ class TaskNav extends React.Component {
     this.props.selectedTaskIds.forEach((taskId) => {
       deleteTask(taskId);
     });
+    const taskDropDown = document.getElementById('task-drop-down');
+    taskDropDown.classList.add('hidden');
   }
 
   render() {
@@ -33,9 +34,10 @@ class TaskNav extends React.Component {
       <div className='task-nav-div'>
         <div className='seperator'></div>
         <div
-          className='task-tool-bar'
-          onClick={ this.handleOpenTaskOption }>
-          <div className='task-option'>
+          className='task-tool-bar'>
+          <div
+            className='task-option'
+            onClick={ this.handleToggleTaskOption }>
             <i className="material-icons more-horiz">more_horiz</i>
             <i className="material-icons arrow-drop-down">
               arrow_drop_down

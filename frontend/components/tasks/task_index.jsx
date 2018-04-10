@@ -22,15 +22,19 @@ class TaskIndex extends React.Component {
   handleTaskOnClick(task) {
     const addSelectedTask = this.props.addSelectedTask;
     const deleteSelectedTask = this.props.deleteSelectedTask;
+    const deleteAllSelectedTask = this.props.deleteAllSelectedTask;
     return (e) => {
       const taskItem = e.currentTarget;
+      const taskItems = document.getElementsByClassName('task-item');
       if (taskItem.classList.contains('selected-task')) {
         taskItem.classList.remove('selected-task');
-        // this.selectedTasks.delete(task.id);
         deleteSelectedTask(task);
       } else {
+        for (const el of taskItems) {
+          el.classList.remove('selected-task');
+        }
         taskItem.classList.add('selected-task');
-        // this.selectedTasks.add(task.id);
+        deleteAllSelectedTask(task);
         addSelectedTask(task);
       }
     };

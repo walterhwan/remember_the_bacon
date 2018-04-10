@@ -9,6 +9,7 @@ export const REMOVE_TASK_FOR_LIST = 'REMOVE_TASK_FOR_LIST';
 
 export const RECEIVE_SELECTED_TASK = 'RECEIVE_SELECTED_TASK';
 export const REMOVE_SELECTED_TASK = 'REMOVE_SELECTED_TASK';
+export const REMOVE_ALL_SELECTED_TASK = 'REMOVE_ALL_SELECTED_TASK';
 
 const receiveSelectedTask = (task) => {
   return {
@@ -21,6 +22,12 @@ const removeSelectedTask = (task) => {
   return {
     type: REMOVE_SELECTED_TASK,
     task
+  };
+};
+
+const removeAllSelectedTask = () => {
+  return {
+    type: REMOVE_ALL_SELECTED_TASK,
   };
 };
 
@@ -58,6 +65,10 @@ export const addSelectedTask = (task) => dispatch => {
 
 export const deleteSelectedTask = (task) => dispatch => {
   dispatch(removeSelectedTask(task));
+};
+
+export const deleteAllSelectedTask = () => dispatch => {
+  dispatch(removeAllSelectedTask());
 };
 
 export const fetchTaskIndex = () => dispatch => {

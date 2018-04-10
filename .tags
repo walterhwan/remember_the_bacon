@@ -236,9 +236,9 @@ grey	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_ba
 .task-description:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^      .task-description:hover {$/;"	function	line:24
 .task-description:focus	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^      .task-description:focus {$/;"	function	line:27
 .task-description	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^      .task-description {$/;"	function	line:31
-.task-estimate-label, .task-complete-label	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    .task-estimate-label, .task-complete-label {$/;"	function	line:38
-.task-estimate-label, .task-complete-label	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    .task-estimate-label, .task-complete-label {$/;"	function	line:45
-#task-completed, #task-estimate	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    #task-completed, #task-estimate {$/;"	function	line:49
-#task-estimate:focus	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    #task-estimate:focus {$/;"	function	line:54
-#task-estimate:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    #task-estimate:hover {$/;"	function	line:58
-#task-estimate	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    #task-estimate {$/;"	function	line:61
+.task-estimate-label, .task-complete-label	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    .task-estimate-label, .task-complete-label {$/;"	function	line:39
+.task-estimate-label, .task-complete-label	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    .task-estimate-label, .task-complete-label {$/;"	function	line:46
+#task-completed, #task-estimate	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    #task-completed, #task-estimate {$/;"	function	line:50
+#task-estimate:focus	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    #task-estimate:focus {$/;"	function	line:55
+#task-estimate:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    #task-estimate:hover {$/;"	function	line:59
+#task-estimate	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_details.scss	/^    #task-estimate {$/;"	function	line:62

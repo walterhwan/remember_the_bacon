@@ -19,7 +19,7 @@ $grey: #99999C;
     .task-details {
       display: flex;
       flex-direction: column;
-      margin: 37px 0px 21px 27px;
+      margin: 21px 0px 21px 27px;
 
       .task-description:hover {
         border: 1px solid $light-gray;
@@ -32,7 +32,12 @@ $grey: #99999C;
         border: 1px solid white;
         border-radius: 3px;
         font-size: 18px;
+        margin: 14px 0px 14px 0px;
       }
+    }
+
+    .task-estimate, .task-completed {
+      margin: 3px 0px 0px 0px;
     }
 
     .task-estimate-label, .task-complete-label {
@@ -40,10 +45,6 @@ $grey: #99999C;
       font-size: 12px;
       color: $grey;
       margin: 0px 0px 0px 16px;
-    }
-
-    .task-estimate-label, .task-complete-label {
-
     }
 
     #task-completed, #task-estimate {
@@ -59,6 +60,12 @@ $grey: #99999C;
       border: 1px solid $light-gray;
     }
     #task-estimate {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+      padding: 1px 1px;
+      border-radius: 0px;
       border: none;
       background: white;
     }
