@@ -39,6 +39,16 @@ class TaskNav extends React.Component {
     const taskDropDown = document.getElementById('task-drop-down');
     taskDropDown.classList.add('hidden');
     taskOption.classList.remove('task-option-on-click');
+
+    this.props.deleteAllSelectedTask();
+
+    // task detail css animation
+    const taskItems = document.getElementsByClassName('task-item');
+    const taskSection = document.getElementById('task-details-section');
+    taskSection.classList.add('hidden-task-details');
+    for (const el of taskItems) {
+      el.classList.remove('selected-task');
+    }
   }
 
   render() {
@@ -63,7 +73,9 @@ class TaskNav extends React.Component {
           </div>
         </div>
         <TaskCreateContainer />
-        <TaskIndexContainer />
+        <div className='tasks-index-div'>
+          <TaskIndexContainer />
+        </div>
       </div>
     );
   }

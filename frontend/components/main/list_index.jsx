@@ -3,24 +3,29 @@ import { NavLink, Link } from 'react-router-dom';
 
 class ListIndex extends React.Component {
   componentDidMount() {
-    this.props.fetchListIndex();
-      // .then(() => this.applyListItemEvent());
+    this.props.fetchListIndex()
+      .then(() => this.applyListItemEvent());
 
     this.handleDeleteList = this.handleDeleteList.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
   }
 
   // TODO: fix hover list item
-  // applyListItemEvent() {
-  //   const listItemDiv = document.getElementsByClassName('list-item-div');
-  //   const listBody = document.getElementsByClassName('list-body');
-  //   listBody.addEventListener('mouseover', () => {
-  //     listItemDiv.classList.add('hovered');
-  //   });
-  //   listBody.addEventListener('mouseout', () => {
-  //     listItemDiv.classList.remove('hovered');
-  //   });
-  // }
+  applyListItemEvent() {
+    const listItemDivs = document.getElementsByClassName('list-item-div');
+    const listBodies = document.getElementsByClassName('list-body');
+    const icons = document.getElementsByClassName('list-option-icon');
+    for (let i = 0; i < listItemDivs.length; i++) {
+      listBodies[i].addEventListener('mouseover', () => {
+        listItemDivs[i].classList.add('hovered');
+        icons[i].classList.add('hovered');
+      });
+      listBodies[i].addEventListener('mouseout', () => {
+        listItemDivs[i].classList.remove('hovered');
+        icons[i].classList.remove('hovered');
+      });
+    }
+  }
 
   renderListItem(list) {
     return (
@@ -85,6 +90,7 @@ class ListIndex extends React.Component {
   handleDeleteList(id) {
     return () => {
       this.props.deleteList(id);
+      this.props.history.push(`/lists/${this.props.lists[0].id}`);
     };
   }
 

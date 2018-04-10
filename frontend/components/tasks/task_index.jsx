@@ -84,7 +84,7 @@ class TaskIndex extends React.Component {
     return (
       <ul className='task-index'>
         {
-          tasks.map((task)=> this.renderTaskItem(task))
+          tasks.slice().reverse().map((task)=> this.renderTaskItem(task))
         }
       </ul>
     );

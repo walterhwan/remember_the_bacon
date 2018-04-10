@@ -85,6 +85,9 @@ $list-hover-color: #B7D1ED;
 
       .list-tail {
         width: 20px;
+        .list-option-icon.hovered {
+          color: $nav-bar-color;
+        }
         .list-option-icon {
           color: $list-nav-color;
           cursor: pointer;

@@ -15,19 +15,40 @@ $light-gray: #c1c1c1;
 
   box-sizing: border-box;
 
+  .menu-icon-div.extend {
+    width: 84px;
+  }
   .menu-icon-div {
+    display: flex;
+    flex-direction: row;
     height: 30px;
     width: 36px;
     margin: 5px 5px 5px 11px;
     border-radius: 3px;
     box-sizing: border-box;
+    color: white;
+    user-select: none;
+    overflow: hidden;
+    cursor: pointer;
 
-    i {
-      color: white;
+    transition: width 0.5s;
+
+    .menu-icon {
       font-size: 24px;
       padding: 3px 0px 0px 6px;
       opacity: 0.8;
-      cursor: pointer;
+    }
+    .menu-text {
+      box-sizing: border-box;
+      overflow: hidden;
+      // text-overflow: ellipsis;
+      width: auto;
+      height: 30px;
+      font-size: .8125rem;
+      letter-spacing: .8px;
+      line-height: 31px;
+      white-space: nowrap;
+      padding: 0px 10px 0px 10px;
     }
   }
 
@@ -35,7 +56,10 @@ $light-gray: #c1c1c1;
     background: rgba(0,0,0,0.15);
   }
 
-  form {
+  .search-form.extend {
+    left: 110px;
+  }
+  .search-form {
     position: absolute;
     left: 210px;
     background-color: $search-color;
@@ -45,7 +69,7 @@ $light-gray: #c1c1c1;
     margin-top: 5px;
     margin-bottom: auto;
 
-    transition: background-color 0.2s;
+    transition: left 0.5s, background-color 0.2s;
 
     .search-icon {
       position: absolute;
@@ -104,15 +128,21 @@ $light-gray: #c1c1c1;
   overflow-y: hidden;
   background: $list-nav-color;
   width: 100%;
-  height: 100vh;
-  min-height: 750px;
+  height: calc(100vh - 40px);
+  // min-height: 750px;
+  border-top: 9px solid $list-nav-color;
 
   // list_index.scss
+  .side-lists-nav.extend {
+    top: -350px;
+  }
   .side-lists-nav {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 210px;
+
+    transition: top 0.5s;
   }
 
   > div {
@@ -128,12 +158,16 @@ $light-gray: #c1c1c1;
     border-top-right-radius: 6px;
     width: 50%;
     z-index: 1;
-    top: 9px;
+    top: 0px;
   }
-
+  .task-list-details-section.extend {
+    margin: 0px 0px 0px 0px;
+  }
   .task-list-details-section {
     margin: 0px 0px 0px 210px;
     z-index: 2;
+
+    transition: margin 0.5s;
   }
   // list_detail.scss
 }

@@ -4,6 +4,9 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       log_in(@user)
+      # Create initial lists
+      List.create!(user_id: @user.id, name: 'Work')
+      List.create!(user_id: @user.id, name: 'Personal')
       render 'api/users/show'
     else
       render json: @user.errors.full_messages, status: 422

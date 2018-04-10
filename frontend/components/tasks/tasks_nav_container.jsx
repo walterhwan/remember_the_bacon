@@ -5,7 +5,8 @@ import {
   fetchTask,
   CreateTask,
   updateTask,
-  deleteTask
+  deleteTask,
+  deleteAllSelectedTask
 } from '../../actions/task_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -25,6 +26,7 @@ const mapDispatchToProps = (dispatch) => {
     CreateTask: (task) => dispatch(CreateTask(task)),
     updateTask: (task) => dispatch(updateTask(task)),
     deleteTask: (id) => dispatch(deleteTask(id)),
+    deleteAllSelectedTask: () => dispatch(deleteAllSelectedTask()),
   };
 };
 

@@ -10,8 +10,14 @@
 #
 
 class List < ApplicationRecord
+  before_destroy :destroy_tasks
 
   belongs_to :user
   has_many :tasks
 
+  private
+  
+  def destroy_tasks
+   self.tasks.destroy_all
+  end
 end

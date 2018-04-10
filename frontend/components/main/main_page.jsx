@@ -38,6 +38,37 @@ class MainPage extends React.Component {
   // <i class="material-icons">check_box</i>
   // <i class="material-icons">check_box_outline_blank</i>
 
+  handleMenuOnClick(e) {
+    const menuIconDiv = document.getElementById('menu-icon-div');
+    if (menuIconDiv.classList.contains('extend')) {
+      menuIconDiv.classList.remove('extend');
+    } else {
+      menuIconDiv.classList.add('extend');
+    }
+
+    const sideListNav = document.getElementById('side-lists-nav');
+    if (sideListNav.classList.contains('extend')) {
+      sideListNav.classList.remove('extend');
+    } else {
+      sideListNav.classList.add('extend');
+    }
+
+    const section = document.getElementById('task-list-details-section');
+    if (section.classList.contains('extend')) {
+      section.classList.remove('extend');
+    } else {
+      section.classList.add('extend');
+    }
+
+    const searchForm = document.getElementById('search-form');
+    if (searchForm.classList.contains('extend')) {
+      searchForm.classList.remove('extend');
+    } else {
+      searchForm.classList.add('extend');
+    }
+
+  }
+
   render() {
     return (
       <div>
@@ -45,21 +76,36 @@ class MainPage extends React.Component {
         <ListCreateContainer />
         <ListUpdateContainer />
         <nav className="main-page-nav">
-          <div className="menu-icon-div">
-            <i className="material-icons">menu</i>
+          <div
+            className="menu-icon-div"
+            id="menu-icon-div"
+            onClick={ this.handleMenuOnClick }>
+            <i
+              className="material-icons menu-icon">
+              menu
+            </i>
+            <p className='menu-text'>Lists</p>
           </div>
-          <form className="search-form">
+          <form
+            className="search-form"
+            id='search-form' >
             <i className="material-icons search-icon">search</i>
-            <input className="task-search" type='search' />
+            <input
+              className="task-search"
+              type='search' />
           </form>
           <LogoutContainer />
         </nav>
         <main className="main-page-main">
-          <nav className="side-lists-nav">
+          <nav
+            className="side-lists-nav"
+            id='side-lists-nav'>
             <div className="logo"/>
             <ListIndexContainer />
           </nav>
-          <div className='task-list-details-section'>
+          <div
+            className='task-list-details-section'
+            id='task-list-details-section'>
             <section className='tasks-nav-section'>
               <TaskNavContainer />
             </section>
