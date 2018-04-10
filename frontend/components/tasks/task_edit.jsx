@@ -91,6 +91,9 @@ class TaskCreate extends React.Component {
               <option value="30">30 minutes</option>
               <option value="45">45 minutes</option>
               <option value="60">1 hour</option>
+              <option value="120">2 hour</option>
+              <option value="180">3 hour</option>
+              <option value="240">4 hour</option>
               <option value="">No estimate</option>
             </select>
           </div>

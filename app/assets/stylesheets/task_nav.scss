@@ -155,7 +155,7 @@ $dark-grey: #666660;
   font-size: .8125rem;
 
   .task-white-space {
-    width: 13.3px;
+    min-width: 13.3px;
     height: 100%;
   }
 
@@ -192,7 +192,10 @@ $dark-grey: #666660;
 
 
   p {
-    padding: 9px 0;
+    padding: 9px 13px 9px 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 

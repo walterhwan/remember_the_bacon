@@ -5,12 +5,6 @@ class ListDetail extends React.Component {
     const list = this.props.list;
     const hours = Math.floor(list.total_estimated / 60);
     const minutes = list.total_estimated % 60;
-    // let estText;
-    // if (minutes === 0) {
-    //   estText = `${hours}hr`;
-    // } else {
-    //   estText = `${hours}hr ${minutes}min`;
-    // }
 
     return (
       <section className='details-section'>

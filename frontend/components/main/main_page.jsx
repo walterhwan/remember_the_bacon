@@ -71,7 +71,7 @@ class MainPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='main-page-div'>
         <div className='modal-screen modal'></div>
         <ListCreateContainer />
         <ListUpdateContainer />
