@@ -65,7 +65,9 @@ class TaskCreate extends React.Component {
   render() {
     const task = this.props.task;
     return (
-      <div className='task-details-section'>
+      <div
+        id='task-details-section'
+        className='task-details-section hidden-task-details'>
         <form
           className='task-details'
           onSubmit={this.handleSubmit}>

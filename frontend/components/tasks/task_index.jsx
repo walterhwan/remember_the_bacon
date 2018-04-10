@@ -37,6 +37,14 @@ class TaskIndex extends React.Component {
         deleteAllSelectedTask(task);
         addSelectedTask(task);
       }
+
+      // task detail css animation
+      const taskSection = document.getElementById('task-details-section');
+      if (taskItem.classList.contains('selected-task')) {
+        taskSection.classList.remove('hidden-task-details');
+      } else {
+        taskSection.classList.add('hidden-task-details');
+      }
     };
   }
 
@@ -49,7 +57,8 @@ class TaskIndex extends React.Component {
         <div className='task-white-space'> </div>
         <div className='task-divider'></div>
         <div className={`task-check-box-${task.id}`}>
-          <i className="material-icons">crop_din</i>
+          <i className="material-icons box-icon">crop_din</i>
+          <i className={`material-icons done-icon-${task.id}`}>done</i>
         </div>
         <p>
           {task.description}

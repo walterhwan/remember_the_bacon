@@ -148,16 +148,23 @@ $yellow: #FFFEDA;
   }
 
   [class^="task-check-box-"] {
+    position: relative;
     width: 30px;
     height: 30px;
     font-size: 18px;
     color: #ccc;
 
-    i {
+    .box-icon {
       padding: 7px 6px;
       font-size: 18px;
       opacity: 1;
     }
+  }
+
+  [class^="done-icon-"] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
   }
 
   p {

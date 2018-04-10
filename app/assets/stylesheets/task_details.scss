@@ -5,6 +5,10 @@ $grey: #99999C;
   position: relative;
   overflow: hidden;
 
+
+  .hidden-task-details.task-details-section {
+    right: calc(-52%);
+  }
   .task-details-section {
     position: absolute;
     background: white;
@@ -12,10 +16,14 @@ $grey: #99999C;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     width: calc(50% - 6px);
+    height: 100%;
     z-index: 2;
     top: 9px;
-    right: -250px;
+    right: 0px;
+    // right: -350px;
     margin-right: 9px;
+
+    transition: right linear 0.3s ;
 
 
     .task-details {
@@ -34,7 +42,7 @@ $grey: #99999C;
         border: 1px solid white;
         border-radius: 3px;
         font-size: 18px;
-        margin: 14px 0px 14px 0px;
+        margin: 14px 80px 14px 0px;
       }
     }
 
