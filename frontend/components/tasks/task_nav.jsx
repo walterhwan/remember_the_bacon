@@ -51,10 +51,25 @@ class TaskNav extends React.Component {
     }
   }
 
+  handleSelectTab(e) {
+
+  }
+
   render() {
     return (
       <div className='task-nav-div'>
-        <div className='seperator'></div>
+        <div className='tab-nav'>
+          <p
+            onClick={this.handleSelectTab}
+            className='task-tab selected'>
+            Incomplete
+          </p>
+          <p
+            onClick={this.handleSelectTab}
+            className='task-tab'>
+            Completed
+          </p>
+        </div>
         <div
           className='task-tool-bar'>
           <div

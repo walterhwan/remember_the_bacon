@@ -10,8 +10,29 @@ $dark-grey: #666660;
   flex-direction: column;
   position: relative;
 
-  .seperator {
-    height: 10px;
+  .tab-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 50px;
+    padding-right: 20px;
+    border-bottom: 1px dotted $very-light-grey;
+
+    .task-tab {
+      position: relative;
+      top: 1px;
+      font-size: 13px;
+      color: #0063BA;
+      align-self: flex-end;
+      padding: 6px 12px 6px 12px;
+      cursor: pointer;
+    }
+    .task-tab.selected {
+      font-weight: bold;
+      color: black;
+      border: 1px dotted $very-light-grey;
+      border-bottom: 1px solid white;
+    }
   }
 
 }
