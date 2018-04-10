@@ -93,9 +93,11 @@ class ListIndex extends React.Component {
     return () => {
       const list = context.props.lists.find((el) => el.id === id);
 
+      const screen = document.getElementsByClassName('modal-screen modal')[0];
       const modal = document.getElementsByClassName(`modal ${formType}`)[0];
       const formInput = document.getElementById(`${formType}-list`);
       modal.classList.add('is-open');
+      screen.classList.add('is-open');
       formInput.focus();
 
       if (id !== undefined) {

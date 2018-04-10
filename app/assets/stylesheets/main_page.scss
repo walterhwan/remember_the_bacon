@@ -100,6 +100,8 @@ $light-gray: #c1c1c1;
 .main-page-main {
   display: flex;
   flex-direction: row;
+  position: relative;
+  overflow-y: hidden;
   background: $list-nav-color;
   width: 100%;
   height: 100vh;
@@ -107,7 +109,10 @@ $light-gray: #c1c1c1;
 
   // list_index.scss
   .side-lists-nav {
-    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 210px;
   }
 
   > div {
@@ -126,5 +131,9 @@ $light-gray: #c1c1c1;
     top: 9px;
   }
 
+  .task-list-details-section {
+    margin: 0px 0px 0px 210px;
+    z-index: 2;
+  }
   // list_detail.scss
 }

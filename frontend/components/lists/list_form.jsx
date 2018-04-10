@@ -22,9 +22,11 @@ class ListForm extends React.Component {
   }
 
   closeModal(typeForm) {
+    const screen = document.getElementsByClassName('modal-screen modal')[0];
     const modals = document.getElementsByClassName('modal');
     for (const modal of modals) {
       modal.classList.remove('is-open');
+      screen.classList.remove('is-open');
     }
   }
 

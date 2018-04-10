@@ -22,7 +22,7 @@ class ListDetail extends React.Component {
           </div>
           <div className='list-est-time detail-item'>
             <p className='num'>
-              {hours}<span>hr</span>{minutes}<span>min</span>
+              {hours}<span>hr</span> {minutes}<span>min</span>
             </p>
             <p className='type'>estimated</p>
           </div>
