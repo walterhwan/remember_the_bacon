@@ -1,6 +1,7 @@
 import React from 'react';
 import TaskIndexContainer from './task_index_container';
 import TaskCreateContainer from './task_create_container';
+import { toggleTaskDetailSection } from '../../util/css_util.jsx';
 
 
 class TaskNav extends React.Component {
@@ -43,13 +44,7 @@ class TaskNav extends React.Component {
 
     this.props.deleteAllSelectedTask();
 
-    // task detail css animation
-    const taskItems = document.getElementsByClassName('task-item');
-    const taskSection = document.getElementById('task-details-section');
-    taskSection.classList.add('hidden-task-details');
-    for (const el of taskItems) {
-      el.classList.remove('selected-task');
-    }
+    toggleTaskDetailSection();
   }
 
   handleSelectTab(e) {

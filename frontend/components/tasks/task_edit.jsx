@@ -1,6 +1,5 @@
 import React from 'react';
-// import DatePicker from 'react-datepicker';
-// import moment from 'moment';
+import { toggleTaskDetailSection } from '../../util/css_util.jsx';
 
 const defaultTask = {
   list_id: '',
@@ -54,6 +53,8 @@ class TaskCreate extends React.Component {
   handleUpdateComplete(e) {
     const newState = Object.assign({}, this.state, {completed: e.target.checked});
     this.props.updateTask(newState);
+
+    toggleTaskDetailSection();
   }
 
   handleUpdateEstimate(e) {

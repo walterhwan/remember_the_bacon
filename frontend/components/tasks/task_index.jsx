@@ -59,6 +59,12 @@ class TaskIndex extends React.Component {
   }
 
   renderTaskItem(task) {
+    let taskDescriptClass;
+    if (this.props.showCompleted) {
+      taskDescriptClass = 'task-description completed';
+    } else {
+      taskDescriptClass = 'task-description';
+    }
     return (
       <li
         className='task-item'
@@ -72,7 +78,7 @@ class TaskIndex extends React.Component {
             className={'material-icons done-icon hidden'}
             id={`done-icon-${task.id}`}>done</i>
         </div>
-        <p>
+        <p className={taskDescriptClass}>
           {task.description}
         </p>
       </li>
@@ -82,12 +88,11 @@ class TaskIndex extends React.Component {
   render() {
     const { tasks } = this.props;
     const selectedTab = document.querySelectorAll('.task-tab, .selected')[0];
-    // const displayCompleted =
-    // (selectedTab) ? Boolean(selectedTab.getAttribute('data')) : false;
+
     const displayTasks = tasks.slice().filter((el) => {
       return this.props.showCompleted === el.completed;
     }).reverse();
-    // debugger;
+
     return (
       <ul className='task-index'>
         {

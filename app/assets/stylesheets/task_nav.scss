@@ -211,8 +211,11 @@ $dark-grey: #666660;
     }
   }
 
-
-  p {
+  .task-description.completed {
+    color: #7e7e7e;
+    text-decoration: line-through;
+  }
+  .task-description {
     padding: 9px 13px 9px 0px;
     text-overflow: ellipsis;
     overflow: hidden;
