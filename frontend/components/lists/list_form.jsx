@@ -11,7 +11,8 @@ class ListForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const name = this.state.name.trim();
-    const newState = { name };
+    const formInput = document.getElementById(`update-list`);
+    const newState = { name, id: formInput.data };
 
     if (name) {
       this.props.action(newState);

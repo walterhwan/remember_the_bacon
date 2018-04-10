@@ -6,6 +6,7 @@ class ListIndex extends React.Component {
     this.props.fetchListIndex();
 
     this.handleDeleteList = this.handleDeleteList.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this);
   }
 
   applyListItemEvent() {
@@ -83,14 +84,20 @@ class ListIndex extends React.Component {
   }
 
   handleOpenModal(formType, id) {
+    const context = this;
     return () => {
-      // const dropDown = document.getElementById(`list-drop-down-menu-div-${id}`);
-      // dropDown.classList.add('hidden');
+      const list = context.props.lists.find((el) => el.id === id);
 
-      const modals = document.getElementsByClassName(`modal ${formType}`);
-      for (const modal of modals) {
-        modal.classList.add('is-open');
-        document.getElementById(`${formType}-list`).focus();
+      const modal = document.getElementsByClassName(`modal ${formType}`)[0];
+      const formInput = document.getElementById(`${formType}-list`);
+      modal.classList.add('is-open');
+      formInput.focus();
+      
+      if (id !== undefined) {
+        formInput.data = list.id;
+        formInput.value = list.name;
+        const dropDown = document.getElementById(`list-drop-down-menu-div-${id}`);
+        dropDown.classList.add('hidden');
       }
     };
   }

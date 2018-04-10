@@ -3,6 +3,7 @@ $grey: #99999C;
 
 .task-list-details-section {
   position: relative;
+  overflow: hidden;
 
   .task-details-section {
     position: absolute;
@@ -13,8 +14,9 @@ $grey: #99999C;
     width: calc(50% - 6px);
     z-index: 2;
     top: 9px;
-    right: 0px;
+    right: -250px;
     margin-right: 9px;
+
 
     .task-details {
       display: flex;
