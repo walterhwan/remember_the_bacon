@@ -3,6 +3,9 @@ import TaskEdit from './task_edit';
 import {
   updateTask,
 } from '../../actions/task_actions';
+import {
+  fetchList,
+} from '../../actions/list_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
@@ -29,6 +32,7 @@ const mapStateToProps = ({ entities }, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     updateTask: (task) => dispatch(updateTask(task)),
+    fetchList: (id) => dispatch(fetchList(id)),
   };
 };
 

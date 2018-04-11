@@ -49,19 +49,28 @@ class TaskCreate extends React.Component {
     e.preventDefault();
     const taskDescription = document.getElementById('task-description');
     taskDescription.blur();
-    this.props.updateTask(this.state);
+
+    this.props.updateTask(this.state).then((action) => {
+      this.props.fetchList(action.task.list_id);
+    });
   }
 
   handleUpdateComplete(e) {
     const newState = Object.assign({}, this.state, {completed: e.target.checked});
-    this.props.updateTask(newState);
+    
+    this.props.updateTask(newState).then((action) => {
+      this.props.fetchList(action.task.list_id);
+    });
 
     toggleTaskDetailSection();
   }
 
   handleUpdateEstimate(e) {
     const newState = Object.assign({}, this.state, {estimate: e.target.value});
-    this.props.updateTask(newState);
+
+    this.props.updateTask(newState).then((action) => {
+      this.props.fetchList(action.task.list_id);
+    });
   }
 
 
@@ -80,11 +89,16 @@ class TaskCreate extends React.Component {
         <form
           className='task-details'
           onSubmit={this.handleSubmit}>
-          <input
-            className='task-description'
-            id='task-description'
-            value={this.state.description}
-            onChange={this.update('description')} />
+
+          <div className='task-description-div'>
+            <div className='divider'></div>
+            <input
+              className='task-description'
+              id='task-description'
+              value={this.state.description}
+              onChange={this.update('description')}
+              onBlur={this.handleSubmit}/>
+          </div>
           <div className='task-estimate'>
             <label
               className='task-estimate-label'

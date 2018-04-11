@@ -41,18 +41,35 @@ $grey: #99999C;
       flex-direction: column;
       margin: 21px 0px 21px 27px;
 
-      .task-description:hover {
-        border: 1px solid $light-gray;
-      }
-      .task-description:focus {
-        outline: none;
-        border: 1px solid #2e8ceb;
-      }
-      .task-description {
-        border: 1px solid white;
-        border-radius: 3px;
-        font-size: 18px;
-        margin: 14px 80px 14px 0px;
+      .task-description-div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .divider {
+          background-color: #ccc;
+          background-attachment: scroll;
+          width: 3px;
+          height: 24px;
+          min-width: 3px;
+          border-radius: 1px;
+          margin: 0px 5px;
+        }
+        .task-description:hover {
+          border: 1px solid $light-gray;
+        }
+        .task-description:focus {
+          outline: none;
+          border: 1px solid #2e8ceb;
+        }
+        .task-description {
+          width: 90%;
+          border: 1px solid white;
+          border-radius: 3px;
+          font-size: 18px;
+          margin: 14px 80px 14px 0px;
+          text-overflow: ellipsis;
+        }
       }
     }
 

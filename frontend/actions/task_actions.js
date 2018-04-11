@@ -1,4 +1,5 @@
 import * as TaskAPIUtil from '../util/task_util';
+import * as ListAPIUtil from '../util/list_util';
 
 export const RECEIVE_TASKS = 'RECEIVE_TASKS';
 export const RECEIVE_TASK = 'RECEIVE_TASK';
@@ -112,7 +113,9 @@ export const createTask = (taskForm) => dispatch => {
 export const updateTask = (taskForm) => dispatch => {
   return TaskAPIUtil.updateTask(taskForm)
     .then(
-      (task) => dispatch(receiveTask(task))
+      (task) => {
+        return dispatch(receiveTask(task));
+      }
     );
 };
 
