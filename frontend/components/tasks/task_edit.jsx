@@ -47,6 +47,8 @@ class TaskCreate extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const taskDescription = document.getElementById('task-description');
+    taskDescription.blur();
     this.props.updateTask(this.state);
   }
 
@@ -69,11 +71,18 @@ class TaskCreate extends React.Component {
       <div
         id='task-details-section'
         className='task-details-section hidden-task-details'>
+        <div
+          type='button'
+          className='close-task-detail-button'
+          onClick={toggleTaskDetailSection}>
+          close x
+        </div>
         <form
           className='task-details'
           onSubmit={this.handleSubmit}>
           <input
             className='task-description'
+            id='task-description'
             value={this.state.description}
             onChange={this.update('description')} />
           <div className='task-estimate'>

@@ -13,17 +13,26 @@ Task.all.destroy_all
 demo = User.create!(username: 'demo', password: 'demodemo', email: 'demo@gmail.com', last_name: 'Asimov', first_name: 'Isaac')
 demo2 = User.create!(username: 'demo2', password: 'demodemo', email: 'demo2@gmail.com', last_name: 'Olivaw', first_name: 'Daneel')
 
-list1 = List.create!(user_id: demo.id, name: 'Work')
-list2 = List.create!(user_id: demo.id, name: 'Personal')
-list3 = List.create!(user_id: demo.id, name: 'Family')
-list4 = List.create!(user_id: demo.id, name: 'Gaming')
-list5 = List.create!(user_id: demo.id, name: 'Other')
+work = List.create!(user_id: demo.id, name: 'Work')
+personal = List.create!(user_id: demo.id, name: 'Personal')
+family = List.create!(user_id: demo.id, name: 'Family')
+gaming = List.create!(user_id: demo.id, name: 'Gaming')
+other = List.create!(user_id: demo.id, name: 'Other')
+movie = List.create!(user_id: demo.id, name: 'Movie to Watch')
+
 list21 = List.create!(user_id: demo2.id, name: 'Personal')
 
-
-task1 = Task.create!(list_id: list1.id, description: 'take out trash', due_date: nil, estimate: 5, completed: false)
-task2 = Task.create!(list_id: list1.id, description: 'read js books', due_date: nil, estimate: 240, completed: false)
-task3 = Task.create!(list_id: list1.id, description: 'Remember to bring HDMI cable for the screen', due_date: nil, estimate: nil, completed: false)
+# Seed work list
+Task.create!(list_id: work.id, description: 'Task edit', due_date: nil, estimate: 45, completed: false)
+Task.create!(list_id: work.id, description: 'Task create', due_date: nil, estimate: 30, completed: false)
+Task.create!(list_id: work.id, description: 'Task destroy', due_date: nil, estimate: 120, completed: false)
+Task.create!(list_id: work.id, description: 'List edit', due_date: nil, estimate: 45, completed: true)
+Task.create!(list_id: work.id, description: 'List create', due_date: nil, estimate: 30, completed: true)
+Task.create!(list_id: work.id, description: 'List destroy', due_date: nil, estimate: 120, completed: true)
+Task.create!(list_id: work.id, description: 'Fix rename list', due_date: nil, estimate: 0, completed: false)
+Task.create!(list_id: work.id, description: 'When user logged in they don\'t have a list', due_date: nil, estimate: 0, completed: false)
+Task.create!(list_id: work.id, description: 'Fix adding a empty task', due_date: nil, estimate: 0, completed: false)
+Task.create!(list_id: work.id, description: 'Remember to bring HDMI cable for the screen', due_date: nil, estimate: nil, completed: false)
 
 task3 = Task.create!(list_id: list2.id, description: 'Remember to act like human', due_date: nil, estimate: nil, completed: true)
 
@@ -37,3 +46,10 @@ task3 = Task.create!(list_id: list2.id, description: 'Remember to act like human
 # Fix delete option button where it will appear when its parent was clicked
 # Task select check box (and select only one)
 # clean selectedTaskIds when switching lists
+
+
+# Landing page pictures and transition effect
+# Add due date?
+# Task complete check complete button
+# Fix list overflow problem
+# Estimated time (update when task changed)

@@ -25,6 +25,16 @@ $grey: #99999C;
 
     transition: right linear 0.3s ;
 
+    .close-task-detail-button {
+      position: absolute;
+      font-size: 14px;
+      font-weight: bold;
+      user-select: none;
+      top: 13px;
+      right: 10px;
+      color: $grey;
+      cursor: pointer;
+    }
 
     .task-details {
       display: flex;
