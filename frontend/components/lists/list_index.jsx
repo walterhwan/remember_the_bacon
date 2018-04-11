@@ -27,7 +27,7 @@ class ListIndex extends React.Component {
     this.props.fetchListIndex()
       .then(() => applyListItemEvent());
 
-    this.handleDeleteList = this.handleDeleteList.bind(this);
+    this.handleOpenConfirmDelete = this.handleOpenConfirmDelete.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
   }
 
@@ -61,7 +61,7 @@ class ListIndex extends React.Component {
           </i>
         </div>
         <div
-          className={`list-drop-down-menu-div-${list.id} hidden`}
+          className='list-drop-down-menu-div hidden'
           key={`list-dropdown-${list.id}`}
           id={`list-drop-down-menu-div-${list.id}`}>
           <div
@@ -69,7 +69,7 @@ class ListIndex extends React.Component {
             <p>Rename list</p>
           </div>
           <div
-            onClick={this.handleDeleteList(list.id)}>
+            onClick={this.handleOpenConfirmDelete(list.id)}>
             <p>Remove list</p>
           </div>
         </div>
@@ -95,10 +95,20 @@ class ListIndex extends React.Component {
     };
   }
 
-  handleDeleteList(id) {
+  handleOpenConfirmDelete(id) {
     return () => {
-      this.props.deleteList(id);
-      this.props.history.push(`/lists/${this.props.lists[0].id}`);
+      const screen = document.getElementsByClassName('modal-screen modal')[0];
+      const confirmDeleteList = document.getElementsByClassName('confirm-delete-list-div modal')[0];
+      confirmDeleteList.classList.add('is-open');
+      screen.classList.add('is-open');
+
+      confirmDeleteList.data = id;
+
+      const dropDowns = document.getElementsByClassName('list-drop-down-menu-div');
+      for (const dropDown of dropDowns) {
+        dropDown.classList.add('hidden');
+      }
+
     };
   }
 

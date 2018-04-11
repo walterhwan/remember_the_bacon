@@ -130,3 +130,70 @@ $light-gray: #c1c1c1;
   }
   // list_detail.scss
 }
+
+.confirm-delete-list-div {
+  position: absolute;
+  top: calc(50% - 220px);
+  left: 50%;
+  margin-left: -220px;
+  width: 360px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 5px;
+  border: 1px solid $light-gray;
+  padding: 40px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+
+
+  .cofirm-delete-list-form {
+    // display: none;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-weight: 400;
+      font-size: 18px;
+      margin: 0px 0px 20px 0px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      input {
+        height: 32px;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.08);
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: .875rem;
+        border: 1px solid $light-gray;
+        padding: 0px 13px;
+      }
+
+      input:focus {
+        outline: none;
+        border: 1px solid #2e8ceb;
+      }
+
+      input[type='submit'] {
+        background: #2881E8;
+        margin: 20px 5px 0px 0px;
+        border: none;
+        color: white;
+      }
+
+      input[type='submit']:focus {
+        outline: none;
+        border: 1px solid white;
+      }
+
+      input[type='button'] {
+        margin: 20px 0px 0px 5px;
+      }
+    }
+  }
+}

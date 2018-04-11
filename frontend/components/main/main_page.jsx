@@ -8,6 +8,7 @@ import ListUpdateContainer from '../lists/list_update_container';
 import ListDetailContainer from '../lists/list_detail_container';
 import TaskEditContainer from '../tasks/task_edit_container';
 import TaskSearchContainer from '../tasks/task_search_container';
+import ListDeleteContainer from '../lists/list_delete_container';
 
 class MainPage extends React.Component {
   constructor(props) {
@@ -50,6 +51,15 @@ class MainPage extends React.Component {
 
   }
 
+  closeModal() {
+    const screen = document.getElementsByClassName('modal-screen modal')[0];
+    const modals = document.getElementsByClassName('modal');
+    for (const modal of modals) {
+      modal.classList.remove('is-open');
+      screen.classList.remove('is-open');
+    }
+  }
+
   render() {
     return (
       <div className='main-page-div'>
@@ -57,6 +67,7 @@ class MainPage extends React.Component {
         <div className='modal-screen modal'></div>
         <ListCreateContainer />
         <ListUpdateContainer />
+        <ListDeleteContainer />
 
         <nav className="main-page-nav">
           <div
