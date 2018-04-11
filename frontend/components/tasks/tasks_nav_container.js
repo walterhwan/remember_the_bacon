@@ -12,11 +12,13 @@ import { switchTab } from '../../actions/ui_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = ({ entities }) => {
+const mapStateToProps = ({ entities, ui }) => {
   const { tasks, selectedTaskIds } = entities;
+  const { showCompleted } = ui;
   return {
     tasks: Object.values(tasks),
     selectedTaskIds,
+    showCompleted,
   };
 };
 

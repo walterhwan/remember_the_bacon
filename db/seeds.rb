@@ -16,11 +16,10 @@ demo2 = User.create!(username: 'demo2', password: 'demodemo', email: 'demo2@gmai
 work = List.create!(user_id: demo.id, name: 'Work')
 personal = List.create!(user_id: demo.id, name: 'Personal')
 family = List.create!(user_id: demo.id, name: 'Family')
-gaming = List.create!(user_id: demo.id, name: 'Gaming')
+apartment = List.create!(user_id: demo.id, name: 'Apartment')
 other = List.create!(user_id: demo.id, name: 'Other')
-movie = List.create!(user_id: demo.id, name: 'Movie to Watch')
+movie = List.create!(user_id: demo.id, name: 'TV/Movie to watch')
 
-list21 = List.create!(user_id: demo2.id, name: 'Personal')
 
 # Seed work list
 Task.create!(list_id: work.id, description: 'Task edit', due_date: nil, estimate: 45, completed: false)
@@ -29,12 +28,48 @@ Task.create!(list_id: work.id, description: 'Task destroy', due_date: nil, estim
 Task.create!(list_id: work.id, description: 'List edit', due_date: nil, estimate: 45, completed: true)
 Task.create!(list_id: work.id, description: 'List create', due_date: nil, estimate: 30, completed: true)
 Task.create!(list_id: work.id, description: 'List destroy', due_date: nil, estimate: 120, completed: true)
-Task.create!(list_id: work.id, description: 'Fix rename list', due_date: nil, estimate: 0, completed: false)
-Task.create!(list_id: work.id, description: 'When user logged in they don\'t have a list', due_date: nil, estimate: 0, completed: false)
-Task.create!(list_id: work.id, description: 'Fix adding a empty task', due_date: nil, estimate: 0, completed: false)
-Task.create!(list_id: work.id, description: 'Remember to bring HDMI cable for the screen', due_date: nil, estimate: nil, completed: false)
+Task.create!(list_id: work.id, description: 'Fix rename list', due_date: nil, estimate: nil, completed: false)
+Task.create!(list_id: work.id, description: 'When user logged in they don\'t have a list', due_date: nil, estimate: nil, completed: false)
+Task.create!(list_id: work.id, description: 'Fix adding a empty task', due_date: nil, estimate: nil, completed: false)
+Task.create!(list_id: work.id, description: 'Remember to bring HDMI cable for second screen', due_date: nil, estimate: nil, completed: false)
 
-task3 = Task.create!(list_id: list2.id, description: 'Remember to act like human', due_date: nil, estimate: nil, completed: true)
+# Personal list
+Task.create!(list_id: personal.id, description: 'Grocery shopping', due_date: nil, estimate: 30, completed: false)
+Task.create!(list_id: personal.id, description: 'Annual Dental Appointment', due_date: nil, estimate: nil, completed: false)
+Task.create!(list_id: personal.id, description: 'Buy ticket back home', due_date: nil, estimate: nil, completed: false)
+Task.create!(list_id: personal.id, description: 'Car Maintenance', due_date: nil, estimate: 120, completed: true)
+
+Task.create!(list_id: personal.id, description: 'Learn Ruby', due_date: nil, estimate: nil, completed: true)
+Task.create!(list_id: personal.id, description: 'Learn SQL', due_date: nil, estimate: nil, completed: true)
+Task.create!(list_id: personal.id, description: 'Learn Rails Active Record', due_date: nil, estimate: nil, completed: true)
+Task.create!(list_id: personal.id, description: 'Learn Javascript', due_date: nil, estimate: nil, completed: true)
+Task.create!(list_id: personal.id, description: 'Hair cut', due_date: nil, estimate: 30, completed: true)
+Task.create!(list_id: personal.id, description: 'Buy shoe storage rack', due_date: nil, estimate: 60, completed: true)
+
+
+# Show to watch
+Task.create!(list_id: movie.id, description: 'Dr. Strangelove', due_date: nil, estimate: 90, completed: false)
+Task.create!(list_id: movie.id, description: 'Fahrenheit 451', due_date: nil, estimate: 90, completed: false)
+Task.create!(list_id: movie.id, description: 'Isle of Dogs', due_date: nil, estimate: 90, completed: false)
+Task.create!(list_id: movie.id, description: 'A Quite Place', due_date: nil, estimate: 90, completed: false)
+Task.create!(list_id: movie.id, description: 'Westword Season 2', due_date: nil, estimate: 90, completed: false)
+Task.create!(list_id: movie.id, description: 'The Post', due_date: nil, estimate: 90, completed: false)
+
+Task.create!(list_id: movie.id, description: 'Baby Driver', due_date: nil, estimate: 90, completed: true)
+Task.create!(list_id: movie.id, description: 'Dunkirk', due_date: nil, estimate: 90, completed: true)
+Task.create!(list_id: movie.id, description: 'Wonder Woman', due_date: nil, estimate: 90, completed: true)
+Task.create!(list_id: movie.id, description: 'Logan', due_date: nil, estimate: 90, completed: true)
+Task.create!(list_id: movie.id, description: 'Watchman', due_date: nil, estimate: 90, completed: true)
+Task.create!(list_id: movie.id, description: 'Ex Machina', due_date: nil, estimate: 90, completed: true)
+
+
+# Apartment task list
+Task.create!(list_id: apartment.id, description: 'Taking out recycles', due_date: nil, estimate: 2, completed: false)
+Task.create!(list_id: apartment.id, description: 'Vacuum the carpet', due_date: nil, estimate: 20, completed: false)
+Task.create!(list_id: apartment.id, description: 'Costco shopping', due_date: nil, estimate: 90, completed: true)
+Task.create!(list_id: apartment.id, description: 'Clean dishwashing', due_date: nil, estimate: 30, completed: false)
+
+
 
 
 # Task edit (need to add auto submit)
@@ -52,4 +87,18 @@ task3 = Task.create!(list_id: list2.id, description: 'Remember to act like human
 # Add due date?
 # Task complete check complete button
 # Fix list overflow problem
+# Estimated time (update when task changed)
+
+# Serach routes, api, etc
+#
+# Seed the database
+#
+# Landing page pictures and transition effect
+#
+# Add more fields to task details
+#
+# Task complete check complete button
+#
+# Fix list overflow problem
+#
 # Estimated time (update when task changed)

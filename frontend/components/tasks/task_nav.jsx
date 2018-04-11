@@ -10,38 +10,57 @@ class TaskNav extends React.Component {
 
     this.handleDeleteTask = this.handleDeleteTask.bind(this);
     this.handleSelectTab = this.handleSelectTab.bind(this);
+    this.renderTaskCreate = this.renderTaskCreate.bind(this);
+    this.toggleTaskOption = this.toggleTaskOption.bind(this);
+    this.applyBlurCloseDropDownListener = this.applyBlurCloseDropDownListener.bind(this);
   }
 
-  handleToggleTaskOption(e) {
-    const taskToolBar = e.target;
+  componentDidMount() {
+    this.applyBlurCloseDropDownListener();
+  }
+
+  applyBlurCloseDropDownListener() {
     const taskOption = document.getElementById('task-option');
     const taskDropDown = document.getElementById('task-drop-down');
+    document.addEventListener('click', () => {
+      this.closeTaskOption();
+    });
+    taskOption.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.toggleTaskOption();
+    });
+  }
+
+  toggleTaskOption(e) {
+    const taskDropDown = document.getElementById('task-drop-down');
     if (taskDropDown.classList.contains('hidden')) {
-      taskDropDown.classList.remove('hidden');
-      taskOption.classList.add('task-option-on-click');
+      this.openTaskOption();
     } else {
-      taskDropDown.classList.add('hidden');
-      taskOption.classList.remove('task-option-on-click');
+      this.closeTaskOption();
     }
   }
 
-  handleCloseTaskOption(e) {
+  closeTaskOption() {
     const taskOption = document.getElementById('task-option');
     const taskDropDown = document.getElementById('task-drop-down');
     taskDropDown.classList.add('hidden');
     taskOption.classList.remove('task-option-on-click');
   }
 
-  handleDeleteTask() {
-    const deleteTask = this.props.deleteTask;
+  openTaskOption() {
     const taskOption = document.getElementById('task-option');
+    const taskDropDown = document.getElementById('task-drop-down');
+    taskDropDown.classList.remove('hidden');
+    taskOption.classList.add('task-option-on-click');
+  }
+
+  handleDeleteTask() {
+    this.closeTaskOption();
+
+    const deleteTask = this.props.deleteTask;
     this.props.selectedTaskIds.forEach((taskId) => {
       deleteTask(taskId);
     });
-    const taskDropDown = document.getElementById('task-drop-down');
-    taskDropDown.classList.add('hidden');
-    taskOption.classList.remove('task-option-on-click');
-
     this.props.deleteAllSelectedTask();
 
     toggleTaskDetailSection();
@@ -58,6 +77,44 @@ class TaskNav extends React.Component {
     const selectedTab = document.querySelector('.task-tab.selected');
     const showCompleted = (selectedTab.getAttribute('data') === 'true');
     this.props.switchTab(showCompleted);
+  }
+
+  renderTaskCreate() {
+    if (this.props.showCompleted) {
+      return (
+        <div className='task-bar-repalcement'></div>
+      );
+    } else {
+      return (
+        <TaskCreateContainer />
+      );
+    }
+  }
+
+  renderDeleteTaskDropDown() {
+    if (this.props.selectedTaskIds.length > 0) {
+      return (
+        <div
+          className='task-drop-down hidden hover-able'
+          id='task-drop-down'>
+          <p
+            className='delete-task'
+            onClick={this.handleDeleteTask}>Delete Task
+          </p>
+        </div>
+      );
+    } else {
+      return (
+        <div
+          className='task-drop-down hidden'
+          id='task-drop-down'>
+          <p
+            className='delete-task disabled'>
+            Delete Task
+          </p>
+        </div>
+      );
+    }
   }
 
   render() {
@@ -82,19 +139,15 @@ class TaskNav extends React.Component {
           <div
             className='task-option'
             id='task-option'
-            onClick={ this.handleToggleTaskOption }>
+            onClick={ this.toggleTaskOption }>
             <i className="material-icons more-horiz">more_horiz</i>
             <i className="material-icons arrow-drop-down">
               arrow_drop_down
             </i>
           </div>
-          <div
-            className='task-drop-down hidden'
-            id='task-drop-down'>
-            <p onClick={this.handleDeleteTask}>Delete Task</p>
-          </div>
+          {this.renderDeleteTaskDropDown()}
         </div>
-        <TaskCreateContainer />
+        {this.renderTaskCreate()}
         <div className='tasks-index-div'>
           <TaskIndexContainer />
         </div>

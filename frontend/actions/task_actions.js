@@ -71,6 +71,13 @@ export const deleteAllSelectedTask = () => dispatch => {
   dispatch(removeAllSelectedTask());
 };
 
+export const fetchTaskSearch = (searchTerm) => dispatch => {
+  return TaskAPIUtil.requestTaskSearch(searchTerm)
+    .then(
+      (tasks) => dispatch(receiveTasks(tasks))
+    );
+};
+
 export const fetchTaskIndex = () => dispatch => {
   return TaskAPIUtil.requestTaskIndex()
     .then(

@@ -59,6 +59,7 @@ $dark-grey: #666660;
   position: relative;
   width: 100%;
   height: 50px;
+  border-bottom: 1px dotted $very-light-grey;
 
   .task-option:hover {
     color: black;
@@ -90,7 +91,7 @@ $dark-grey: #666660;
     }
   }
 
-  .task-drop-down:hover {
+  .task-drop-down.hover-able:hover {
     background-color: $list-nav-color;
   }
   .task-drop-down {
@@ -105,8 +106,13 @@ $dark-grey: #666660;
     border: 1px solid $light-grey;
     font-size: 14px;
     box-shadow: 0 1px 4px 1px rgba(0,0,0,0.2);
+    z-index: 2;
 
-    p {
+    .delete-task.disabled {
+      color: $light-grey;
+      cursor: default;
+    }
+    .delete-task {
       padding: 8px 7px 8px 7px;
     }
   }
@@ -119,7 +125,6 @@ $dark-grey: #666660;
   width: 100%;
   height: 50px;
   background: white;
-  border-top: 1px dotted $very-light-grey;
   border-bottom: 1px dotted $very-light-grey;
 
   transition: height 0.2s;
@@ -171,7 +176,7 @@ $dark-grey: #666660;
 .task-item {
   display: flex;
   flex-direction: row;
-  border-bottom: 1px dotted #EEEEEE;
+  border-bottom: 1px dotted $very-light-grey;
   cursor: pointer;
   font-size: .8125rem;
 
@@ -195,6 +200,7 @@ $dark-grey: #666660;
     height: 30px;
     font-size: 18px;
     color: #ccc;
+    user-select: none;
 
     .box-icon {
       padding: 7px 6px;

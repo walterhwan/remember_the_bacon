@@ -2,35 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoutContainer from '../session/logout_container';
 import TaskNavContainer from '../tasks/tasks_nav_container';
-import ListIndexContainer from './list_index_container';
+import ListIndexContainer from '../lists/list_index_container';
 import ListCreateContainer from '../lists/list_create_container';
 import ListUpdateContainer from '../lists/list_update_container';
 import ListDetailContainer from '../lists/list_detail_container';
 import TaskEditContainer from '../tasks/task_edit_container';
-
-const applySearchOnFocusEvent = () => {
-  let searchInput = document.getElementsByClassName('task-search')[0];
-  let searchIcon = document.getElementsByClassName('search-icon')[0];
-  let searchForm = document.getElementsByClassName('search-form')[0];
-
-  searchInput.addEventListener("focus", function () {
-    searchIcon.style.color = 'gray';
-    searchForm.style.backgroundColor = 'white';
-  });
-
-  searchInput.addEventListener("focusout", function () {
-    searchIcon.style.color = 'white';
-    searchForm.style.backgroundColor = '#417CE1';
-  });
-};
+import TaskSearchContainer from '../tasks/task_search_container';
 
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-    applySearchOnFocusEvent();
   }
 
   // <i class="material-icons">done</i>
@@ -72,9 +53,11 @@ class MainPage extends React.Component {
   render() {
     return (
       <div className='main-page-div'>
+
         <div className='modal-screen modal'></div>
         <ListCreateContainer />
         <ListUpdateContainer />
+
         <nav className="main-page-nav">
           <div
             className="menu-icon-div"
@@ -86,14 +69,7 @@ class MainPage extends React.Component {
             </i>
             <p className='menu-text'>Lists</p>
           </div>
-          <form
-            className="search-form"
-            id='search-form' >
-            <i className="material-icons search-icon">search</i>
-            <input
-              className="task-search"
-              type='search' />
-          </form>
+          <TaskSearchContainer />
           <LogoutContainer />
         </nav>
         <main className="main-page-main">

@@ -1,3 +1,11 @@
+
+export const requestTaskSearch = (searchTerm) => {
+  return $.ajax({
+    url: `api/search/?search_term=${searchTerm}`,
+    method: 'GET',
+  });
+};
+
 export const requestTaskIndex = () => {
   return $.ajax({
     url: 'api/tasks',

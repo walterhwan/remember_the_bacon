@@ -1,6 +1,12 @@
 class Api::TasksController < ApplicationController
   before_action :require_logged_in
 
+  def search
+    @tasks = current_user.tasks.where("lower(description) LIKE ?", "%#{params['search_term']}%").all
+    # debugger
+    render :index
+  end
+
   def index
     if params[:list_id]
       @tasks = current_user.tasks.where(list_id: params[:list_id])

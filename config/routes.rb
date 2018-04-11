@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
   root to: "static_pages#root"
 
+  get '/api/search', to: 'api/tasks#search', as: 'api_search_tasks'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
