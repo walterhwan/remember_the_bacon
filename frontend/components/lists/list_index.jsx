@@ -1,30 +1,38 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
+const applyListItemEvent = () => {
+  const listItemDivs = document.getElementsByClassName('list-item-div');
+  const listBodies = document.getElementsByClassName('list-body');
+  const icons = document.getElementsByClassName('list-option-icon');
+  for (let i = 0; i < listItemDivs.length; i++) {
+    listBodies[i].addEventListener('mouseover', () => {
+      listItemDivs[i].classList.add('hovered');
+      icons[i].classList.add('hovered');
+    });
+    listBodies[i].addEventListener('mouseout', () => {
+      listItemDivs[i].classList.remove('hovered');
+      icons[i].classList.remove('hovered');
+    });
+  }
+};
+
 class ListIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = props;
+  }
+
   componentDidMount() {
     this.props.fetchListIndex()
-      .then(() => this.applyListItemEvent());
+      .then(() => applyListItemEvent());
 
     this.handleDeleteList = this.handleDeleteList.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
   }
 
-  // TODO: fix hover list item
-  applyListItemEvent() {
-    const listItemDivs = document.getElementsByClassName('list-item-div');
-    const listBodies = document.getElementsByClassName('list-body');
-    const icons = document.getElementsByClassName('list-option-icon');
-    for (let i = 0; i < listItemDivs.length; i++) {
-      listBodies[i].addEventListener('mouseover', () => {
-        listItemDivs[i].classList.add('hovered');
-        icons[i].classList.add('hovered');
-      });
-      listBodies[i].addEventListener('mouseout', () => {
-        listItemDivs[i].classList.remove('hovered');
-        icons[i].classList.remove('hovered');
-      });
-    }
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    applyListItemEvent();
   }
 
   renderListItem(list) {

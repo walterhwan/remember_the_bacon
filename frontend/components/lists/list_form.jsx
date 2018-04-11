@@ -6,6 +6,13 @@ class ListForm extends React.Component {
     this.state = this.props.list;
 
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    const closeModal = this.closeModal;
+    document.addEventListener('keyup', (e) => {
+      if (e.keyCode === 27) {
+        closeModal();
+      }
+    });
   }
 
   handleSubmit(e) {
@@ -21,7 +28,7 @@ class ListForm extends React.Component {
     }
   }
 
-  closeModal(typeForm) {
+  closeModal() {
     const screen = document.getElementsByClassName('modal-screen modal')[0];
     const modals = document.getElementsByClassName('modal');
     for (const modal of modals) {
