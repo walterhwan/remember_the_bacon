@@ -1,12 +1,13 @@
 import React from 'react';
-import LogoutButton from './logout_button';
+import SettingsButton from './settings_button';
 import { logout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = ({ session, errors }) => {
   return {
     errors: errors.session,
+    currentUser: session.currentUser
   };
 };
 
@@ -19,4 +20,4 @@ const mapDispatchToProps = (dispatch) => {
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(LogoutButton));
+)(SettingsButton));

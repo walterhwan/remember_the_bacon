@@ -22,7 +22,8 @@ class TaskNav extends React.Component {
   applyBlurCloseDropDownListener() {
     const taskOption = document.getElementById('task-option');
     const taskDropDown = document.getElementById('task-drop-down');
-    document.addEventListener('click', () => {
+    // TODO: Fixing
+    document.getElementById('main-page-div').addEventListener('click', () => {
       this.closeTaskOption();
     });
     taskOption.addEventListener('click', (e) => {

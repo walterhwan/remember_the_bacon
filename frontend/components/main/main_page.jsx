@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LogoutContainer from '../session/logout_container';
+import SettingsContainer from '../session/settings_container';
 import TaskNavContainer from '../tasks/tasks_nav_container';
 import ListIndexContainer from '../lists/list_index_container';
 import ListCreateContainer from '../lists/list_create_container';
@@ -57,7 +57,9 @@ class MainPage extends React.Component {
 
   render() {
     return (
-      <div className='main-page-div'>
+      <div
+        className='main-page-div'
+        id='main-page-div'>
 
         <div className='modal-screen modal'></div>
         <ListCreateContainer />
@@ -76,7 +78,7 @@ class MainPage extends React.Component {
             <p className='menu-text'>Lists</p>
           </div>
           <TaskSearchContainer />
-          <LogoutContainer />
+          <SettingsContainer />
         </nav>
         <main className="main-page-main">
           <nav
