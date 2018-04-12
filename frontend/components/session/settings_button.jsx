@@ -29,12 +29,13 @@ class SettingsButton extends React.Component {
 
   applyBlurCloseDropDownListener() {
     const settingsDropDown = document.getElementById('settings-drop-down');
-    document.getElementById('main-page-div').addEventListener('click', () => {
+    document.getElementById('main-page-div').addEventListener('click', (e) => {
       settingsDropDown.classList.add('hidden');
     });
   }
 
-  handleSettingOnClick() {
+  handleSettingOnClick(e) {
+    e.stopPropagation();
     const settingsDropDown = document.getElementById('settings-drop-down');
     if (settingsDropDown.classList.contains('hidden')) {
       settingsDropDown.classList.remove('hidden');

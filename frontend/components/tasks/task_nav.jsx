@@ -12,6 +12,8 @@ class TaskNav extends React.Component {
     this.handleSelectTab = this.handleSelectTab.bind(this);
     this.renderTaskCreate = this.renderTaskCreate.bind(this);
     this.toggleTaskOption = this.toggleTaskOption.bind(this);
+    this.handleClickComplete = this.handleClickComplete.bind(this);
+    this.handleClickIncomplete = this.handleClickIncomplete.bind(this);
     this.applyBlurCloseDropDownListener = this.applyBlurCloseDropDownListener.bind(this);
   }
 
@@ -20,10 +22,11 @@ class TaskNav extends React.Component {
   }
 
   applyBlurCloseDropDownListener() {
-    const taskOption = document.getElementById('task-option');
+    const taskOption = document.getElementById('task-option-button');
     const taskDropDown = document.getElementById('task-drop-down');
-    // TODO: Fixing
-    document.getElementById('main-page-div').addEventListener('click', () => {
+
+    document.getElementById('main-page-div')
+      .addEventListener('click', () => {
       this.closeTaskOption();
     });
     taskOption.addEventListener('click', (e) => {
@@ -42,17 +45,17 @@ class TaskNav extends React.Component {
   }
 
   closeTaskOption() {
-    const taskOption = document.getElementById('task-option');
+    const taskOption = document.getElementById('task-option-button');
     const taskDropDown = document.getElementById('task-drop-down');
     taskDropDown.classList.add('hidden');
-    taskOption.classList.remove('task-option-on-click');
+    taskOption.classList.remove('on-click');
   }
 
   openTaskOption() {
-    const taskOption = document.getElementById('task-option');
+    const taskOption = document.getElementById('task-option-button');
     const taskDropDown = document.getElementById('task-drop-down');
     taskDropDown.classList.remove('hidden');
-    taskOption.classList.add('task-option-on-click');
+    taskOption.classList.add('on-click');
   }
 
   handleDeleteTask() {
@@ -63,6 +66,26 @@ class TaskNav extends React.Component {
       deleteTask(taskId);
     });
     this.props.deleteAllSelectedTask();
+
+    toggleTaskDetailSection();
+  }
+
+  handleClickIncomplete() {
+    this.props.selectedTaskIds.forEach((taskId) => {
+      const task = this.props.tasks.find((el) => el.id === taskId);
+      task.completed = false;
+      this.props.updateTask(task);
+    });
+
+    toggleTaskDetailSection();
+  }
+
+  handleClickComplete() {
+    this.props.selectedTaskIds.forEach((taskId) => {
+      const task = this.props.tasks.find((el) => el.id === taskId);
+      task.completed = true;
+      this.props.updateTask(task);
+    });
 
     toggleTaskDetailSection();
   }
@@ -90,6 +113,33 @@ class TaskNav extends React.Component {
         <TaskCreateContainer />
       );
     }
+  }
+
+  renderTaskCompleteButtons() {
+    // if ()
+    return (
+      <div
+        className='task-complete-button'
+        id='task-complete-button'
+        onClick={this.handleClickComplete}>
+        <i className='material-icons task-done-icon' >
+          done
+        </i>
+      </div>
+    );
+  }
+
+  renderTaskNotCompleteButtons() {
+    return (
+      <div
+        className='task-not-complete-button'
+        id='task-not-complete-button'
+        onClick={this.handleClickIncomplete}>
+        <i className="material-icons task-not-done-icon">
+          reply
+        </i>
+      </div>
+    );
   }
 
   renderDeleteTaskDropDown() {
@@ -138,8 +188,8 @@ class TaskNav extends React.Component {
         <div
           className='task-tool-bar'>
           <div
-            className='task-option'
-            id='task-option'
+            className='task-option-button'
+            id='task-option-button'
             onClick={ this.toggleTaskOption }>
             <i className="material-icons more-horiz">more_horiz</i>
             <i className="material-icons arrow-drop-down">
@@ -147,6 +197,7 @@ class TaskNav extends React.Component {
             </i>
           </div>
           {this.renderDeleteTaskDropDown()}
+          {(this.props.showCompleted) ? this.renderTaskNotCompleteButtons() : this.renderTaskCompleteButtons()}
         </div>
         {this.renderTaskCreate()}
         <div className='tasks-index-div'>
