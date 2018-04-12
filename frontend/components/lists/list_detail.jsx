@@ -21,14 +21,15 @@ class ListDetail extends React.Component {
 
   render() {
     const list = this.props.list;
+    const numTasks = list.task_ids.length - list.num_completed;
 
     return (
       <section className='details-section'>
         <div className='list-name-div'>{list.name}</div>
         <div className='list-detail-div'>
           <div className='list-num-task detail-item'>
-            <p className='num'>{list.task_ids.length}</p>
-            <p className='type'>task</p>
+            <p className='num'>{numTasks}</p>
+            <p className='type'>{(numTasks < 2 ) ? 'task' : 'tasks' }</p>
           </div>
           <div className='list-est-time detail-item'>
             {this.renderEstimatedTime(list.total_estimated)}

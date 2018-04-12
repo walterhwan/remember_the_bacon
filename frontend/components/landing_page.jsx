@@ -3,10 +3,40 @@ import { Link } from 'react-router-dom';
 
 
 class LandingPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.interval = undefined;
+  }
+
+  componentDidMount() {
+    this.applySetInteval();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  applySetInteval() {
+    window.backgroundIdx = 0;
+    this.interval = setInterval(function() {
+      const colorArr = ['#0063BA', '#0095ED', '#6950A1', '#44B659'];
+      const colorIdx = window.backgroundIdx % 4;
+      const landingNav = document.getElementById('landing-nav');
+      const landingMain = document.getElementById('landing-main');
+      landingNav.style.backgroundColor = colorArr[colorIdx];
+      landingMain.style.backgroundColor = colorArr[colorIdx];
+
+      window.backgroundIdx += 1;
+    }, 5000);
+  }
+
   render() {
     return (
-      <div className='landing_page'>
-        <nav className='landing-nav'>
+      <div
+        className='landing-page'>
+        <nav
+          className='landing-nav'
+          id='landing-nav'>
           <div >
             <Link to='/' className='logo'/>
             <ul className='landing-nav-ul'>
@@ -25,7 +55,9 @@ class LandingPage extends React.Component {
             </ul>
           </div>
         </nav>
-        <main className='landing-main'>
+        <main
+          className='landing-main'
+          id='landing-main'>
           <div className='quote-signup-div'>
             <h1>The smart to-do app for lazy people.</h1>
             <Link
