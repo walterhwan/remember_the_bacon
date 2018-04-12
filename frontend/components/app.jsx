@@ -12,7 +12,7 @@ import SignupFormContainer from './session/signup_form_container.jsx';
 
 
 const App = () => (
-  <div>
+  <div className='app'>
     <Switch>
       <ProtectedRoute path='/lists/:listId' component={MainPage} />
       <AuthRoute path='/login' component={SessionLogin} />

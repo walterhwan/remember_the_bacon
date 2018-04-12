@@ -5,12 +5,12 @@ const applyCreateTaskOnFocusEvents = () => {
   let taskBarInput = document.getElementsByClassName('task-create')[0];
 
   taskBarInput.addEventListener("focus", function () {
-    taskBar.style.height = '90px';
+    taskBar.classList.add('extend');
   });
 
   taskBarInput.addEventListener("focusout", function () {
     setTimeout(function () {
-      taskBar.style.height = '50px';
+      taskBar.classList.remove('extend');
     }, 100);
   });
 };

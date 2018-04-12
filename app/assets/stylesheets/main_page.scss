@@ -4,10 +4,15 @@ $list-nav-color: #D4E8F4;
 $list-hover-color: #B7D1ED;
 $light-gray: #c1c1c1;
 
+.main-page-div {
+  display: flex;
+  flex-direction: column;
+}
+
 .main-page-nav {
   background: $nav-bar-color;
   width: 100%;
-  height: 40px;
+  min-height: 40px;
 
   display: flex;
   flex-direction: row;
@@ -87,7 +92,7 @@ $light-gray: #c1c1c1;
   overflow-y: hidden;
   background: $list-nav-color;
   width: 100%;
-  height: calc(100vh - 40px);
+  // height: calc(100vh - 40px);
   // min-height: 750px;
   border-top: 9px solid $list-nav-color;
 

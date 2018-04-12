@@ -2,8 +2,12 @@ class Api::TasksController < ApplicationController
   before_action :require_logged_in
 
   def search
-    @tasks = current_user.tasks.where("lower(description) LIKE ?", "%#{params['search_term']}%").all
-    # debugger
+    withStartingKeyWord = current_user.tasks.where("lower(description) LIKE ?", "#{params['search_term']}%").all
+
+    allKeyWord = current_user.tasks.where("lower(description) LIKE ?", "%#{params['search_term']}%").all
+
+    # TODO: improve search 
+    @tasks = allKeyWord.reverse
     render :index
   end
 

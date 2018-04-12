@@ -142,7 +142,7 @@ class ListIndex extends React.Component {
           <i className="material-icons">
             arrow_drop_down
           </i>
-          <p onClick={()=>console.log('clicked')}>
+          <p>
             Lists
           </p>
           <i
