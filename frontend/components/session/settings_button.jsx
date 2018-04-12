@@ -5,6 +5,26 @@ class SettingsButton extends React.Component {
 
   componentDidMount() {
     this.applyBlurCloseDropDownListener();
+    this.applyHoverSettingButtonListener();
+  }
+
+  applyHoverSettingButtonListener() {
+    const buttons = document.querySelectorAll(
+      '.linkedin-button, .github-button, .setting-button'
+    );
+    for (const button of buttons) {
+      const icons = button.querySelectorAll('img, i');
+      button.addEventListener('mouseover', () => {
+        for (const icon of icons) {
+          icon.style.opacity = 1;
+        }
+      });
+      button.addEventListener('mouseout', () => {
+        for (const icon of icons) {
+          icon.style.opacity = 0.7;
+        }
+      });
+    }
   }
 
   applyBlurCloseDropDownListener() {
