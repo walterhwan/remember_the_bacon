@@ -25,7 +25,7 @@ class LandingPage extends React.Component {
             </ul>
           </div>
         </nav>
-        <main>
+        <main className='landing-main'>
           <div className='quote-signup-div'>
             <h1>The smart to-do app for lazy people.</h1>
             <Link
@@ -35,7 +35,7 @@ class LandingPage extends React.Component {
           <div className='silder-div'>
           </div>
         </main>
-        <footer className='footer'>
+        <footer className='landing-footer'>
           <p>
             <a href='https://www.linkedin.com/in/hsuan-chen-walter-wan-b9854970/'>
               About Me
