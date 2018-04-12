@@ -1,9 +1,12 @@
+$darkblue: #0063BA;
+$lightblue: #0095ED;
+
 .landing_page {
   font-family: 'Noto Sans', sans-serif;
 }
 
 .landing-nav {
-  background: #0095ED;
+  background: $darkblue;
   // font-family: 'Noto Sans', sans-serif;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(0, 0, 0, .08);
@@ -65,7 +68,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: #0095ED;
+  background: $darkblue;
   height: 214px;
   color: #fff;
   font-family: 'Noto Sans', sans-serif;
@@ -96,6 +99,22 @@
 
 .silder-div {
   width: 100%;
-  background: #0095ED;
+  background: $darkblue;
   height: 666px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0px;
+  font-size: 12px;
+
+  a {
+    color: #0064BA;
+  }
+
+  p {
+    margin: 5px 0px;
+  }
 }

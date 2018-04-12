@@ -7,9 +7,11 @@
   width: 50%;
   top: 0px;
   margin-right: 9px;
+  padding: 27px 27px;
+  box-sizing: border-box;
 
   .list-name-div {
-    margin: 37px 0px 21px 27px;
+    margin: 10px 0px 21px 0px;
     font-size: 18px;
   }
 
@@ -32,7 +34,6 @@
     }
 
     .list-num-task {
-      margin-left: 28px;
       .num {
         color: #0064BA;
       }
@@ -42,6 +43,22 @@
     }
     span {
       font-size: 14px;
+    }
+  }
+
+  .list-detail-footer {
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    font-size: 12px;
+    padding: inherit;
+
+    a {
+      color: #0064BA;
+    }
+
+    p {
+      margin: 5px 0px;
     }
   }
 }

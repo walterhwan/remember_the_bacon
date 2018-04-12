@@ -15,11 +15,6 @@ class MainPage extends React.Component {
     super(props);
   }
 
-  // <i class="material-icons">done</i>
-  // <i class="material-icons">add_box</i>
-  // <i class="material-icons">check_box</i>
-  // <i class="material-icons">check_box_outline_blank</i>
-
   handleMenuOnClick(e) {
     const menuIconDiv = document.getElementById('menu-icon-div');
     if (menuIconDiv.classList.contains('extend')) {

@@ -66,10 +66,25 @@ $light-gray: #c1c1c1;
   .logout-div {
     display: flex;
     flex-direction: row;
+    align-items: center;
+
+    .linkedin-icon {
+      height: 24px;
+      width: 24px;
+      color: white;
+      margin: 0px 3px;
+    }
+
+    .github-icon {
+      height: 24px;
+      width: 24px;
+      color: white;
+      margin: 0px 3px;
+    }
 
     .settings-icon {
       color: white;
-      padding: 7px 0px 0px;
+      margin: 0px 3px;
     }
 
     .logout-button {

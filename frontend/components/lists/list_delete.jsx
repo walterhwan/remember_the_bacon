@@ -11,7 +11,7 @@ class ListDelete extends React.Component {
     e.preventDefault();
     const confirmDeleteList = document.getElementsByClassName('confirm-delete-list-div modal')[0];
     this.props.deleteList(confirmDeleteList.data);
-    // TODO: redirect after list was deleted
+
     this.props.history.push(`/lists/${this.props.lists[0].id}`);
 
     this.closeModal();

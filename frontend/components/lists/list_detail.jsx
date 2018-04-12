@@ -39,6 +39,17 @@ class ListDetail extends React.Component {
             <p className='type'>completed</p>
           </div>
         </div>
+        <footer className='list-detail-footer'>
+          <p>
+            <a href='https://www.linkedin.com/in/hsuan-chen-walter-wan-b9854970/'>
+              About Me
+            </a>&nbsp;&nbsp;&nbsp;
+            <a href='https://github.com/walterhwan'>
+              My Github
+            </a>
+          </p>
+          <p>This website was made in 11 days</p>
+        </footer>
       </section>
     );
   }
