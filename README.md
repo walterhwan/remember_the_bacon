@@ -6,9 +6,15 @@ Remember the Bacon is a place to store of your to-do list and get things done! I
 
 + Secure user authentication
   + User password was stored as salted hash(BCrypt)
-  + 
++ Create tasks and organize them into lists so you remember to do them
++ Add task details like estimated time to do the task
++ Smooth and interactive navigation
 
-# Name of MVP
+# Lists CRUD
+
+[[/public/gif/list_CRUD.gif|Lists CRUD]]
+
+Lists of task are the core feature of this app.
 
 + Brief description
 + any CRUD functionality it may have

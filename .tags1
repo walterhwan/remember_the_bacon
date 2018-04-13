@@ -4,3 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+README	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# README$/;"	function	line:1
+Features	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Features$/;"	function	line:5
+Lists CRUD	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Lists CRUD$/;"	function	line:13
