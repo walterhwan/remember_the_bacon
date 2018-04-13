@@ -354,4 +354,7 @@ a	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon
 p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  p {$/;"	function	line:149
 README	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# README$/;"	function	line:1
 Features	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Features$/;"	function	line:5
-Lists CRUD	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Lists CRUD$/;"	function	line:13
+List CRUD	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## List CRUD$/;"	function	line:13
+Task CRUD	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## Task CRUD$/;"	function	line:19
+Good animation	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## Good animation$/;"	function	line:25
+Improvements	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Improvements$/;"	function	line:70

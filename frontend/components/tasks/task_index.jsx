@@ -94,12 +94,10 @@ class TaskIndex extends React.Component {
       }
     };
     const { tasks } = this.props;
-    const selectedTab = document.querySelectorAll('.task-tab, .selected')[0];
 
     let displayTasks = tasks.slice().filter((el) => {
       return this.props.showCompleted === el.completed;
     });
-
     displayTasks = displayTasks.sort(byUpdateTime);
 
 
