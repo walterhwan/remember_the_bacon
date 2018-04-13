@@ -19,7 +19,7 @@ Task.all.destroy_all
   personal = List.create!(user_id: demo.id, name: 'Personal')
   family = List.create!(user_id: demo.id, name: 'Family')
   apartment = List.create!(user_id: demo.id, name: 'Apartment')
-  other = List.create!(user_id: demo.id, name: 'Other')
+  programming = List.create!(user_id: demo.id, name: 'Programming')
   movie = List.create!(user_id: demo.id, name: 'TV/Movie to watch')
 
   # Seed work list
@@ -69,6 +69,14 @@ Task.all.destroy_all
   Task.create!(list_id: apartment.id, description: 'Vacuum the carpet', due_date: nil, estimate: 20, completed: false)
   Task.create!(list_id: apartment.id, description: 'Costco shopping', due_date: nil, estimate: 90, completed: true)
   Task.create!(list_id: apartment.id, description: 'Clean dishwashing', due_date: nil, estimate: 30, completed: false)
+
+  # programming task list
+  (1..50).each do
+    Task.create!(list_id: programming.id, description: Faker::Hacker.say_something_smart[0...-1], due_date: nil, estimate: 5, completed: false)
+  end
+  (1..50).each do
+    Task.create!(list_id: programming.id, description: Faker::Hacker.say_something_smart[0...-1], due_date: nil, estimate: 5, completed: true)
+  end
 end
 
 

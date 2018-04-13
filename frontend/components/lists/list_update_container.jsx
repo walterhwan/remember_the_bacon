@@ -11,7 +11,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ entities }, ownProps) => {
-  // console.log(ownProps.location.search.split('=')[1]);
   return {
     list: {name: ''},
     title: 'Rename list',
