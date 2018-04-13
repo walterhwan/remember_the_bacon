@@ -74,10 +74,11 @@ class TaskNav extends React.Component {
     this.props.selectedTaskIds.forEach((taskId) => {
       const task = this.props.tasks.find((el) => el.id === taskId);
       task.completed = false;
-      this.props.updateTask(task);
+      this.props.updateTask(task)
+        .then(() => this.props.fetchList(task.list_id));
+
     });
     this.props.deleteAllSelectedTask();
-
     toggleTaskDetailSection();
   }
 
@@ -85,7 +86,8 @@ class TaskNav extends React.Component {
     this.props.selectedTaskIds.forEach((taskId) => {
       const task = this.props.tasks.find((el) => el.id === taskId);
       task.completed = true;
-      this.props.updateTask(task);
+      this.props.updateTask(task)
+        .then(() => this.props.fetchList(task.list_id));
     });
     this.props.deleteAllSelectedTask();
 
