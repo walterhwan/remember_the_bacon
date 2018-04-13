@@ -324,14 +324,6 @@ i	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon
 .task-description.completed	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-description.completed {$/;"	function	line:274
 .task-description	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^  .task-description {$/;"	function	line:278
 .selected-task	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/task_nav.scss	/^.selected-task {$/;"	function	line:286
-path	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var path = require("path");$/;"	variable	line:1
-webpack	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var webpack = require("webpack");$/;"	variable	line:2
-plugins	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var plugins = []; \/\/ if using any plugins for both dev and production$/;"	variable	line:5
-devPlugins	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var devPlugins = []; \/\/ if using any plugins for development$/;"	variable	line:6
-prodPlugins	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var prodPlugins = [$/;"	variable	line:8
-module.exports.context	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^module.exports = {$/;"	property	line:27
-module.exports.entry	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^  context: __dirname,$/;"	property	line:28
-module.exports.output	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^  entry: ".\/frontend\/entry",$/;"	property	line:29
 name	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "name": "remember_the_bacon",$/;"	function	line:2
 private	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "private": true,$/;"	function	line:3
 dependencies	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "dependencies": {$/;"	function	line:4
@@ -359,4 +351,12 @@ keywords	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_th
 author	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "author": "",$/;"	function	line:29
 license	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "license": "ISC",$/;"	function	line:30
 devDependencies	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^  "devDependencies": {$/;"	function	line:31
-redux-logger	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "redux-logger": "^3.0.6",$/;"	function	line:32
+redux-logger	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/package.json	/^    "redux-logger": "^3.0.6"$/;"	function	line:32
+path	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var path = require("path");$/;"	variable	line:1
+webpack	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var webpack = require("webpack");$/;"	variable	line:2
+plugins	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var plugins = []; \/\/ if using any plugins for both dev and production$/;"	variable	line:5
+devPlugins	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var devPlugins = []; \/\/ if using any plugins for development$/;"	variable	line:6
+prodPlugins	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^var prodPlugins = [$/;"	variable	line:8
+module.exports.context	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^module.exports = {$/;"	property	line:27
+module.exports.entry	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^  context: __dirname,$/;"	property	line:28
+module.exports.output	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/webpack.config.js	/^  entry: ".\/frontend\/entry",$/;"	property	line:29

@@ -10,8 +10,8 @@ class TaskIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchListTasks(this.props.listId)
-      .then(() => this.setState(this.props.tasks));
+    this.props.fetchListTasks(this.props.listId);
+      // .then(() => this.setState(this.props.tasks));
   }
 
   componentWillReceiveProps(nextProps) {
@@ -19,7 +19,7 @@ class TaskIndex extends React.Component {
       this.props.fetchListTasks(nextProps.match.params.listId);
     }
     // TODO: figure out what to return
-    return null;
+    return {};
   }
 
   handleTaskOnClick(task) {

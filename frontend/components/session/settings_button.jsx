@@ -50,8 +50,8 @@ class SettingsButton extends React.Component {
   }
 
   handleLogout() {
-    this.props.history.push('/');
     this.props.logout();
+    // this.props.history.push('/');
   }
 
   render() {
