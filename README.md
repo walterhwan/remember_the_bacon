@@ -12,7 +12,7 @@ Remember the Bacon is a place to store of your to-do list and get things done! I
 
 # Lists CRUD
 
-![list-crud](https://imgur.com/Nt497MR)
+![list-curd](https://i.imgur.com/Nt497MR.gif)
 
 Lists of task are the core feature of this app.
 
