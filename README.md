@@ -34,6 +34,8 @@ When editing the task, there is no submit button anywhere. Since every time user
 
 ![add_task](https://i.imgur.com/kxgrwH6.gif)
 
+![search](https://i.imgur.com/XcHruBv.gif)
+
 Good animation that feels intuitive and interactive is very crucial for website design. Our mind rely on those visual clue to help understanding the site. Sometimes these visual design is more important than the actual feature. Since a badly designed UI might discourage its usage no mater how good your feature is.
 
 The best solution for this project is CSS animation using `transition` and use javascript to trigger those effects. Since the animation is not too complicated css transition effects is the fastest and the lightweight choice.
@@ -74,7 +76,23 @@ The actual implementation is simple. First, you define the starting position (su
  ...
  ```
 
-### Challenge
+## Search
+
+![search](https://i.imgur.com/gkC9wRo.gif)
+
+After finishing list and tasks, doing search is much easier. Since it reuse all components of task index. The search itself is handled on database level, although after the frontend gets the data it can present in whatever order that is required(or select some part of the tasks).
+
+```js
+// filter tasks depend on whether incomplete or completed tabs user selected previously
+let displayTasks = tasks.slice().filter((el) => {
+  return this.props.showCompleted === el.completed;
+});
+// sort the task by update time or other options
+displayTasks = displayTasks.sort(byUpdateTime);
+```
+
+
+## Challenge
 
 The real challenging part of this project is how to organize the structure of html in order to achieve various CSS animation effects but also maintain responsiveness of the website. Knowing many tools/tricks and trying out each of them to find out the best solution is the key to polishing the final product.
 
@@ -92,8 +110,6 @@ The hardest part is probably the task navigation component(the middle section of
  - [ ] Assign tasks to other user
 
 <!--
-
-
 + Brief description
 + any CRUD functionality it may have
 + screenshot of feature
