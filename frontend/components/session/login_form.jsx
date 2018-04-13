@@ -60,7 +60,7 @@ class LoginForm extends React.Component {
           type='text'
           onChange={this.update('username')}
           value={user.username}
-          placeholder="Email or username">
+          placeholder="Username">
         </input>
         <input
           type='password'

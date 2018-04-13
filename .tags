@@ -227,8 +227,6 @@ create	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_
 update	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def update$/;"	method	line:38	class:Api
 destroy	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def destroy$/;"	method	line:48	class:Api
 task_params	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/controllers/api/tasks_controller.rb	/^  def task_params$/;"	method	line:56	class:Api
-README	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# README$/;"	function	line:1
-Name of MVP	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Name of MVP$/;"	function	line:25
 .details-section	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_detail.scss	/^.details-section {$/;"	function	line:2
 .list-name-div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_detail.scss	/^  .list-name-div {$/;"	function	line:13
 .list-detail-div	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_detail.scss	/^  .list-detail-div {$/;"	function	line:18
@@ -354,3 +352,6 @@ a:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the
 .landing-footer	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.landing-footer {$/;"	function	line:138
 a	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  a {$/;"	function	line:145
 p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  p {$/;"	function	line:149
+README	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# README$/;"	function	line:1
+Features	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Features$/;"	function	line:5
+Name of MVP	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Name of MVP$/;"	function	line:11

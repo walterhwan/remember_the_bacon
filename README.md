@@ -1,32 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Remember the Bacon is a place to store of your to-do list and get things done! It was inspired by [Remember the Milk](www.rememberthemilk.com). But unlike the oringial, it delivers a smoother user experience through Rails, PostgreSQL, React.js, and Redux. This project was planned and implemented in about 11 days.
 
-Things you may want to cover:
+# Features
 
-* Ruby version
++ Secure user authentication
+  + User password was stored as salted hash(BCrypt)
+  + 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # Name of MVP
 
-* Brief description
-* any CRUD funcitonailty it may have
-* screenshot of feature
-* challenge
-* why you did it that way
-* how? one code snippet 
++ Brief description
++ any CRUD functionality it may have
++ screenshot of feature
++ challenge
++ why you did it that way
++ how? one code snippet
