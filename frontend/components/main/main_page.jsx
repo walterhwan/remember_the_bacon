@@ -16,34 +16,24 @@ class MainPage extends React.Component {
   }
 
   handleMenuOnClick(e) {
-    const menuIconDiv = document.getElementById('menu-icon-div');
-    if (menuIconDiv.classList.contains('extend')) {
-      menuIconDiv.classList.remove('extend');
+    const eleClassNames = [
+      '.menu-icon-div',
+      '.side-lists-nav',
+      '.task-list-details-section',
+      '.search-form',
+    ];
+    const elements = document.querySelectorAll(
+      eleClassNames.join(', ')
+    );
+    if (elements[0].classList.contains('extend')) {
+      for (const el of elements) {
+        el.classList.remove('extend');
+      }
     } else {
-      menuIconDiv.classList.add('extend');
+      for (const el of elements) {
+        el.classList.add('extend');
+      }
     }
-
-    const sideListNav = document.getElementById('side-lists-nav');
-    if (sideListNav.classList.contains('extend')) {
-      sideListNav.classList.remove('extend');
-    } else {
-      sideListNav.classList.add('extend');
-    }
-
-    const section = document.getElementById('task-list-details-section');
-    if (section.classList.contains('extend')) {
-      section.classList.remove('extend');
-    } else {
-      section.classList.add('extend');
-    }
-
-    const searchForm = document.getElementById('search-form');
-    if (searchForm.classList.contains('extend')) {
-      searchForm.classList.remove('extend');
-    } else {
-      searchForm.classList.add('extend');
-    }
-
   }
 
   closeModal() {
@@ -101,13 +91,5 @@ class MainPage extends React.Component {
     );
   }
 }
-// <div className='task-details-section'>
-//   <div className='task-name-div'>
-//     <input value='Task Name' />
-//   </div>
-// </div>
-
-
-  // <input type='button' value='Menu' />
 
 export default MainPage;

@@ -7,10 +7,12 @@ import {
   NavLink, Redirect, Switch
 } from 'react-router-dom';
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = ({ errors, session }) => {
+  const user = session.currentUser;
   return {
     errors: errors.session,
     navLink: <Link to="/signup">Sign Up (LoginFormContainer)</Link>,
+    user: user
   };
 };
 

@@ -18,7 +18,9 @@ class LoginForm extends React.Component {
     e.preventDefault();
 
     this.props.login(this.state)
-      .then(() => this.props.history.push('/'));
+      .then((user) => {
+        this.props.history.push('/');
+      });
   }
 
   handleDemoLogin(e) {
@@ -26,8 +28,9 @@ class LoginForm extends React.Component {
       username: `demo${Math.floor(Math.random() * 20)}`,
       password: 'demodemo'
     };
+    const context1 = this.props;
     this.props.login(demoUser)
-      .then(() => this.props.history.push(`/`));
+      .then(() => this.props.history.push('/'));
   }
 
   renderErrorMessage() {

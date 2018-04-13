@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class SettingsButton extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleLogout = this.handleLogout.bind(this);
+  }
 
   componentDidMount() {
     this.applyBlurCloseDropDownListener();
@@ -42,6 +47,11 @@ class SettingsButton extends React.Component {
     } else {
       settingsDropDown.classList.add('hidden');
     }
+  }
+
+  handleLogout() {
+    this.props.history.push('/');
+    this.props.logout();
   }
 
   render() {
@@ -86,7 +96,7 @@ class SettingsButton extends React.Component {
               className='user-logout-button'
               type='button'
               value='Sign out'
-              onClick={() => this.props.logout()} />
+              onClick={this.handleLogout} />
           </div>
         </div>
 
