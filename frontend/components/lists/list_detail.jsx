@@ -13,7 +13,7 @@ class ListDetail extends React.Component {
     } else {
       return (
         <p className='num'>
-          {hours}<span>hr</span> {minutes}<span>min</span>
+          {hours}<span>hr</span>&nbsp;{minutes}<span>min</span>
         </p>
       );
     }
@@ -44,7 +44,7 @@ class ListDetail extends React.Component {
           <p>
             <a href='https://www.linkedin.com/in/hsuan-chen-walter-wan-b9854970/'>
               About Me
-            </a>&nbsp;&nbsp;&nbsp;
+            </a>
             <a href='https://github.com/walterhwan'>
               Github
             </a>

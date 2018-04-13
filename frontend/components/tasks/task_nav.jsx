@@ -116,30 +116,33 @@ class TaskNav extends React.Component {
   }
 
   renderTaskCompleteButtons() {
-    // if ()
-    return (
-      <div
-        className='task-complete-button'
-        id='task-complete-button'
-        onClick={this.handleClickComplete}>
-        <i className='material-icons task-done-icon' >
-          done
-        </i>
-      </div>
-    );
+    if (this.props.selectedTaskIds.length > 0) {
+      return (
+        <div
+          className='task-complete-button'
+          id='task-complete-button'
+          onClick={this.handleClickComplete}>
+          <i className='material-icons task-done-icon' >
+            done
+          </i>
+        </div>
+      );
+    }
   }
 
   renderTaskNotCompleteButtons() {
-    return (
-      <div
-        className='task-not-complete-button'
-        id='task-not-complete-button'
-        onClick={this.handleClickIncomplete}>
-        <i className="material-icons task-not-done-icon">
-          reply
-        </i>
-      </div>
-    );
+    if (this.props.selectedTaskIds.length > 0) {
+      return (
+        <div
+          className='task-not-complete-button'
+          id='task-not-complete-button'
+          onClick={this.handleClickIncomplete}>
+          <i className="material-icons task-not-done-icon">
+            reply
+          </i>
+        </div>
+      );
+    }
   }
 
   renderDeleteTaskDropDown() {

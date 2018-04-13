@@ -74,7 +74,7 @@ class MainPage extends React.Component {
           <nav
             className="side-lists-nav"
             id='side-lists-nav'>
-            <div className="logo"/>
+            <div className="colored-logo"/>
             <ListIndexContainer />
           </nav>
           <div

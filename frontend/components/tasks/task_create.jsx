@@ -1,15 +1,15 @@
 import React from 'react';
 
 const applyCreateTaskOnFocusEvents = () => {
-  let taskBar = document.getElementsByClassName('task-bar')[0];
-  let taskBarInput = document.getElementsByClassName('task-create')[0];
+  let taskBar = document.getElementById('task-bar');
+  let taskBarInput = document.getElementById('task-create');
 
-  taskBarInput.addEventListener("focus", function () {
+  taskBarInput.addEventListener("focus", () => {
     taskBar.classList.add('extend');
   });
 
-  taskBarInput.addEventListener("focusout", function () {
-    setTimeout(function () {
+  taskBarInput.addEventListener("focusout", () => {
+    setTimeout(() => {
       taskBar.classList.remove('extend');
     }, 100);
   });
@@ -28,7 +28,9 @@ class TaskCreate extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    return this.setState({list_id: nextProps.match.params.listId});
+    return this.setState({
+      list_id: nextProps.match.params.listId
+    });
   }
 
   handleSubmit(e) {
@@ -47,16 +49,18 @@ class TaskCreate extends React.Component {
     return (
       <form
         className='task-bar'
+        id='task-bar'
         onSubmit={this.handleSubmit}>
         <input
           className='task-create'
+          id='task-create'
           type="text"
           placeholder="Add a task..."
           value={this.state.description}
           onChange={this.update('description')}/>
         <div className="task-util-bar">
           <div className=""></div>
-          <input
+          <input className='add-button'
             type="submit"
             value="Add Task" >
           </input>

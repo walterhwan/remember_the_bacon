@@ -206,7 +206,10 @@ html, body, main, .app, .main-page-div,
   margin: 5px 17px;
   margin-top: 0px;
 
-  input[type=submit]{
+  .add-button:focus {
+    outline: none;
+  }
+  .add-button {
     float: right;
     background: #2881E8;
     padding-right: 14px;
