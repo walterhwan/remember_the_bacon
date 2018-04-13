@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+# Name of MVP
+
+* Brief description
+* any CRUD funcitonailty it may have
+* screenshot of feature
+* challenge
+* why you did it that way
+* how? one code snippet 

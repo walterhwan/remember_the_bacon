@@ -2,20 +2,20 @@ class Api::TasksController < ApplicationController
   before_action :require_logged_in
 
   def search
-    withStartingKeyWord = current_user.tasks.where("lower(description) LIKE ?", "#{params['search_term']}%").all
+    most_relevant = current_user.tasks.where("lower(description) LIKE ?", "#{params['search_term']}%").all
 
-    allKeyWord = current_user.tasks.where("lower(description) LIKE ?", "%#{params['search_term']}%").all
+    less_relevant = current_user.tasks.where("lower(description) LIKE ?", "%#{params['search_term']}%").where("lower(description) NOT LIKE ?", "#{params['search_term']}%").all
 
-    # TODO: improve search 
-    @tasks = allKeyWord.reverse
+    # TODO: improve search
+    @tasks = less_relevant + most_relevant #.sort_by(&:created_at)
     render :index
   end
 
   def index
     if params[:list_id]
-      @tasks = current_user.tasks.where(list_id: params[:list_id])
+      @tasks = current_user.tasks.where(list_id: params[:list_id]).order(updated_at: :desc)
     else
-      @tasks = current_user.tasks
+      @tasks = current_user.tasks.order(updated_at: :desc)
     end
     render :index
   end

@@ -46,7 +46,7 @@ class ListDetail extends React.Component {
               About Me
             </a>&nbsp;&nbsp;&nbsp;
             <a href='https://github.com/walterhwan'>
-              My Github
+              Github
             </a>
           </p>
           <p>This website was made in 11 days</p>

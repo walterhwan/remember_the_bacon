@@ -86,12 +86,22 @@ class TaskIndex extends React.Component {
   }
 
   render() {
+    const byUpdateTime = (a, b) => {
+      if (a.updated_at < b.updated_at) {
+        return 1;
+      } else {
+        return -1;
+      }
+    };
     const { tasks } = this.props;
     const selectedTab = document.querySelectorAll('.task-tab, .selected')[0];
 
-    const displayTasks = tasks.slice().filter((el) => {
+    let displayTasks = tasks.slice().filter((el) => {
       return this.props.showCompleted === el.completed;
-    }).reverse();
+    });
+
+    displayTasks = displayTasks.sort(byUpdateTime);
+
 
     return (
       <ul className='task-index'>

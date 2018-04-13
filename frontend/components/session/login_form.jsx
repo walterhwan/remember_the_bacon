@@ -23,7 +23,7 @@ class LoginForm extends React.Component {
 
   handleDemoLogin(e) {
     const demoUser = {
-      username: 'demo',
+      username: `demo${Math.floor(Math.random() * 20)}`,
       password: 'demodemo'
     };
     this.props.login(demoUser)
