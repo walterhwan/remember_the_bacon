@@ -26,11 +26,11 @@ Smooth manipulation of Task is also a very important feature. The idea is to mak
 
 ![menu_animation](https://i.imgur.com/8ugZIEV.gif)
 
-![add_task](https://i.imgur.com/Ju9EzTC.gif)
+![add_task](https://i.imgur.com/kxgrwH6.gif)
 
 Good animation that feels intuitive and interactive is very crucial for website design. Our mind rely on those visual clue to help understanding the site. Sometimes these visual design is more important than the actual feature. Since a badly designed UI might discourage its usage no mater how good your feature is.
 
-The best solution for this project is CSS animation using `transition` and use javascript to trigger those effects. Since the animation is not too complicated css transition effects is the fastest and require less resources.
+The best solution for this project is CSS animation using `transition` and use javascript to trigger those effects. Since the animation is not too complicated css transition effects is the fastest and the lightweight choice.
 
 The actual implementation is simple. First, you define the starting position (such as height, absolute position etc) of the DOM elements and then define the ending position in the same selector plus an additional class such as `extend`.
 
@@ -43,9 +43,10 @@ The actual implementation is simple. First, you define the starting position (su
 }
 ```
 
- Then, in javascript, you can query all the elements you want to move and add/remove `extend` class depend on the situation. The
+ Then, in javascript, you can query all the elements you want to move and add/remove `extend` class depend on the situation. Note that although it looks like some element 'disappeared' they were actually been moved outside of its parent elements and was hidden by `overflow: hidden` property.
 
  ```js
+ ...
  const eleClassNames = [
    '.menu-icon-div',
    '.side-lists-nav',
@@ -64,6 +65,7 @@ The actual implementation is simple. First, you define the starting position (su
      el.classList.add('extend');
    }
  }
+ ...
  ```
 
 
