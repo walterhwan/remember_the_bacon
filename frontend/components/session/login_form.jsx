@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
 
   handleDemoLogin(e) {
     const demoUser = {
-      username: `demo${Math.floor(Math.random() * 20)}`,
+      username: `demo${Math.floor(Math.random() * 20 + 1)}`,
       password: 'demodemo'
     };
     const context1 = this.props;

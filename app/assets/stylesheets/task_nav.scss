@@ -34,11 +34,11 @@ $dark-grey: #666660;
     min-height: 90px;
   }
   .task-bar {
+    min-height: 50px;
     transition: min-height 0.2s;
 
     display: flex;
     flex-direction: column;
-    min-height: 50px;
     max-height: 50px;
     border-bottom: 1px dotted $very-light-grey;
   }
