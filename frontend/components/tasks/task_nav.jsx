@@ -101,6 +101,9 @@ class TaskNav extends React.Component {
     const selectedTab = document.querySelector('.task-tab.selected');
     const showCompleted = (selectedTab.getAttribute('data') === 'true');
     this.props.switchTab(showCompleted);
+
+    this.props.deleteAllSelectedTask();
+    toggleTaskDetailSection();
   }
 
   renderTaskCreate() {
