@@ -14,7 +14,15 @@
 !/tmp/.keep
 
 /node_modules
+/.sass-cache
 /yarn-error.log
+
+TAGS
+.TAGS
+!TAGS/
+tags
+.tags
+!tags/
 
 .byebug_history
 bundle.js

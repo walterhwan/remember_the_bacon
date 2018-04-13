@@ -2,6 +2,8 @@
 
 Remember the Bacon is a place to store of your to-do list and get things done! It was inspired by [Remember the Milk](www.rememberthemilk.com). But unlike the oringial, it delivers a smoother user experience through Rails, PostgreSQL, React.js, and Redux. This project was planned and implemented in about 11 days.
 
+[Design Document](https://github.com/walterhwan/remember_the_bacon/wiki)
+
 # Features
 
 + Secure user authentication
@@ -68,6 +70,11 @@ The actual implementation is simple. First, you define the starting position (su
  ...
  ```
 
+## Challenge
+
+The challenge is to organize the structure
+
+
 
 # Improvements
 
@@ -80,7 +87,6 @@ The actual implementation is simple. First, you define the starting position (su
 
 <!--
 
- The challenge is to organize the structure
 
 + Brief description
 + any CRUD functionality it may have

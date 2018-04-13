@@ -316,12 +316,6 @@ a:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the
 .landing-footer	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^.landing-footer {$/;"	function	line:138
 a	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  a {$/;"	function	line:145
 p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/landing_page.scss	/^  p {$/;"	function	line:149
-README	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# README$/;"	function	line:1
-Features	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Features$/;"	function	line:5
-List CRUD	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## List CRUD$/;"	function	line:13
-Task CRUD	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## Task CRUD$/;"	function	line:19
-Good animation	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## Good animation$/;"	function	line:25
-Improvements	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Improvements$/;"	function	line:72
 search-color	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_index.scss	/^$search-color: #417CE1;$/;"	function	line:1
 nav-bar-color	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_index.scss	/^$nav-bar-color: #0064BA;$/;"	function	line:2
 list-nav-color	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_index.scss	/^$list-nav-color: #D4E8F4;$/;"	function	line:3
@@ -359,3 +353,10 @@ p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon
 div:hover	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_index.scss	/^  div:hover {$/;"	function	line:180
 p	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_index.scss	/^  p {$/;"	function	line:184
 .hidden	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/app/assets/stylesheets/list_index.scss	/^.hidden {$/;"	function	line:190
+README	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# README$/;"	function	line:1
+Features	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Features$/;"	function	line:7
+List CRUD	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## List CRUD$/;"	function	line:15
+Task CRUD	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## Task CRUD$/;"	function	line:21
+Good animation	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## Good animation$/;"	function	line:27
+Challenge	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^## Challenge$/;"	function	line:73
+Improvements	/Users/walter/Documents/Programing/Ruby Projects/AppAcademy/remember_the_bacon/README.md	/^# Improvements$/;"	function	line:79
