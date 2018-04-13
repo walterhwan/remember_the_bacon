@@ -35,6 +35,17 @@ class ListIndex extends React.Component {
     applyListItemEvent();
   }
 
+  renderListNumber(list) {
+    const notCompleted = list.task_ids.length - list.num_completed;
+    if (notCompleted !== 0) {
+      return (
+        <p
+          className='num-tasks'>{notCompleted}
+        </p>
+      );
+    }
+  }
+
   renderListItem(list) {
     return (
       <div
@@ -54,6 +65,7 @@ class ListIndex extends React.Component {
           </NavLink>
         </div>
         <div className='list-tail'>
+          {this.renderListNumber(list)}
           <i
             className="material-icons list-option-icon"
             onClick={this.handleToggleDropDown(list.id)}>

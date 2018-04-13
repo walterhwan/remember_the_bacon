@@ -94,5 +94,3 @@ end
 # Show list incomplete total on list index
 #
 # Improve search relevance
-#
-# Seed the database

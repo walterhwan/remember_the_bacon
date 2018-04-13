@@ -76,6 +76,7 @@ class TaskNav extends React.Component {
       task.completed = false;
       this.props.updateTask(task);
     });
+    this.props.deleteAllSelectedTask();
 
     toggleTaskDetailSection();
   }
@@ -86,6 +87,7 @@ class TaskNav extends React.Component {
       task.completed = true;
       this.props.updateTask(task);
     });
+    this.props.deleteAllSelectedTask();
 
     toggleTaskDetailSection();
   }
