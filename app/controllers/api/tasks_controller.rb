@@ -2,9 +2,9 @@ class Api::TasksController < ApplicationController
   before_action :require_logged_in
 
   def search
-    most_relevant = current_user.tasks.where("lower(description) LIKE ?", "#{params['search_term']}%").all
+    most_relevant = current_user.tasks.where("lower(description) LIKE ?", "#{params['search_term'].downcase}%").all
 
-    less_relevant = current_user.tasks.where("lower(description) LIKE ?", "%#{params['search_term']}%").where("lower(description) NOT LIKE ?", "#{params['search_term']}%").all
+    less_relevant = current_user.tasks.where("lower(description) LIKE ?", "%#{params['search_term'].downcase}%").where("lower(description) NOT LIKE ?", "#{params['search_term'].downcase}%").all
 
     # TODO: improve search
     @tasks = less_relevant + most_relevant #.sort_by(&:created_at)
